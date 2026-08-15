@@ -1,0 +1,322 @@
+# Class option grants (Remaster-oriented). Open lists gated in chargen_policy.rb.
+# Lookup: Pf2e.read_data("subclasses", "bloodline") then [slug]
+# apply via Pf2e.apply_subclass_grants!(sheet)
+
+subclasses:
+  # --- filled: bloodline + doctrine ---
+  bloodline:
+    imperial:
+      name: Imperial
+      tradition: arcane
+      skills:
+      - arcana
+      - society
+      cantrips:
+      - detect_magic
+      focus_spells:
+      - ancestral_memories
+      repertoire_gifts:
+        "0": detect_magic
+        "1": force_barrage
+      notes: "Bloodline spells and gifts scale with level; initial focus is ancestral_memories."
+
+    elemental:
+      name: Elemental
+      tradition: primal
+      skills:
+      - nature
+      - intimidation
+      cantrips:
+      - ignition
+      focus_spells:
+      - elemental_toss
+      repertoire_gifts:
+        "0": ignition
+        "1": breathe_fire
+      notes: "Default elemental influence = fire for v1. Air/earth/metal/water/wood influence can be added later."
+
+    fey:
+      name: Fey
+      tradition: primal
+      skills:
+      - deception
+      - nature
+      cantrips:
+      - figment
+      focus_spells:
+      - faerie_dust
+      repertoire_gifts:
+        "0": figment
+        "1": charm
+      notes: "Bloodline focus: faerie_dust (initial)."
+
+    angelic:
+      name: Angelic
+      tradition: divine
+      skills:
+      - diplomacy
+      - religion
+      cantrips:
+      - light
+      focus_spells:
+      - angelic_halo
+      repertoire_gifts:
+        "0": light
+        "1": heal
+      notes: "Bloodline focus: angelic_halo (initial)."
+
+  doctrine:
+    cloistered:
+      name: Cloistered Cleric
+      steps:
+        "1":
+          features:
+          - first_doctrine_cloistered
+          feats:
+          - domain_initiate
+        "3":
+          features:
+          - second_doctrine_cloistered
+          proficiency:
+            fortitude: E
+        "7":
+          features:
+          - third_doctrine_cloistered
+          spellcasting:
+            proficiency: E
+        "11":
+          features:
+          - fourth_doctrine_cloistered
+          proficiency:
+            attacks:
+              simple: E
+              unarmed: E
+        "15":
+          features:
+          - fifth_doctrine_cloistered
+          spellcasting:
+            proficiency: M
+        "19":
+          features:
+          - final_doctrine_cloistered
+          spellcasting:
+            proficiency: L
+      notes: "Domain Initiate at 1st. Spell proficiency advances on the cloistered track."
+
+    warpriest:
+      name: Warpriest
+      steps:
+        "1":
+          features:
+          - first_doctrine_warpriest
+          feats:
+          - shield_block
+          proficiency:
+            fortitude: E
+            defenses:
+              light: T
+              medium: T
+        "3":
+          features:
+          - second_doctrine_warpriest
+          proficiency:
+            attacks:
+              martial: T
+        "7":
+          features:
+          - third_doctrine_warpriest
+          proficiency:
+            attacks:
+              simple: E
+              unarmed: E
+              martial: E
+        "11":
+          features:
+          - fourth_doctrine_warpriest
+          spellcasting:
+            proficiency: E
+        "15":
+          features:
+          - fifth_doctrine_warpriest
+          proficiency:
+            defenses:
+              light: E
+              medium: E
+        "19":
+          features:
+          - final_doctrine_warpriest
+          spellcasting:
+            proficiency: M
+      notes: "Armor + Fort expert + Shield Block at 1st. Martial weapons at 3rd. Spell proficiency lags cloistered."
+
+  # --- stubs (open options; grants filled later) ---
+  contact:
+    faiths_flamekeeper:
+      name: Faith's Flamekeeper
+      skills: []
+      notes: "stub"
+    the_inscribed_one:
+      name: The Inscribed One
+      skills: []
+      notes: "stub"
+    silence_in_snow:
+      name: Silence in Snow
+      skills: []
+      notes: "stub"
+    spinner_of_threads:
+      name: Spinner of Threads
+      skills: []
+      notes: "stub"
+    wilding_steward:
+      name: Wilding Steward
+      skills: []
+      notes: "stub"
+
+  cause:
+    justice:
+      name: Justice
+      skills: []
+      notes: "stub"
+    liberation:
+      name: Liberation
+      skills: []
+      notes: "stub"
+    redemption:
+      name: Redemption
+      skills: []
+      notes: "stub"
+    obedience:
+      name: Obedience
+      skills: []
+      notes: "stub"
+
+  muse:
+    maestro:
+      name: Maestro
+      skills: []
+      notes: "stub"
+    enigma:
+      name: Enigma
+      skills: []
+      notes: "stub"
+    polymath:
+      name: Polymath
+      skills: []
+      notes: "stub"
+    warrior:
+      name: Warrior
+      skills: []
+      notes: "stub"
+
+  racket:
+    ruffian:
+      name: Ruffian
+      skills: []
+      notes: "stub"
+    scoundrel:
+      name: Scoundrel
+      skills: []
+      notes: "stub"
+    thief:
+      name: Thief
+      skills: []
+      notes: "stub"
+    mastermind:
+      name: Mastermind
+      skills: []
+      notes: "stub"
+
+  methodology:
+    empiricism:
+      name: Empiricism
+      skills: []
+      notes: "stub"
+    forensic_medicine:
+      name: Forensic Medicine
+      skills: []
+      notes: "stub"
+    interrogation:
+      name: Interrogation
+      skills: []
+      notes: "stub"
+    alchemical_sciences:
+      name: Alchemical Sciences
+      skills: []
+      notes: "stub"
+
+  order:
+    animal:
+      name: Animal
+      skills: []
+      notes: "stub"
+    leaf:
+      name: Leaf
+      skills: []
+      notes: "stub"
+    storm:
+      name: Storm
+      skills: []
+      notes: "stub"
+    wild:
+      name: Wild
+      skills: []
+      notes: "stub"
+    wave:
+      name: Wave
+      skills: []
+      notes: "stub"
+    flame:
+      name: Flame
+      skills: []
+      notes: "stub"
+
+  edge:
+    precision:
+      name: Precision
+      skills: []
+      combat_tag: precision
+      notes: "Combat resolution later; token only."
+    flurry:
+      name: Flurry
+      skills: []
+      combat_tag: flurry
+      notes: "Combat resolution later; token only."
+    outwit:
+      name: Outwit
+      skills: []
+      combat_tag: outwit
+      notes: "Combat resolution later; token only."
+
+  school:
+    abjuration:
+      name: Abjuration
+      skills: []
+      notes: "stub"
+    conjuration:
+      name: Conjuration
+      skills: []
+      notes: "stub"
+    divination:
+      name: Divination
+      skills: []
+      notes: "stub"
+    enchantment:
+      name: Enchantment
+      skills: []
+      notes: "stub"
+    evocation:
+      name: Evocation
+      skills: []
+      notes: "stub"
+    illusion:
+      name: Illusion
+      skills: []
+      notes: "stub"
+    transmutation:
+      name: Transmutation
+      skills: []
+      notes: "stub"
+    universalist:
+      name: Universalist
+      skills: []
+      notes: "stub"
