@@ -99,6 +99,16 @@ module AresMUSH
         when "language" then return CgLanguageCmd
         when "feat" then return CgFeatCmd
         when "unfeat" then return CgFeatRemoveCmd
+        when "contact" then return CgContactCmd
+        when "bloodline" then return CgBloodlineCmd
+        when "cause" then return CgCauseCmd
+        when "muse" then return CgMuseCmd
+        when "racket" then return CgRacketCmd
+        when "methodology" then return CgMethodologyCmd
+        when "order" then return CgOrderCmd
+        when "edge" then return CgEdgeCmd
+        when "school" then return CgSchoolCmd
+        when "doctrine" then return CgDoctrineCmd
         end
       end
       nil
