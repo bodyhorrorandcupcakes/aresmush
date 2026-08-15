@@ -1,10 +1,30 @@
-# Static weapon reference data.
+# Static weapon reference data (PF2e Remaster / Pathfinder Player Core).
 # Lookup: Pf2e.read_data("weapons", "longsword")
-# price — in sp (for vendors)
-
+# Generated from Foundry VTT pf2e equipment pack (publication = Pathfinder Player Core).
+# Filter: type weapon, level 0, rarity common, no parenthetical variants.
+# price — integer silver pieces (sp)
+# range — feet for ranged; null for melee (thrown range lives on traits e.g. thrown_10)
+# reload — integer or null; 0 = usable after firing without a Reload action (bows)
+# category — simple | martial | advanced | unarmed
+#
 weapons:
-  longsword:
-    name: Longsword
+  arbalest:
+    name: Arbalest
+    category: martial
+    damage:
+      dice: 1
+      sides: 10
+      type: piercing
+    hands: 2
+    group: crossbow
+    traits:
+    - backstabber
+    range: 110
+    reload: 1
+    bulk: '2'
+    price: 80
+  bastard_sword:
+    name: Bastard Sword
     category: martial
     damage:
       dice: 1
@@ -12,53 +32,42 @@ weapons:
       type: slashing
     hands: 1
     group: sword
-    traits: [versatile_p]
+    traits:
+    - two_hand_d12
     range: null
     reload: null
-    bulk: 1
-    price: 10
-
-  shortsword:
-    name: Shortsword
+    bulk: '1'
+    price: 40
+  battle_axe:
+    name: Battle Axe
     category: martial
     damage:
       dice: 1
-      sides: 6
-      type: piercing
+      sides: 8
+      type: slashing
     hands: 1
-    group: sword
-    traits: [agile, finesse, versatile_s]
+    group: axe
+    traits:
+    - sweep
     range: null
     reload: null
-    bulk: L
-    price: 9
-
-  dagger:
-    name: Dagger
-    category: simple
+    bulk: '1'
+    price: 10
+  bo_staff:
+    name: Bo Staff
+    category: martial
     damage:
       dice: 1
-      sides: 4
-      type: piercing
-    hands: 1
-    group: knife
-    traits: [agile, finesse, thrown_10, versatile_s]
-    range: null
-    reload: null
-    bulk: L
-    price: 2
-
-  unarmed:
-    name: Fist
-    category: unarmed
-    damage:
-      dice: 1
-      sides: 4
+      sides: 8
       type: bludgeoning
-    hands: 1
-    group: brawling
-    traits: [agile, finesse, nonlethal, unarmed]
+    hands: 2
+    group: club
+    traits:
+    - monkwapon
+    - parry
+    - reach
+    - trip
     range: null
     reload: null
-    bulk: 0
-    # no price — not for sale
+    bulk: '2'
+    price: 2
