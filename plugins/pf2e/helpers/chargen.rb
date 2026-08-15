@@ -67,7 +67,6 @@ module AresMUSH
         end
       end
 
-      # Level ability boosts: ability_boosts["level_5"] = [str, dex, ...]
       stored.each do |source, list|
         next unless source.to_s =~ /\Alevel_\d+\z/
         Array(list).each do |raw|
@@ -190,6 +189,9 @@ module AresMUSH
           forced << s.to_s.strip.downcase
         end
       end
+      # Subclass fixed skills (bloodline, racket, order, …) + free skill choices taken
+      forced.concat(subclass_fixed_skills(sheet))
+      forced.concat(subclass_skill_choices_taken(sheet))
       forced.reject(&:empty?).uniq
     end
 
@@ -225,7 +227,9 @@ module AresMUSH
         used: cg_skill_picks_used(sheet),
         remaining: cg_skill_picks_remaining(sheet),
         forced: cg_forced_skills(sheet),
-        trained: trained
+        trained: trained,
+        subclass_skill_choices_pending: subclass_skill_choices_pending(sheet),
+        subclass_skill_choices_taken: subclass_skill_choices_taken(sheet)
       }
     end
 
@@ -246,17 +250,40 @@ module AresMUSH
 
       data = read_data("skills") || {}
       slugs.each do |sk|
-        return { ok: false, error: "pf2e.cg_unknown_skill", sheet: sheet } unless data.key?(sk)
+        unless data.key?(sk) || sk == "lore" || sk.end_with?("_lore")
+          return { ok: false, error: "pf2e.cg_unknown_skill", sheet: sheet }
+        end
         return { ok: false, error: "pf2e.cg_skill_already_trained", sheet: sheet } if skill_rank(sheet, sk) != "U"
       end
 
+      # Split into subclass free choices vs class skill picks
+      pending_sc = subclass_skill_choices_pending(sheet)
+      as_subclass = []
+      as_class = []
+      slugs.each do |sk|
+        if pending_sc > as_subclass.size && skill_valid_for_subclass_choice?(sheet, sk)
+          as_subclass << sk
+        else
+          as_class << sk
+        end
+      end
+
       remaining = cg_skill_picks_remaining(sheet)
-      if slugs.size > remaining
+      if as_class.size > remaining
         return { ok: false, error: "pf2e.cg_skill_no_picks", sheet: sheet }
       end
 
-      slugs.each { |sk| set_skill_rank(sheet, sk, "T") }
-      { ok: true, error: nil, sheet: sheet, trained: slugs, remaining: cg_skill_picks_remaining(sheet) }
+      as_subclass.each do |sk|
+        set_skill_rank(sheet, sk, "T")
+        record_subclass_skill_choice!(sheet, sk)
+      end
+      as_class.each { |sk| set_skill_rank(sheet, sk, "T") }
+
+      {
+        ok: true, error: nil, sheet: sheet, trained: slugs,
+        remaining: cg_skill_picks_remaining(sheet),
+        subclass_choices_pending: subclass_skill_choices_pending(sheet)
+      }
     end
 
     def self.cg_set_ancestry(char, slug)
