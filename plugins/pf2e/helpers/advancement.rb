@@ -285,6 +285,9 @@ module AresMUSH
       # Rebuild class spell source slots / proficiency for the new level
       sync_all_magic_slots(sheet)
 
+      # Re-apply class-option grants (doctrine steps unlock by level, bloodline gifts, etc.)
+      apply_subclass_grants!(sheet)
+
       pending = empty_pending
       pending["skill_increase"] = pkg["skill_increase"].to_i
       pending["ability_boost"] = pkg["ability_boost"].to_i
