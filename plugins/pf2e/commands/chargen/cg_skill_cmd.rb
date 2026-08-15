@@ -26,6 +26,13 @@ module AresMUSH
                        :remaining => result[:remaining],
                        :forced => forced,
                        :trained => trained)
+          pending = result[:subclass_skill_choices_pending].to_i
+          taken = Array(result[:subclass_skill_choices_taken])
+          if pending > 0 || !taken.empty?
+            client.emit t('pf2e.cg_skill_status_choices',
+                         :taken => taken.empty? ? "(none)" : taken.join(", "),
+                         :pending => pending)
+          end
           return
         end
 
