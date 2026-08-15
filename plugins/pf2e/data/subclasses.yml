@@ -122,33 +122,43 @@ subclasses:
     ruffian:
       name: Ruffian
       skills: [intimidation]
+      key_ability_options: [str, dex]
       proficiency:
         defenses:
           medium: T
-      notes: "Medium armor; may use Strength as key ability. Wider SA weapons are combat-side later."
+      notes: "Medium armor. Key ability Str or Dex (cg/racket ruffian str). Wider SA weapons are combat-side later."
 
     scoundrel:
       name: Scoundrel
       skills: [deception, diplomacy]
-      notes: "May use Charisma as key ability. Feint upgrades are combat-side later."
+      key_ability_options: [cha, dex]
+      notes: "Key ability Cha or Dex (cg/racket scoundrel cha). Feint upgrades are combat-side later."
 
     thief:
       name: Thief
       skills: [thievery]
+      key_ability_options: [dex]
       combat_tag: dex_damage_finesse
-      notes: "Dexterity to damage with finesse melee is combat-side later."
+      notes: "Key ability Dex. Dexterity to damage with finesse melee is combat-side later."
 
     mastermind:
       name: Mastermind
       skills: [society]
-      notes: "Also trained in one of Arcana, Nature, Occultism, or Religion (player choice). May use Intelligence as key ability."
+      key_ability_options: [int, dex]
+      skill_choices:
+        count: 1
+        from: [arcana, nature, occultism, religion]
+      notes: "Key ability Int or Dex. Free skill: one of Arcana/Nature/Occultism/Religion via cg/skill after commit."
 
   methodology:
     empiricism:
       name: Empiricism
       skills: []
       feats: [thats_odd]
-      notes: "Trained in one Intelligence-based skill of the player's choice."
+      skill_choices:
+        count: 1
+        from_attribute: int
+      notes: "Free skill: one Intelligence skill (arcana/crafting/occultism/society/lore) via cg/skill after commit."
 
     forensic_medicine:
       name: Forensic Medicine
