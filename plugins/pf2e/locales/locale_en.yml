@@ -159,6 +159,8 @@ en:
 
     feat_search_title_all: "PF2e Feats"
     feat_search_title_query: "PF2e Feats matching '%{query}'"
+    spell_search_title_all: "PF2e Spells"
+    spell_search_title_query: "PF2e Spells matching '%{query}'"
 
     cg_ancestry_set: "Ancestry set to %{name}."
     cg_heritage_set: "Heritage set to %{name}."
@@ -229,7 +231,7 @@ en:
     cast_innate_atwill: "%{name} casts innate %{spell} (%{slug}, at-will). DC %{dc}, Attack +%{attack}."
     cast_focus: "%{name} casts focus %{spell} (%{slug}) from %{source} (R%{rank}). FP %{fp}/%{fp_max}. DC %{dc}, Attack +%{attack}."
     cast_cantrip: "%{name} casts cantrip %{spell} (%{slug}) from %{source}. DC %{dc}, Attack +%{attack}."
-    cast_slot: "%{name} casts %{spell} (%{slug}) from %{source} at rank %{rank}%{height}. Slots %{used}/%{max}. DC %{dc}, Attack +%{attack}."
+    cast_slot: "%{name} casts %{spell} (%{slug}) from %{source} at rank %{rank}%{height}.Slots %{used}/%{max}. DC %{dc}, Attack +%{attack}."
     cast_heightened_note: " (heightened from R%{base})"
 
     innate_cast_usage: "Usage: spells/cast <innate spell slug>"
