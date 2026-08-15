@@ -1,110 +1,447 @@
-# General gear / consumables catalog.
-# Lookup: Pf2e.read_data("items", "rope_50")
+# General gear / consumables catalog (PF2e Remaster / Pathfinder Player Core).
+# Lookup: Pf2e.read_data("items", "rope") or "rope_50" (alias)
+# Source: Foundry VTT pf2e equipment pack (publication = Pathfinder Player Core).
+# Plus synthetic belt_pouch / satchel (common containers not present as PC JSON).
 #
-# kind: gear | consumable | shield | alchemical | custom
+# kind: gear | consumable
 # bulk: L | 0 | 1 | 2 | … | "-" for worn-container negligible
-# price: in sp (vendor uses this; convert to cp at purchase)
-# container: optional capacity rules for bags/packs
-#   capacity      — max Bulk the container can hold
-#   ignore_bulk   — first N Bulk of contents do not count toward carrier Bulk
-#                   (PF2e backpack: capacity 4, ignore_bulk 2)
-#   worn_bulk     — bulk of the container itself when worn (usually 0 / L / -)
+# price: silver pieces (sp); fractional allowed for cp-priced goods (0.1 = 1 cp)
+# quantity_per: for ammo/chalk packs — price is for this many units
+# container:
+#   capacity    — max Bulk the container can hold
+#   ignore_bulk — first N Bulk of contents do not count toward carrier Bulk
+#   worn_bulk   — bulk of the container itself when worn
+# kit: list of {slug, qty} expanded at purchase if code supports it
 #
-# hands: optional
-# traits: optional array
-
 items:
   backpack:
     name: Backpack
     kind: gear
-    bulk: "-"
+    bulk: '-'
+    traits:
+    - container
     price: 1
-    traits: [container]
     container:
       capacity: 4
       ignore_bulk: 2
       worn_bulk: 0
-
+  chest:
+    name: Chest
+    kind: gear
+    bulk: '2'
+    traits:
+    - container
+    price: 6
+    container:
+      capacity: 8
+      ignore_bulk: 0
+      worn_bulk: 2.0
+  sack:
+    name: Sack
+    kind: gear
+    bulk: L
+    traits:
+    - container
+    price: 0.1
+    container:
+      capacity: 8
+      ignore_bulk: 0
+      worn_bulk: 0.1
+  saddlebags:
+    name: Saddlebags
+    kind: gear
+    bulk: L
+    traits:
+    - container
+    price: 2
+    container:
+      capacity: 6
+      ignore_bulk: 2
+      worn_bulk: 0.1
+  alchemists_lab:
+    name: Alchemist's Lab
+    kind: gear
+    bulk: '6'
+    traits: []
+    price: 50
+  alchemists_toolkit:
+    name: Alchemist's Toolkit
+    kind: gear
+    bulk: '1'
+    traits: []
+    price: 30
+  artisans_toolkit:
+    name: Artisan's Toolkit
+    kind: gear
+    bulk: '2'
+    traits: []
+    price: 40
+  basic_crafters_book:
+    name: Basic Crafter's Book
+    kind: gear
+    bulk: L
+    traits: []
+    price: 1
+  bedroll:
+    name: Bedroll
+    kind: gear
+    bulk: L
+    traits: []
+    price: 0.2
+  brass_ear:
+    name: Brass Ear
+    kind: gear
+    bulk: '-'
+    traits: []
+    price: 10
+  caltrops:
+    name: Caltrops
+    kind: gear
+    bulk: L
+    traits: []
+    price: 3
+  cane:
+    name: Cane
+    kind: gear
+    bulk: L
+    traits: []
+    price: 5
+  climbing_kit:
+    name: Climbing Kit
+    kind: gear
+    bulk: '1'
+    traits: []
+    price: 5
+  compass:
+    name: Compass
+    kind: gear
+    bulk: '-'
+    traits: []
+    price: 10
+  cookware:
+    name: Cookware
+    kind: gear
+    bulk: '2'
+    traits: []
+    price: 10
+  corrective_lenses:
+    name: Corrective Lenses
+    kind: gear
+    bulk: '-'
+    traits: []
+    price: 5
+  crowbar:
+    name: Crowbar
+    kind: gear
+    bulk: L
+    traits: []
+    price: 5
+  crutch:
+    name: Crutch
+    kind: gear
+    bulk: L
+    traits: []
+    price: 5
+  disguise_kit:
+    name: Disguise Kit
+    kind: gear
+    bulk: L
+    traits: []
+    price: 20
+  dueling_cape:
+    name: Dueling Cape
+    kind: gear
+    bulk: L
+    traits: []
+    price: 5
+  fishing_tackle:
+    name: Fishing Tackle
+    kind: gear
+    bulk: '1'
+    traits: []
+    price: 8
+  flint_and_steel:
+    name: Flint and Steel
+    kind: gear
+    bulk: '-'
+    traits: []
+    price: 0.5
+  grappling_hook:
+    name: Grappling Hook
+    kind: gear
+    bulk: L
+    traits: []
+    price: 1
+  hammer:
+    name: Hammer
+    kind: gear
+    bulk: L
+    traits: []
+    price: 1
+  healers_toolkit:
+    name: Healer's Toolkit
+    kind: gear
+    bulk: '1'
+    traits: &id002 []
+    price: 50
+  hearing_aid:
+    name: Hearing Aid
+    kind: gear
+    bulk: '-'
+    traits: []
+    price: 5
+  hourglass:
+    name: Hourglass
+    kind: gear
+    bulk: L
+    traits: []
+    price: 30
+  merchants_scale:
+    name: Merchant's Scale
+    kind: gear
+    bulk: L
+    traits: []
+    price: 2
+  mirror:
+    name: Mirror
+    kind: gear
+    bulk: '-'
+    traits: []
+    price: 10
+  mug:
+    name: Mug
+    kind: gear
+    bulk: '-'
+    traits: []
+    price: 0.1
+  net:
+    name: Net
+    kind: gear
+    bulk: '1'
+    traits: []
+    price: 10
+  parrying_scabbard:
+    name: Parrying Scabbard
+    kind: gear
+    bulk: L
+    traits: []
+    price: 5
+  piton:
+    name: Piton
+    kind: gear
+    bulk: '-'
+    traits: []
+    price: 0.1
+  prosthesis:
+    name: Prosthesis
+    kind: gear
+    bulk: '-'
+    traits: []
+    price: 5
+  religious_text:
+    name: Religious Text
+    kind: gear
+    bulk: L
+    traits: []
+    price: 10
+  repair_toolkit:
+    name: Repair Toolkit
+    kind: gear
+    bulk: '1'
+    traits: []
+    price: 20
+  rope:
+    name: Rope
+    kind: gear
+    bulk: L
+    traits: &id001 []
+    price: 5
+  signal_whistle:
+    name: Signal Whistle
+    kind: gear
+    bulk: '-'
+    traits: []
+    price: 0.8
+  soap:
+    name: Soap
+    kind: gear
+    bulk: '-'
+    traits: []
+    price: 0.2
+  spyglass:
+    name: Spyglass
+    kind: gear
+    bulk: L
+    traits: []
+    price: 200
+  tack:
+    name: Tack
+    kind: gear
+    bulk: '2'
+    traits: []
+    price: 40
+  ten_foot_pole:
+    name: Ten-Foot Pole
+    kind: gear
+    bulk: '1'
+    traits: []
+    price: 0.1
+  thieves_toolkit:
+    name: Thieves' Toolkit
+    kind: gear
+    bulk: L
+    traits: &id003 []
+    price: 30
+  torch:
+    name: Torch
+    kind: gear
+    bulk: L
+    traits: []
+    price: 0.1
+  travelers_chair:
+    name: Traveler's Chair
+    kind: gear
+    bulk: '3'
+    traits: []
+    price: 50
+  waterskin:
+    name: Waterskin
+    kind: gear
+    bulk: L
+    traits: []
+    price: 0.5
+  wheelchair:
+    name: Wheelchair
+    kind: gear
+    bulk: '2'
+    traits: []
+    price: 5
+  writing_set:
+    name: Writing Set
+    kind: gear
+    bulk: L
+    traits: []
+    price: 10
+  arrows:
+    name: Arrows (10)
+    kind: consumable
+    bulk: L
+    traits: []
+    price: 1
+    quantity_per: 10
+  blowgun_darts:
+    name: Blowgun Darts (10)
+    kind: consumable
+    bulk: '-'
+    traits: []
+    price: 0.5
+    quantity_per: 10
+  bolts:
+    name: Bolts (10)
+    kind: consumable
+    bulk: L
+    traits: []
+    price: 1
+    quantity_per: 10
+  candle:
+    name: Candle (10)
+    kind: consumable
+    bulk: '-'
+    traits: []
+    price: 0.1
+    quantity_per: 10
+  chalk:
+    name: Chalk (10)
+    kind: consumable
+    bulk: '-'
+    traits: []
+    price: 0.1
+    quantity_per: 10
+  oil_1_pint:
+    name: Oil (1 pint)
+    kind: consumable
+    bulk: '-'
+    traits: []
+    price: 0.1
+  rations:
+    name: Rations
+    kind: consumable
+    bulk: L
+    traits: []
+    price: 4
+  sling_bullets:
+    name: Sling Bullets (10)
+    kind: consumable
+    bulk: L
+    traits: []
+    price: 0.1
+    quantity_per: 10
+  adventurers_pack:
+    name: Adventurer's Pack
+    kind: gear
+    bulk: '1'
+    price: 15
+    traits:
+    - kit
+    kit:
+    - slug: backpack
+      qty: 1
+    - slug: bedroll
+      qty: 1
+    - slug: chalk
+      qty: 10
+    - slug: flint_and_steel
+      qty: 1
+    - slug: rope
+      qty: 1
+    - slug: rations
+      qty: 2
+    - slug: soap
+      qty: 1
+    - slug: torch
+      qty: 5
+    - slug: waterskin
+      qty: 1
+    notes: Backpack + bedroll + 10 chalk + flint and steel + 50 ft rope + 2 weeks
+      rations + soap + 5 torches + waterskin.
+  belt_pouch:
+    name: Belt Pouch
+    kind: gear
+    bulk: '-'
+    price: 0.4
+    traits:
+    - container
+    container:
+      capacity: 0.4
+      ignore_bulk: 0
+      worn_bulk: 0
+    notes: Holds up to 4 light items (0.4 Bulk).
   satchel:
     name: Satchel
     kind: gear
     bulk: L
     price: 1
-    traits: [container]
+    traits:
+    - container
     container:
       capacity: 2
       ignore_bulk: 0
       worn_bulk: 0.1
-
-  belt_pouch:
-    name: Belt Pouch
-    kind: gear
-    bulk: "-"
-    price: 0.4
-    traits: [container]
-    container:
-      capacity: 0.4   # 4 L
-      ignore_bulk: 0
-      worn_bulk: 0
-
   rope_50:
-    name: "Rope (50 feet)"
+    name: Rope (50 feet)
     kind: gear
     bulk: L
+    traits: *id001
     price: 5
-
-  torch:
-    name: Torch
-    kind: gear
-    bulk: L
-    price: 1
-
-  rations:
-    name: Rations (1 week)
-    kind: consumable
-    bulk: L
-    price: 4
-
   healers_tools:
-    name: "Healer's Tools"
+    name: Healer's Tools
     kind: gear
-    bulk: 1
+    bulk: '1'
+    traits: *id002
     price: 50
-
   thieves_tools:
-    name: "Thieves' Tools"
+    name: Thieves' Tools
     kind: gear
     bulk: L
+    traits: *id003
     price: 30
-
-  steel_shield:
-    name: "Steel Shield"
-    kind: shield
-    bulk: 1
-    price: 20
-    ac_bonus: 2
-    hardness: 5
-    hp: 20
-    bt: 10
-
-  # Sample alchemicals (expand later)
-  minor_elixir_of_life:
-    name: "Minor Elixir of Life"
-    kind: alchemical
-    bulk: L
-    price: 20
-    traits: [alchemical, consumable, elixir, healing]
-
-  lesser_antidote:
-    name: "Lesser Antidote"
-    kind: alchemical
-    bulk: L
-    price: 10
-    traits: [alchemical, consumable, elixir]
-
-  acid_flask_lesser:
-    name: "Acid Flask (Lesser)"
-    kind: alchemical
-    bulk: L
-    price: 3
-    traits: [alchemical, bomb, consumable, splash]
