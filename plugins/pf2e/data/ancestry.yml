@@ -1,14 +1,161 @@
-# Static ancestry reference data.
-# Lookup: Pf2e.read_data("ancestries", "dwarf")
+# Ancestries — Pathfinder Player Core (Foundry). common→tradetongue, elven→iliari.
 #
-# languages:
-#   starting          — always known (plus Tradetongue is also forced globally)
-#   additional_per_int — if true, player picks ability_mod(int) extra languages
-#                        from common (and uncommon if you later allow)
-#   additional_options — optional closed list for those free picks; omit = any
-#                        non-restricted language of allowed rarities
-
 ancestries:
+  dwarf:
+    name: Dwarf
+    hp: 10
+    size: medium
+    speed: 20
+    boosts:
+      fixed:
+      - con
+      - wis
+      free: 1
+    flaws:
+      fixed:
+      - cha
+      free: 0
+    traits:
+    - dwarf
+    - humanoid
+    languages:
+      starting:
+      - tradetongue
+      - dwarven
+      additional_per_int: true
+    vision: darkvision
+    heritages:
+    - ancient_blooded_dwarf
+    - death_warden_dwarf
+    - forge_dwarf
+    - rock_dwarf
+    - strong_blooded_dwarf
+    features:
+    - darkvision
+  elf:
+    name: Elf
+    hp: 6
+    size: medium
+    speed: 30
+    boosts:
+      fixed:
+      - dex
+      - int
+      free: 1
+    flaws:
+      fixed:
+      - con
+      free: 0
+    traits:
+    - elf
+    - humanoid
+    languages:
+      starting:
+      - tradetongue
+      - iliari
+      additional_per_int: true
+    vision: low_light_vision
+    heritages:
+    - ancient_elf
+    - arctic_elf
+    - cavern_elf
+    - seer_elf
+    - whisper_elf
+    - woodland_elf
+    features: []
+  gnome:
+    name: Gnome
+    hp: 8
+    size: medium
+    speed: 25
+    boosts:
+      fixed:
+      - cha
+      - con
+      free: 1
+    flaws:
+      fixed:
+      - str
+      free: 0
+    traits:
+    - gnome
+    - humanoid
+    languages:
+      starting:
+      - tradetongue
+      - fey
+      - gnomish
+      additional_per_int: true
+    vision: low_light_vision
+    heritages:
+    - chameleon_gnome
+    - fey_touched_gnome
+    - sensate_gnome
+    - umbral_gnome
+    - wellspring_gnome
+    features: []
+  goblin:
+    name: Goblin
+    hp: 6
+    size: medium
+    speed: 25
+    boosts:
+      fixed:
+      - cha
+      - dex
+      free: 1
+    flaws:
+      fixed:
+      - wis
+      free: 0
+    traits:
+    - goblin
+    - humanoid
+    languages:
+      starting:
+      - tradetongue
+      - goblin
+      additional_per_int: true
+    vision: darkvision
+    heritages:
+    - charhide_goblin
+    - irongut_goblin
+    - razortooth_goblin
+    - snow_goblin
+    - unbreakable_goblin
+    features:
+    - darkvision
+  halfling:
+    name: Halfling
+    hp: 6
+    size: medium
+    speed: 25
+    boosts:
+      fixed:
+      - dex
+      - wis
+      free: 1
+    flaws:
+      fixed:
+      - str
+      free: 0
+    traits:
+    - halfling
+    - humanoid
+    languages:
+      starting:
+      - tradetongue
+      - halfling
+      additional_per_int: true
+    vision: normal
+    heritages:
+    - gutsy_halfling
+    - hillock_halfling
+    - jinxed_halfling
+    - nomadic_halfling
+    - twilight_halfling
+    - wildwood_halfling
+    features: []
   human:
     name: Human
     hp: 8
@@ -20,57 +167,81 @@ ancestries:
     flaws:
       fixed: []
       free: 0
-    traits: [human, humanoid]
+    traits:
+    - human
+    - humanoid
     languages:
-      starting: [tradetongue]
+      starting:
+      - tradetongue
       additional_per_int: true
     vision: normal
     heritages:
-      - skilled_heritage
-      - versatile_heritage
+    - skilled_heritage
+    - skilled_human
+    - versatile_heritage
+    - versatile_human
     features: []
-
-  dwarf:
-    name: Dwarf
-    hp: 10
+  leshy:
+    name: Leshy
+    hp: 8
     size: medium
-    speed: 20
+    speed: 25
     boosts:
-      fixed: [con, wis]
+      fixed:
+      - con
+      - wis
       free: 1
     flaws:
-      fixed: [cha]
+      fixed:
+      - int
       free: 0
-    traits: [dwarf, humanoid]
+    traits:
+    - leshy
+    - plant
     languages:
-      starting: [tradetongue, dwarven]
+      starting:
+      - tradetongue
+      - fey
+      additional_per_int: true
+    vision: low_light_vision
+    heritages:
+    - cactus_leshy
+    - fruit_leshy
+    - fungus_leshy
+    - gourd_leshy
+    - leaf_leshy
+    - lotus_leshy
+    - root_leshy
+    - seaweed_leshy
+    - vine_leshy
+    features: []
+  orc:
+    name: Orc
+    hp: 10
+    size: medium
+    speed: 25
+    boosts:
+      fixed: []
+      free: 2
+    flaws:
+      fixed: []
+      free: 0
+    traits:
+    - humanoid
+    - orc
+    languages:
+      starting:
+      - tradetongue
+      - orcish
       additional_per_int: true
     vision: darkvision
     heritages:
-      - ancient_blooded
-      - strong_blooded
+    - badlands_orc
+    - battle_ready_orc
+    - deep_orc
+    - grave_orc
+    - hold_scarred_orc
+    - rainfall_orc
+    - winter_orc
     features:
-      - darkvision
-      - clan_dagger
-
-  elf:
-    name: Elf
-    hp: 6
-    size: medium
-    speed: 30
-    boosts:
-      fixed: [dex, int]
-      free: 1
-    flaws:
-      fixed: [con]
-      free: 0
-    traits: [elf, humanoid]
-    languages:
-      starting: [tradetongue, iliari]
-      additional_per_int: true
-    vision: low_light
-    heritages:
-      - ancient_elf
-      - woodland_elf
-    features:
-      - low_light_vision
+    - darkvision

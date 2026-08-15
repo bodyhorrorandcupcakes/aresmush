@@ -65,14 +65,19 @@ module AresMUSH
     end
 
     def self.cg_list_classes
-      data = read_data("charclasses") || {}
-      data.keys.sort.map do |slug|
+      data = read_data("charclasses") || read_data("classes") || {}
+      data.keys.sort.select { |slug| cg_class_open?(slug) }.map do |slug|
         entry = data[slug] || {}
         keys = Array((entry["key_ability"] || {})["options"]).map(&:to_s)
+        field = cg_subclass_field_for_class(slug)
+        note_bits = []
+        note_bits << ("key: " + keys.join("/")) unless keys.empty?
+        note_bits << "HP #{entry["hp"]}"
+        note_bits << ("pick: " + cg_subclass_label(field)) if field
         {
           slug: slug.to_s,
           name: entry["name"] || slug.to_s,
-          note: keys.empty? ? "HP #{entry["hp"]}" : "key: #{keys.join("/")} · HP #{entry["hp"]}"
+          note: note_bits.join(" · ")
         }
       end
     end

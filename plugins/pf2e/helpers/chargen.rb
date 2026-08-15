@@ -337,6 +337,7 @@ module AresMUSH
       key = slug.to_s.strip.downcase
       entry = cg_class_entry(key)
       return { ok: false, error: "pf2e.cg_unknown_class", sheet: sheet } unless entry.is_a?(Hash)
+      return { ok: false, error: "pf2e.cg_class_not_open", sheet: sheet } unless cg_class_open?(key)
 
       options = Array((entry["key_ability"] || {})["options"]).map { |a| ability_key(a) || a.to_s }
       chosen = key_ability ? ability_key(key_ability) : nil

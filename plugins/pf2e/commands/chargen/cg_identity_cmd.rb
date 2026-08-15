@@ -28,6 +28,12 @@ module AresMUSH
         end
         lines << t('pf2e.cg_identity_line', :label => "Class", :value => class_val)
 
+        if result[:subclass_field]
+          label = Pf2e.cg_subclass_label(result[:subclass_field])
+          val = result[:subclass_name] || result[:subclass_value] || "— (required)"
+          lines << t('pf2e.cg_identity_line', :label => label, :value => val)
+        end
+
         lines << t('pf2e.cg_identity_grants_header')
         lines << t('pf2e.cg_identity_line', :label => "Speed", :value => result[:speed] || "—")
         lines << t('pf2e.cg_identity_line',

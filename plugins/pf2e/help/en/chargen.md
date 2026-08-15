@@ -63,3 +63,22 @@ Remaster slot types: **ancestry**, **general**, **class**, **skill**. A feat may
 ## Starting wealth
 
 On `cg/commit`, starting wealth (default **15 gp**) is placed on the **Society account**. Withdraw to your purse before shopping. See [Money](/help/money) and [Shop](/help/shop).
+
+## Class options (required before commit)
+
+After `cg/class`, set the option your class requires:
+
+| Class | Command |
+|-------|--------|
+| Witch | `cg/contact <slug>` |
+| Sorcerer | `cg/bloodline <slug>` |
+| Champion | `cg/cause <slug>` |
+| Bard | `cg/muse <slug>` |
+| Rogue | `cg/racket <slug>` |
+| Investigator | `cg/methodology <slug>` |
+| Druid | `cg/order <slug>` |
+| Ranger | `cg/edge <slug>` |
+| Wizard | `cg/school <slug>` |
+| Cleric | `cg/doctrine <slug>` |
+
+Omit the slug to list open options. Only open options can be selected; closed classes and options are not listed.

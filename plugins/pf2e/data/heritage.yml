@@ -1,45 +1,258 @@
-# Static heritage reference data.
-# Lookup: Pf2e.read_data("heritages", "versatile_heritage")
+# Heritages — Pathfinder Player Core (Foundry). Includes versatile_heritage/skilled_heritage aliases.
 #
-# ancestry — parent ancestry slug (must appear in that ancestry's heritages list)
-# Optional overrides only when the heritage changes baseline ancestry stats.
-# boosts.free — extra free boosts granted by the heritage (e.g. Versatile)
-
 heritages:
-  versatile_heritage:
-    name: Versatile Heritage
-    ancestry: human
-    boosts:
-      free: 1
-    features: []
-
-  skilled_heritage:
-    name: Skilled Heritage
-    ancestry: human
-    # Grants training in one skill; resolved in chargen, not numeric here
+  nephilim:
+    name: Nephilim
+    ancestry: null
     features:
-      - skilled_heritage
-
-  ancient_blooded:
-    name: Ancient-Blooded Dwarf
-    ancestry: dwarf
+    - nephilim
+  aiuvarin:
+    name: Aiuvarin
+    ancestry: null
     features:
-      - ancient_blooded
-
-  strong_blooded:
-    name: Strong-Blooded Dwarf
-    ancestry: dwarf
+    - aiuvarin
+  changeling:
+    name: Changeling
+    ancestry: null
     features:
-      - strong_blooded
-
+    - changeling
+  dromaar:
+    name: Dromaar
+    ancestry: null
+    features:
+    - dromaar
   ancient_elf:
     name: Ancient Elf
     ancestry: elf
     features:
-      - ancient_elf
-
+    - ancient_elf
+  arctic_elf:
+    name: Arctic Elf
+    ancestry: elf
+    features:
+    - arctic_elf
   woodland_elf:
     name: Woodland Elf
     ancestry: elf
     features:
-      - woodland_elf
+    - woodland_elf
+  cavern_elf:
+    name: Cavern Elf
+    ancestry: elf
+    features:
+    - cavern_elf
+  seer_elf:
+    name: Seer Elf
+    ancestry: elf
+    features:
+    - seer_elf
+  whisper_elf:
+    name: Whisper Elf
+    ancestry: elf
+    features:
+    - whisper_elf
+  forge_dwarf:
+    name: Forge Dwarf
+    ancestry: dwarf
+    features:
+    - forge_dwarf
+  rock_dwarf:
+    name: Rock Dwarf
+    ancestry: dwarf
+    features:
+    - rock_dwarf
+  death_warden_dwarf:
+    name: Death Warden Dwarf
+    ancestry: dwarf
+    features:
+    - death_warden_dwarf
+  ancient_blooded_dwarf:
+    name: Ancient-Blooded Dwarf
+    ancestry: dwarf
+    features:
+    - ancient_blooded_dwarf
+  strong_blooded_dwarf:
+    name: Strong-Blooded Dwarf
+    ancestry: dwarf
+    features:
+    - strong_blooded_dwarf
+  lotus_leshy:
+    name: Lotus Leshy
+    ancestry: leshy
+    features:
+    - lotus_leshy
+  seaweed_leshy:
+    name: Seaweed Leshy
+    ancestry: leshy
+    features:
+    - seaweed_leshy
+  root_leshy:
+    name: Root Leshy
+    ancestry: leshy
+    features:
+    - root_leshy
+  fruit_leshy:
+    name: Fruit Leshy
+    ancestry: leshy
+    features:
+    - fruit_leshy
+  leaf_leshy:
+    name: Leaf Leshy
+    ancestry: leshy
+    features:
+    - leaf_leshy
+  vine_leshy:
+    name: Vine Leshy
+    ancestry: leshy
+    features:
+    - vine_leshy
+  cactus_leshy:
+    name: Cactus Leshy
+    ancestry: leshy
+    features:
+    - cactus_leshy
+  gourd_leshy:
+    name: Gourd Leshy
+    ancestry: leshy
+    features:
+    - gourd_leshy
+  fungus_leshy:
+    name: Fungus Leshy
+    ancestry: leshy
+    features:
+    - fungus_leshy
+  battle_ready_orc:
+    name: Battle-Ready Orc
+    ancestry: orc
+    features:
+    - battle_ready_orc
+  rainfall_orc:
+    name: Rainfall Orc
+    ancestry: orc
+    features:
+    - rainfall_orc
+  badlands_orc:
+    name: Badlands Orc
+    ancestry: orc
+    features:
+    - badlands_orc
+  grave_orc:
+    name: Grave Orc
+    ancestry: orc
+    features:
+    - grave_orc
+  winter_orc:
+    name: Winter Orc
+    ancestry: orc
+    features:
+    - winter_orc
+  hold_scarred_orc:
+    name: Hold-Scarred Orc
+    ancestry: orc
+    features:
+    - hold_scarred_orc
+  deep_orc:
+    name: Deep Orc
+    ancestry: orc
+    features:
+    - deep_orc
+  versatile_human:
+    name: Versatile Human
+    ancestry: human
+    features: &id001 []
+    boosts: &id002
+      free: 1
+  versatile_heritage:
+    name: Versatile Heritage
+    ancestry: human
+    features: *id001
+    boosts: *id002
+  skilled_human:
+    name: Skilled Human
+    ancestry: human
+    features: &id003
+    - skilled_human
+  skilled_heritage:
+    name: Skilled Heritage
+    ancestry: human
+    features: *id003
+  charhide_goblin:
+    name: Charhide Goblin
+    ancestry: goblin
+    features:
+    - charhide_goblin
+  razortooth_goblin:
+    name: Razortooth Goblin
+    ancestry: goblin
+    features:
+    - razortooth_goblin
+  irongut_goblin:
+    name: Irongut Goblin
+    ancestry: goblin
+    features:
+    - irongut_goblin
+  unbreakable_goblin:
+    name: Unbreakable Goblin
+    ancestry: goblin
+    features:
+    - unbreakable_goblin
+  snow_goblin:
+    name: Snow Goblin
+    ancestry: goblin
+    features:
+    - snow_goblin
+  wellspring_gnome:
+    name: Wellspring Gnome
+    ancestry: gnome
+    features:
+    - wellspring_gnome
+  chameleon_gnome:
+    name: Chameleon Gnome
+    ancestry: gnome
+    features:
+    - chameleon_gnome
+  umbral_gnome:
+    name: Umbral Gnome
+    ancestry: gnome
+    features:
+    - umbral_gnome
+  sensate_gnome:
+    name: Sensate Gnome
+    ancestry: gnome
+    features:
+    - sensate_gnome
+  fey_touched_gnome:
+    name: Fey-Touched Gnome
+    ancestry: gnome
+    features:
+    - fey_touched_gnome
+  twilight_halfling:
+    name: Twilight Halfling
+    ancestry: halfling
+    features:
+    - twilight_halfling
+  gutsy_halfling:
+    name: Gutsy Halfling
+    ancestry: halfling
+    features:
+    - gutsy_halfling
+  hillock_halfling:
+    name: Hillock Halfling
+    ancestry: halfling
+    features:
+    - hillock_halfling
+  nomadic_halfling:
+    name: Nomadic Halfling
+    ancestry: halfling
+    features:
+    - nomadic_halfling
+  jinxed_halfling:
+    name: Jinxed Halfling
+    ancestry: halfling
+    features:
+    - jinxed_halfling
+  wildwood_halfling:
+    name: Wildwood Halfling
+    ancestry: halfling
+    features:
+    - wildwood_halfling

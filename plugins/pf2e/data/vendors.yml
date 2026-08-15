@@ -6,48 +6,162 @@
 # stock: null / omit = unlimited; integer = limited quantity (future).
 #
 # buy_currency: purse only (must withdraw from Society account first).
+# vendor_level_lock in pf2e.yml: item level must be <= character level + offset.
+#
+# Generated to match Player Core weapons.yml / armor.yml / items.yml.
+#
 
 vendors:
   general:
     name: General Goods
-    description: Rope, rations, tools, common kits.
+    description: Adventuring gear, tools, containers, kits, and common supplies.
     categories: [gear, consumable]
     stock:
-      - { section: items, slug: backpack }
-      - { section: items, slug: rope_50 }
-      - { section: items, slug: torch }
-      - { section: items, slug: rations }
-      - { section: items, slug: healers_tools }
-      - { section: items, slug: thieves_tools }
-
+    - {section: items, slug: adventurers_pack}
+    - {section: items, slug: alchemists_lab}
+    - {section: items, slug: alchemists_toolkit}
+    - {section: items, slug: artisans_toolkit}
+    - {section: items, slug: backpack}
+    - {section: items, slug: basic_crafters_book}
+    - {section: items, slug: bedroll}
+    - {section: items, slug: belt_pouch}
+    - {section: items, slug: brass_ear}
+    - {section: items, slug: caltrops}
+    - {section: items, slug: candle}
+    - {section: items, slug: cane}
+    - {section: items, slug: chalk}
+    - {section: items, slug: chest}
+    - {section: items, slug: climbing_kit}
+    - {section: items, slug: compass}
+    - {section: items, slug: cookware}
+    - {section: items, slug: corrective_lenses}
+    - {section: items, slug: crowbar}
+    - {section: items, slug: crutch}
+    - {section: items, slug: disguise_kit}
+    - {section: items, slug: dueling_cape}
+    - {section: items, slug: fishing_tackle}
+    - {section: items, slug: flint_and_steel}
+    - {section: items, slug: grappling_hook}
+    - {section: items, slug: hammer}
+    - {section: items, slug: healers_toolkit}
+    - {section: items, slug: healers_tools}
+    - {section: items, slug: hearing_aid}
+    - {section: items, slug: hourglass}
+    - {section: items, slug: merchants_scale}
+    - {section: items, slug: mirror}
+    - {section: items, slug: mug}
+    - {section: items, slug: net}
+    - {section: items, slug: oil_1_pint}
+    - {section: items, slug: parrying_scabbard}
+    - {section: items, slug: piton}
+    - {section: items, slug: prosthesis}
+    - {section: items, slug: rations}
+    - {section: items, slug: religious_text}
+    - {section: items, slug: repair_toolkit}
+    - {section: items, slug: rope}
+    - {section: items, slug: rope_50}
+    - {section: items, slug: sack}
+    - {section: items, slug: saddlebags}
+    - {section: items, slug: satchel}
+    - {section: items, slug: signal_whistle}
+    - {section: items, slug: soap}
+    - {section: items, slug: spyglass}
+    - {section: items, slug: tack}
+    - {section: items, slug: ten_foot_pole}
+    - {section: items, slug: thieves_toolkit}
+    - {section: items, slug: thieves_tools}
+    - {section: items, slug: torch}
+    - {section: items, slug: travelers_chair}
+    - {section: items, slug: waterskin}
+    - {section: items, slug: wheelchair}
+    - {section: items, slug: writing_set}
   weaponsmith:
     name: Weaponsmith
-    description: Simple and martial weapons.
+    description: Simple and martial weapons, plus ammunition.
     categories: [weapon]
     stock:
-      - { section: weapons, slug: longsword }
-      - { section: weapons, slug: shortsword }
-      - { section: weapons, slug: dagger }
-
+    - {section: weapons, slug: arbalest}
+    - {section: weapons, slug: bastard_sword}
+    - {section: weapons, slug: battle_axe}
+    - {section: weapons, slug: bo_staff}
+    - {section: weapons, slug: bola}
+    - {section: weapons, slug: club}
+    - {section: weapons, slug: crossbow}
+    - {section: weapons, slug: dagger}
+    - {section: weapons, slug: dart}
+    - {section: weapons, slug: falchion}
+    - {section: weapons, slug: flail}
+    - {section: weapons, slug: gauntlet}
+    - {section: weapons, slug: glaive}
+    - {section: weapons, slug: greataxe}
+    - {section: weapons, slug: greatclub}
+    - {section: weapons, slug: greatpick}
+    - {section: weapons, slug: greatsword}
+    - {section: weapons, slug: guisarme}
+    - {section: weapons, slug: halberd}
+    - {section: weapons, slug: hand_crossbow}
+    - {section: weapons, slug: hatchet}
+    - {section: weapons, slug: heavy_crossbow}
+    - {section: weapons, slug: javelin}
+    - {section: weapons, slug: lance}
+    - {section: weapons, slug: light_hammer}
+    - {section: weapons, slug: light_mace}
+    - {section: weapons, slug: light_pick}
+    - {section: weapons, slug: longbow}
+    - {section: weapons, slug: longspear}
+    - {section: weapons, slug: longsword}
+    - {section: weapons, slug: mace}
+    - {section: weapons, slug: main_gauche}
+    - {section: weapons, slug: maul}
+    - {section: weapons, slug: morningstar}
+    - {section: weapons, slug: pick}
+    - {section: weapons, slug: ranseur}
+    - {section: weapons, slug: rapier}
+    - {section: weapons, slug: sap}
+    - {section: weapons, slug: scimitar}
+    - {section: weapons, slug: scythe}
+    - {section: weapons, slug: shield_boss}
+    - {section: weapons, slug: shield_spikes}
+    - {section: weapons, slug: shortbow}
+    - {section: weapons, slug: shortsword}
+    - {section: weapons, slug: sickle}
+    - {section: weapons, slug: sling}
+    - {section: weapons, slug: spear}
+    - {section: weapons, slug: spiked_gauntlet}
+    - {section: weapons, slug: staff}
+    - {section: weapons, slug: starknife}
+    - {section: weapons, slug: sword_cane}
+    - {section: weapons, slug: trident}
+    - {section: weapons, slug: war_flail}
+    - {section: weapons, slug: warhammer}
+    - {section: weapons, slug: whip}
+    - {section: items, slug: arrows}
+    - {section: items, slug: bolts}
+    - {section: items, slug: sling_bullets}
+    - {section: items, slug: blowgun_darts}
   armorer:
     name: Armorer
     description: Armor and shields.
     categories: [armor, shield]
     stock:
-      - { section: armor, slug: explorers_clothing }
-      - { section: armor, slug: leather }
-      - { section: armor, slug: studded_leather }
-      - { section: armor, slug: chain_mail }
-      - { section: armor, slug: breastplate }
-      - { section: armor, slug: half_plate }
-      - { section: armor, slug: full_plate }
-      - { section: items, slug: steel_shield }
-
+    - {section: armor, slug: breastplate}
+    - {section: armor, slug: buckler}
+    - {section: armor, slug: chain_mail}
+    - {section: armor, slug: chain_shirt}
+    - {section: armor, slug: explorers_clothing}
+    - {section: armor, slug: full_plate}
+    - {section: armor, slug: half_plate}
+    - {section: armor, slug: hide_armor}
+    - {section: armor, slug: leather_armor}
+    - {section: armor, slug: padded_armor}
+    - {section: armor, slug: scale_mail}
+    - {section: armor, slug: splint_mail}
+    - {section: armor, slug: steel_shield}
+    - {section: armor, slug: studded_leather_armor}
+    - {section: armor, slug: tower_shield}
+    - {section: armor, slug: wooden_shield}
   alchemist:
     name: Alchemist Shop
-    description: Alchemical items (expand catalog as data is added).
+    description: Alchemical items (catalog expands when alchemical data is added).
     categories: [alchemical, consumable]
-    stock:
-      - { section: items, slug: minor_elixir_of_life }
-      - { section: items, slug: lesser_antidote }
-      - { section: items, slug: acid_flask_lesser }
+    stock: []

@@ -1,43 +1,546 @@
-# Archetype catalog.
-# Lookup: Pf2e.read_data("archetypes", "barbarian")
+# Archetype catalog (PF2e Remaster).
+# EXCLUDED: monk, swashbuckler, alchemist, barbarian (tonal/Society fit — not yet).
+# TABLED: oracle.
+# Policy: 1st dedication free, 2nd staff-only, 3rd never.
 #
-# dedication_feat — slug of the dedication feat in feats.yml (required)
-# multiclass      — if true, blocked when charclass matches class_slug
-# class_slug      — linked class for multiclass exclusion (optional)
-# traits          — tags for filtering
-# grants          — applied once when dedication is taken (skills to train, etc.)
-#
-# Archetype *feats* live in feats.yml with:
-#   traits: [archetype, <archetype_slug>]
-#   prerequisites requiring the dedication feat (or type: archetype)
 
 archetypes:
-  barbarian:
-    name: Barbarian
-    dedication_feat: barbarian_dedication
-    multiclass: true
-    class_slug: barbarian
-    traits: [multiclass, martial]
+  acrobat:
+    name: Acrobat
+    dedication_feat: acrobat_dedication
+    multiclass: false
+    traits: []
     grants:
       skills:
-        - athletics
-      # armor/weapon trainings are narrative for now; model later if needed
-
+      - acrobatics
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Acrobatics
+  archaeologist:
+    name: Archaeologist
+    dedication_feat: archaeologist_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills:
+      - society
+      - thievery
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Society, and Thievery
+  archer:
+    name: Archer
+    dedication_feat: archer_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+  assassin:
+    name: Assassin
+    dedication_feat: assassin_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Deception
+    - trained in Stealth
+  bard:
+    name: Bard
+    dedication_feat: bard_dedication
+    multiclass: true
+    traits:
+    - multiclass
+    grants:
+      skills:
+      - occultism
+      - performance
+    level: 2
+    source: player_core
+    class_slug: bard
+    prerequisites_text:
+    - Charisma +2
+  bastion:
+    name: Bastion
+    dedication_feat: bastion_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - Shield Block
+  beastmaster:
+    name: Beastmaster
+    dedication_feat: beastmaster_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Nature
+  blessed_one:
+    name: Blessed One
+    dedication_feat: blessed_one_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+  bounty_hunter:
+    name: Bounty Hunter
+    dedication_feat: bounty_hunter_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills:
+      - survival
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Survival
+  cavalier:
+    name: Cavalier
+    dedication_feat: cavalier_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Nature or Society
+  celebrity:
+    name: Celebrity
+    dedication_feat: celebrity_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+  champion:
+    name: Champion
+    dedication_feat: champion_dedication
+    multiclass: true
+    class_slug: champion
+    traits:
+    - multiclass
+    grants:
+      skills:
+      - religion
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - Strength +2
+    - Charisma +2
+  cleric:
+    name: Cleric
+    dedication_feat: cleric_dedication
+    multiclass: true
+    traits:
+    - multiclass
+    grants:
+      skills:
+      - religion
+    level: 2
+    source: player_core
+    class_slug: cleric
+    prerequisites_text:
+    - Wisdom +2
+  dandy:
+    name: Dandy
+    dedication_feat: dandy_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills:
+      - deception
+      - society
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Diplomacy
+  druid:
+    name: Druid
+    dedication_feat: druid_dedication
+    multiclass: true
+    traits:
+    - multiclass
+    grants:
+      skills:
+      - nature
+    level: 2
+    source: player_core
+    class_slug: druid
+    prerequisites_text:
+    - Wisdom +2
+  dual_weapon_warrior:
+    name: Dual-Weapon Warrior
+    dedication_feat: dual_weapon_warrior_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+  duelist:
+    name: Duelist
+    dedication_feat: duelist_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in light armor and simple weapons
+  eldritch_archer:
+    name: Eldritch Archer
+    dedication_feat: eldritch_archer_dedication
+    multiclass: false
+    traits:
+    - magical
+    grants:
+      skills: []
+    level: 6
+    source: player_core_2
+    prerequisites_text:
+    - expert in at least one weapon from the bow or crossbow weapon group
+  familiar_master:
+    name: Familiar Master
+    dedication_feat: familiar_master_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
   fighter:
     name: Fighter
     dedication_feat: fighter_dedication
     multiclass: true
-    class_slug: fighter
-    traits: [multiclass, martial]
+    traits:
+    - multiclass
     grants:
       skills: []
-
+    level: 2
+    source: player_core
+    class_slug: fighter
+    prerequisites_text:
+    - Strength +2
+    - Dexterity +2
+  gladiator:
+    name: Gladiator
+    dedication_feat: gladiator_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - Impressive Performance
+  herbalist:
+    name: Herbalist
+    dedication_feat: herbalist_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills:
+      - nature
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Nature
+    - Natural Medicine
+  investigator:
+    name: Investigator
+    dedication_feat: investigator_dedication
+    multiclass: true
+    class_slug: investigator
+    traits:
+    - multiclass
+    grants:
+      skills:
+      - society
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - Intelligence +2
+  linguist:
+    name: Linguist
+    dedication_feat: linguist_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills:
+      - society
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - You speak at least three languages.
+  marshal:
+    name: Marshal
+    dedication_feat: marshal_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills:
+      - diplomacy
+      - intimidation
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in martial weapons and either Diplomacy or Intimidation
+  martial_artist:
+    name: Martial Artist
+    dedication_feat: martial_artist_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+  mauler:
+    name: Mauler
+    dedication_feat: mauler_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - Strength +2
+  medic:
+    name: Medic
+    dedication_feat: medic_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills:
+      - medicine
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Medicine
+    - Battle Medicine
+  pirate:
+    name: Pirate
+    dedication_feat: pirate_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Intimidation
+  poisoner:
+    name: Poisoner
+    dedication_feat: poisoner_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Crafting
+  ranger:
+    name: Ranger
+    dedication_feat: ranger_dedication
+    multiclass: true
+    traits:
+    - multiclass
+    grants:
+      skills:
+      - survival
+    level: 2
+    source: player_core
+    class_slug: ranger
+    prerequisites_text:
+    - Dexterity +2
+  ritualist:
+    name: Ritualist
+    dedication_feat: ritualist_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 4
+    source: player_core_2
+    prerequisites_text:
+    - expert in Arcana, Nature, Occultism, or Religion
   rogue:
     name: Rogue
     dedication_feat: rogue_dedication
     multiclass: true
+    traits:
+    - multiclass
+    grants:
+      skills: []
+    level: 2
+    source: player_core
     class_slug: rogue
-    traits: [multiclass]
+    prerequisites_text:
+    - Dexterity +2
+  scout:
+    name: Scout
+    dedication_feat: scout_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Stealth and Survival
+  scroll_trickster:
+    name: Scroll Trickster
+    dedication_feat: scroll_trickster_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Arcana, Nature, Occultism, or Religion
+  scrounger:
+    name: Scrounger
+    dedication_feat: scrounger_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Crafting
+  sentinel:
+    name: Sentinel
+    dedication_feat: sentinel_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+  snarecrafter:
+    name: Snarecrafter
+    dedication_feat: snarecrafter_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Crafting
+    - Snare Crafting
+  sorcerer:
+    name: Sorcerer
+    dedication_feat: sorcerer_dedication
+    multiclass: true
+    class_slug: sorcerer
+    traits:
+    - multiclass
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - Charisma +2
+  talisman_dabbler:
+    name: Talisman Dabbler
+    dedication_feat: talisman_dabbler_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+  vigilante:
+    name: Vigilante
+    dedication_feat: vigilante_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Deception
+  viking:
+    name: Viking
+    dedication_feat: viking_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Athletics
+  weapon_improviser:
+    name: Weapon Improviser
+    dedication_feat: weapon_improviser_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills: []
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in all martial weapons
+  witch:
+    name: Witch
+    dedication_feat: witch_dedication
+    multiclass: true
+    traits:
+    - multiclass
+    grants:
+      skills: []
+    level: 2
+    source: player_core
+    class_slug: witch
+    prerequisites_text:
+    - Intelligence +2
+  wizard:
+    name: Wizard
+    dedication_feat: wizard_dedication
+    multiclass: true
+    traits:
+    - multiclass
     grants:
       skills:
-        - stealth
+      - arcana
+    level: 2
+    source: player_core
+    class_slug: wizard
+    prerequisites_text:
+    - Intelligence +2
+  wrestler:
+    name: Wrestler
+    dedication_feat: wrestler_dedication
+    multiclass: false
+    traits: []
+    grants:
+      skills:
+      - athletics
+    level: 2
+    source: player_core_2
+    prerequisites_text:
+    - trained in Athletics
