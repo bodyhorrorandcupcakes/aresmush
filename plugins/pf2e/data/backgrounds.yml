@@ -1,159 +1,604 @@
-# Static background reference data.
-# Lookup: Pf2e.read_data("backgrounds", "guard")
+# Backgrounds — Pathfinder Player Core (Foundry).
 #
-# skills:         always trained on cg/background
-# skill_choices:  player resolves later via cg/bgskill (do not auto-train)
-# feat:           unconditional skill feat (optional; null if none)
-#
-# skill_choices entry shapes:
-#   type: list
-#     pick: 1
-#     options: [acrobatics, athletics]
-#     feats:                    # optional — option slug → feat slug
-#       acrobatics: cat_fall
-#       athletics: quick_jump
-#   type: lore
-#     pick: 1
-#     category: home_terrain   # UI/help hint only
-#     # player supplies specialty → trains specialty_lore
-
 backgrounds:
-  farmhand:
-    name: Farmhand
+  acolyte:
+    name: Acolyte
     boosts:
       fixed: []
       free: 2
-      options: [str, con]
+      options:
+      - int
+      - wis
     skills:
-      - athletics
-      - labor_lore
+    - religion
+    - scribing_lore
     skill_choices: []
-    feat: assured_identification
+    feat: student_of_the_canon
     traits: []
-    effect: >
-      You come from hard outdoor work. Your background prepares you for
-      sustained physical effort and practical problem-solving.
-
+  acrobat:
+    name: Acrobat
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - dex
+      - str
+    skills:
+    - acrobatics
+    - circus_lore
+    skill_choices: []
+    feat: steady_balance
+    traits: []
+  animal_whisperer:
+    name: Animal Whisperer
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - cha
+      - wis
+    skills:
+    - nature
+    skill_choices: []
+    feat: train_animal
+    traits: []
+  artisan:
+    name: Artisan
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - int
+      - str
+    skills:
+    - crafting
+    - guild_lore
+    skill_choices: []
+    feat: specialty_crafting
+    traits: []
+  artist:
+    name: Artist
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - cha
+      - dex
+    skills:
+    - crafting
+    - art_lore
+    skill_choices: []
+    feat: specialty_crafting
+    traits: []
+  bandit:
+    name: Bandit
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - cha
+      - dex
+    skills:
+    - intimidation
+    skill_choices:
+    - type: lore
+      pick: 1
+      category: home_terrain
+    feat: group_coercion
+    traits: []
+  barkeep:
+    name: Barkeep
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - cha
+      - con
+    skills:
+    - diplomacy
+    - alcohol_lore
+    skill_choices: []
+    feat: hobnobber
+    traits: []
+  barrister:
+    name: Barrister
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - cha
+      - int
+    skills:
+    - diplomacy
+    - legal_lore
+    skill_choices: []
+    feat: group_impression
+    traits: []
+  bounty_hunter:
+    name: Bounty Hunter
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - str
+      - wis
+    skills:
+    - survival
+    - legal_lore
+    skill_choices: []
+    feat: experienced_tracker
+    traits: []
+  charlatan:
+    name: Charlatan
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - cha
+      - int
+    skills:
+    - deception
+    - underworld_lore
+    skill_choices: []
+    feat: charming_liar
+    traits: []
+  cook:
+    name: Cook
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - con
+      - int
+    skills:
+    - survival
+    - cooking_lore
+    skill_choices: []
+    feat: seasoned
+    traits: []
+  criminal:
+    name: Criminal
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - dex
+      - int
+    skills:
+    - stealth
+    - underworld_lore
+    skill_choices: []
+    feat: experienced_smuggler
+    traits: []
+  cultist:
+    name: Cultist
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - cha
+      - int
+    skills:
+    - occultism
+    skill_choices:
+    - type: list
+      pick: 1
+      options:
+      - deity_lore
+    feat: schooled_in_secrets
+    traits: []
+  detective:
+    name: Detective
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - int
+      - wis
+    skills:
+    - society
+    - underworld_lore
+    skill_choices: []
+    feat: streetwise
+    traits: []
   emissary:
     name: Emissary
     boosts:
       fixed: []
       free: 2
-      options: [int, cha]
+      options:
+      - cha
+      - int
     skills:
-      - society
-      - diplomacy
-    skill_choices: []
-    feat: multicultural
+    - society
+    skill_choices:
+    - type: list
+      pick: 1
+      options:
+      - city_lore
+    feat: multilingual
     traits: []
-    effect: >
-      You represent interests across borders or courts. You are practiced
-      at reading rooms and speaking for others.
-
-  warrior:
-    name: Warrior
+  entertainer:
+    name: Entertainer
     boosts:
       fixed: []
       free: 2
-      options: [str, con]
+      options:
+      - cha
+      - dex
     skills:
-      - intimidation
-      - warfare_lore
+    - performance
+    - theatre_lore
     skill_choices: []
-    feat: intimidating_glare
+    feat: fascinating_performance
     traits: []
-    effect: >
-      You were trained for battle long before adventuring. Violence and
-      discipline are familiar tools.
-
-  scholar:
-    name: Scholar
+  farmhand:
+    name: Farmhand
     boosts:
       fixed: []
       free: 2
-      options: [int, wis]
+      options:
+      - con
+      - wis
     skills:
-      - arcana
-      - academia_lore
+    - athletics
+    - farming_lore
     skill_choices: []
-    feat: assurance
+    feat: null
     traits: []
-    effect: >
-      Study shaped your early life. You know how to learn quickly and
-      apply book knowledge under pressure.
-
+  field_medic:
+    name: Field Medic
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - con
+      - wis
+    skills:
+    - medicine
+    - warfare_lore
+    skill_choices: []
+    feat: battle_medicine
+    traits: []
+  fortune_teller:
+    name: Fortune Teller
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - cha
+      - int
+    skills:
+    - occultism
+    - fortune-telling_lore
+    skill_choices: []
+    feat: oddity_identification
+    traits: []
+  gambler:
+    name: Gambler
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - cha
+      - dex
+    skills:
+    - deception
+    - games_lore
+    skill_choices: []
+    feat: lie_to_me
+    traits: []
+  gladiator:
+    name: Gladiator
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - cha
+      - str
+    skills:
+    - performance
+    - gladatorial_lore
+    skill_choices: []
+    feat: impressive_performance
+    traits: []
   guard:
     name: Guard
     boosts:
       fixed: []
       free: 2
-      options: [str, cha]
+      options:
+      - cha
+      - str
     skills:
-      - intimidation
+    - intimidation
     skill_choices:
-      - type: list
-        pick: 1
-        options: [legal_lore, warfare_lore]
+    - type: list
+      pick: 1
+      options:
+      - legal_lore
+      - warfare_lore
     feat: quick_coercion
     traits: []
-    effect: >
-      You served as a guard. You know how to lean on people and how the
-      law — or the battlefield — is organized where you worked.
-
-  noble:
-    name: Noble
+  herbalist:
+    name: Herbalist
     boosts:
       fixed: []
       free: 2
-      options: [int, cha]
+      options:
+      - con
+      - wis
     skills:
-      - society
-    skill_choices:
-      - type: list
-        pick: 1
-        options: [diplomacy, genealogy_lore, heraldry_lore]
-    feat: courtly_graces
+    - nature
+    - herbalism_lore
+    skill_choices: []
+    feat: natural_medicine
     traits: []
-    effect: >
-      You were raised among privilege and expectation. Courts, lineage,
-      and careful words are familiar ground.
-
-  nomad:
-    name: Nomad
+  hermit:
+    name: Hermit
     boosts:
       fixed: []
       free: 2
-      options: [con, wis]
-    skills:
-      - survival
+      options:
+      - con
+      - int
+    skills: []
     skill_choices:
-      - type: lore
-        pick: 1
-        category: home_terrain
-    feat: assurance
+    - type: list
+      pick: 1
+      options:
+      - location_lore
+    - type: list
+      pick: 1
+      options:
+      - nature
+      - occultism
+    feat: dubious_knowledge
     traits: []
-    effect: >
-      You grew up moving with the land. Survival is second nature, and
-      you know the lore of the terrain you call home.
-
-  # Choice skill + feat gated by that choice; Warfare Lore fixed
+  hunter:
+    name: Hunter
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - dex
+      - wis
+    skills:
+    - survival
+    - tanning_lore
+    skill_choices: []
+    feat: survey_wildlife
+    traits: []
+  laborer:
+    name: Laborer
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - con
+      - str
+    skills:
+    - athletics
+    - labor_lore
+    skill_choices: []
+    feat: hefty_hauler
+    traits: []
   martial_disciple:
     name: Martial Disciple
     boosts:
       fixed: []
       free: 2
-      options: [str, dex]
+      options:
+      - dex
+      - str
     skills:
-      - warfare_lore
+    - warfare_lore
     skill_choices:
-      - type: list
-        pick: 1
-        options: [acrobatics, athletics]
-        feats:
-          acrobatics: cat_fall
-          athletics: quick_jump
+    - type: list
+      pick: 1
+      options:
+      - acrobatics
+      - athletics
+      feats:
+        acrobatics: cat_fall
+        athletics: quick_jump
     feat: null
     traits: []
-    effect: >
-      You trained under a martial tradition. You specialize in either
-      fluid movement or explosive power, and you know warfare as a craft.
+  merchant:
+    name: Merchant
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - cha
+      - int
+    skills:
+    - diplomacy
+    - mercantile_lore
+    skill_choices: []
+    feat: bargain_hunter
+    traits: []
+  miner:
+    name: Miner
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - str
+      - wis
+    skills:
+    - survival
+    - mining_lore
+    skill_choices: []
+    feat: terrain_expertise
+    traits: []
+  noble:
+    name: Noble
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - cha
+      - int
+    skills:
+    - society
+    skill_choices:
+    - type: list
+      pick: 1
+      options:
+      - genealogy_lore
+      - heraldry_lore
+    feat: courtly_graces
+    traits: []
+  nomad:
+    name: Nomad
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - con
+      - wis
+    skills:
+    - survival
+    skill_choices:
+    - type: lore
+      pick: 1
+      category: home_terrain
+    feat: null
+    traits: []
+  prisoner:
+    name: Prisoner
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - con
+      - str
+    skills:
+    - stealth
+    - underworld_lore
+    skill_choices: []
+    feat: experienced_smuggler
+    traits: []
+  raised_by_belief:
+    name: Raised by Belief
+    boosts:
+      fixed: []
+      free: 2
+    skills: []
+    skill_choices: []
+    feat: assurance
+    traits: []
+  sailor:
+    name: Sailor
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - dex
+      - str
+    skills:
+    - athletics
+    - sailing_lore
+    skill_choices: []
+    feat: underwater_marauder
+    traits: []
+  scholar:
+    name: Scholar
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - int
+      - wis
+    skills:
+    - academia_lore
+    skill_choices:
+    - type: list
+      pick: 1
+      options:
+      - arcana
+      - nature
+      - occultism
+      - religion
+    feat: null
+    traits: []
+  scout:
+    name: Scout
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - dex
+      - wis
+    skills:
+    - survival
+    skill_choices:
+    - type: lore
+      pick: 1
+      category: home_terrain
+    feat: forager
+    traits: []
+  street_urchin:
+    name: Street Urchin
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - con
+      - dex
+    skills:
+    - thievery
+    skill_choices:
+    - type: list
+      pick: 1
+      options:
+      - city_lore
+    feat: pickpocket
+    traits: []
+  teacher:
+    name: Teacher
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - int
+      - wis
+    skills:
+    - academia_lore
+    skill_choices:
+    - type: list
+      pick: 1
+      options:
+      - performance
+      - society
+    feat: experienced_professional
+    traits: []
+  tinker:
+    name: Tinker
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - dex
+      - int
+    skills:
+    - crafting
+    - engineering_lore
+    skill_choices: []
+    feat: specialty_crafting
+    traits: []
+  warrior:
+    name: Warrior
+    boosts:
+      fixed: []
+      free: 2
+      options:
+      - con
+      - str
+    skills:
+    - intimidation
+    - warfare_lore
+    skill_choices: []
+    feat: intimidating_glare
+    traits: []

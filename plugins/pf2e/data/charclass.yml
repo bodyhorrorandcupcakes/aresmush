@@ -1,42 +1,22 @@
-# Static class reference data (PF2e Remaster / Player Core naming).
-# Lookup: Pf2e.read_data("charclasses", "fighter")
+# Classes — Pathfinder Player Core (Foundry). Advancement levels fixed (.value unwrap).
 #
-# advancement[level] keys (all optional):
-#   features: [slug]           — automatic features (not feat slots)
-#   class_feat / skill_feat / general_feat / ancestry_feat: Integer
-#   skill_increase / ability_boost: Integer  — extras beyond universal table
-#   proficiency: { perception, class_dc, fortitude/reflex/will,
-#                  attacks: { simple|martial|unarmed|advanced },
-#                  defenses: { unarmored|light|medium|heavy },
-#                  skills: { slug: TEML } }
-#   choice: { id, pick, options } or list of those
-#   spellcasting: { rank, slots, focus, ... }  — filled when spells land
-#   notes: staff-facing only
-#
-# Universal (code, not repeated per class):
-#   skill_increase at every level 2..20
-#   ability_boost ×4 at 5, 10, 15, 20
-#   ancestry feat slots 1/5/9/13/17; general 3/7/11/15/19
-#
-# Legacy features_by_level still readable; prefer advancement.
-
 charclasses:
-  fighter:
-    name: Fighter
+  bard:
+    name: Bard
     key_ability:
-      options: [str, dex]
-    hp: 10
-    perception: T
+      options:
+      - cha
+    hp: 8
+    perception: E
     saves:
-      fortitude: E
+      fortitude: T
       reflex: T
-      will: T
+      will: E
     skills:
-      trained_count: 3
-      additional: []
-    languages:
-      starting: []
-      additional: 0
+      trained_count: 4
+      additional:
+      - occultism
+      - performance
     attacks:
       simple: T
       martial: T
@@ -45,117 +25,103 @@ charclasses:
     defenses:
       unarmored: T
       light: T
-      medium: T
-      heavy: T
+      medium: U
+      heavy: U
     class_dc: T
-    spellcasting: null
+    spellcasting:
+      enabled: true
     advancement:
-      1:
-        features: [reactive_strike, shield_block]
-        class_feat: 1
-      2:
-        class_feat: 1
-        skill_feat: 1
-      3:
-        features: [bravery]
-        class_feat: 1
-        proficiency:
-          will: E
-      4:
+      '1':
+        features:
+        - spell_repertoire
+        - composition_spells
+        - muses
+        - occult_spellcasting
+        ancestry_feat: 1
+      '2':
         class_feat: 1
         skill_feat: 1
-      5:
-        features: [fighter_weapon_mastery]
-        class_feat: 1
-        proficiency:
-          attacks:
-            simple: E
-            martial: E
-            unarmed: E
-      6:
+      '3':
+        features:
+        - reflex_expertise
+        - signature_spells
+        general_feat: 1
+        skill_increase: 1
+      '4':
         class_feat: 1
         skill_feat: 1
-      7:
-        features: [battlefield_surveyor, weapon_specialization]
-        class_feat: 1
-        proficiency:
-          perception: E
-          class_dc: E
-      8:
+      '5':
+        ancestry_feat: 1
+        skill_increase: 1
+      '6':
         class_feat: 1
         skill_feat: 1
-      9:
-        features: [combat_flexibility, jogging_dodge]
-        class_feat: 1
-      10:
-        class_feat: 1
-        skill_feat: 1
-      11:
-        features: [fighter_expertise, battle_hardened]
-        class_feat: 1
-        proficiency:
-          fortitude: M
-          attacks:
-            simple: M
-            martial: M
-            unarmed: M
-          class_dc: E
-      12:
+      '7':
+        features:
+        - expert_spellcaster
+        general_feat: 1
+        skill_increase: 1
+      '8':
         class_feat: 1
         skill_feat: 1
-      13:
-        features: [weapon_legend, armor_expertise]
-        class_feat: 1
-        proficiency:
-          attacks:
-            simple: M
-            martial: M
-            unarmed: M
-            advanced: T
-          defenses:
-            light: E
-            medium: E
-            heavy: E
-            unarmored: E
-      14:
+      '9':
+        features:
+        - performer_s_heart
+        - fortitude_expertise
+        ancestry_feat: 1
+        skill_increase: 1
+      '10':
         class_feat: 1
         skill_feat: 1
-      15:
-        features: [greater_weapon_specialization, improved_flexibility]
-        class_feat: 1
-      16:
-        class_feat: 1
-        skill_feat: 1
-      17:
-        features: [armor_mastery]
-        class_feat: 1
-        proficiency:
-          defenses:
-            light: M
-            medium: M
-            heavy: M
-            unarmored: M
-      18:
+      '11':
+        features:
+        - perception_mastery
+        - bard_weapon_expertise
+        general_feat: 1
+        skill_increase: 1
+      '12':
         class_feat: 1
         skill_feat: 1
-      19:
-        features: [versatile_legend]
-        class_feat: 1
-        proficiency:
-          attacks:
-            simple: L
-            martial: L
-            unarmed: L
-          class_dc: M
-      20:
+      '13':
+        features:
+        - weapon_specialization
+        - light_armor_expertise
+        ancestry_feat: 1
+        skill_increase: 1
+      '14':
         class_feat: 1
         skill_feat: 1
-
-  wizard:
-    name: Wizard
+      '15':
+        features:
+        - master_spellcaster
+        general_feat: 1
+        skill_increase: 1
+      '16':
+        class_feat: 1
+        skill_feat: 1
+      '17':
+        features:
+        - greater_performer_s_heart
+        ancestry_feat: 1
+        skill_increase: 1
+      '18':
+        class_feat: 1
+        skill_feat: 1
+      '19':
+        features:
+        - magnum_opus
+        - legendary_spellcaster
+        general_feat: 1
+        skill_increase: 1
+      '20':
+        class_feat: 1
+        skill_feat: 1
+  cleric:
+    name: Cleric
     key_ability:
-      options: [int]
-    hp: 6
+      options:
+      - wis
+    hp: 8
     perception: T
     saves:
       fortitude: T
@@ -164,10 +130,7 @@ charclasses:
     skills:
       trained_count: 2
       additional:
-        - arcana
-    languages:
-      starting: []
-      additional: 0
+      - religion
     attacks:
       simple: T
       martial: U
@@ -180,73 +143,453 @@ charclasses:
       heavy: U
     class_dc: T
     spellcasting:
-      tradition: arcane
-      rank: T
-      type: prepared
+      enabled: true
     advancement:
-      1:
-        features: [wizard_spellcasting, arcane_school, arcane_bond, arcane_thesis]
-        class_feat: 1
-        spellcasting:
-          rank: 1
-      2:
-        class_feat: 1
-        skill_feat: 1
-        spellcasting:
-          rank: 1
-      3:
-        spellcasting:
-          rank: 2
-        notes: "General feat from universal table; 2nd-rank spells."
-      4:
+      '1':
+        features:
+        - deity
+        - cleric_spellcasting
+        - doctrine
+        - first_doctrine
+        - divine_font
+        ancestry_feat: 1
+      '2':
         class_feat: 1
         skill_feat: 1
-        spellcasting:
-          rank: 2
-      5:
-        features: [expert_spellcaster]
-        spellcasting:
-          rank: 3
-        notes: "Ability boosts from universal table."
-      6:
+      '3':
+        features:
+        - second_doctrine
+        general_feat: 1
+        skill_increase: 1
+      '4':
         class_feat: 1
         skill_feat: 1
-        spellcasting:
-          rank: 3
-      7:
-        spellcasting:
-          rank: 4
-      8:
+      '5':
+        features:
+        - perception_expertise
+        ancestry_feat: 1
+        skill_increase: 1
+      '6':
         class_feat: 1
         skill_feat: 1
-        spellcasting:
-          rank: 4
-      9:
-        spellcasting:
-          rank: 5
-      10:
+      '7':
+        features:
+        - third_doctrine
+        general_feat: 1
+        skill_increase: 1
+      '8':
         class_feat: 1
         skill_feat: 1
-        spellcasting:
-          rank: 5
-
+      '9':
+        features:
+        - resolute_faith
+        ancestry_feat: 1
+        skill_increase: 1
+      '10':
+        class_feat: 1
+        skill_feat: 1
+      '11':
+        features:
+        - reflex_expertise
+        - fourth_doctrine
+        general_feat: 1
+        skill_increase: 1
+      '12':
+        class_feat: 1
+        skill_feat: 1
+      '13':
+        features:
+        - divine_defense
+        - weapon_specialization
+        ancestry_feat: 1
+        skill_increase: 1
+      '14':
+        class_feat: 1
+        skill_feat: 1
+      '15':
+        features:
+        - fifth_doctrine
+        general_feat: 1
+        skill_increase: 1
+      '16':
+        class_feat: 1
+        skill_feat: 1
+      '17':
+        ancestry_feat: 1
+        skill_increase: 1
+      '18':
+        class_feat: 1
+        skill_feat: 1
+      '19':
+        features:
+        - final_doctrine
+        - miraculous_spell
+        general_feat: 1
+        skill_increase: 1
+      '20':
+        class_feat: 1
+        skill_feat: 1
+  druid:
+    name: Druid
+    key_ability:
+      options:
+      - wis
+    hp: 8
+    perception: T
+    saves:
+      fortitude: T
+      reflex: T
+      will: E
+    skills:
+      trained_count: 2
+      additional:
+      - nature
+    attacks:
+      simple: T
+      martial: U
+      unarmed: T
+      advanced: U
+    defenses:
+      unarmored: T
+      light: T
+      medium: T
+      heavy: U
+    class_dc: T
+    spellcasting:
+      enabled: true
+    advancement:
+      '1':
+        features:
+        - anathema_druid
+        - druid_spellcasting
+        - druidic_order
+        - wildsong
+        - shield_block
+        - voice_of_nature
+        ancestry_feat: 1
+      '2':
+        class_feat: 1
+        skill_feat: 1
+      '3':
+        features:
+        - perception_expertise
+        - fortitude_expertise
+        general_feat: 1
+        skill_increase: 1
+      '4':
+        class_feat: 1
+        skill_feat: 1
+      '5':
+        features:
+        - reflex_expertise
+        ancestry_feat: 1
+        skill_increase: 1
+      '6':
+        class_feat: 1
+        skill_feat: 1
+      '7':
+        features:
+        - expert_spellcaster
+        general_feat: 1
+        skill_increase: 1
+      '8':
+        class_feat: 1
+        skill_feat: 1
+      '9':
+        ancestry_feat: 1
+        skill_increase: 1
+      '10':
+        class_feat: 1
+        skill_feat: 1
+      '11':
+        features:
+        - wild_willpower
+        - weapon_expertise
+        general_feat: 1
+        skill_increase: 1
+      '12':
+        class_feat: 1
+        skill_feat: 1
+      '13':
+        features:
+        - medium_armor_expertise
+        - weapon_specialization
+        ancestry_feat: 1
+        skill_increase: 1
+      '14':
+        class_feat: 1
+        skill_feat: 1
+      '15':
+        features:
+        - master_spellcaster
+        general_feat: 1
+        skill_increase: 1
+      '16':
+        class_feat: 1
+        skill_feat: 1
+      '17':
+        ancestry_feat: 1
+        skill_increase: 1
+      '18':
+        class_feat: 1
+        skill_feat: 1
+      '19':
+        features:
+        - legendary_spellcaster
+        - primal_hierophant
+        general_feat: 1
+        skill_increase: 1
+      '20':
+        class_feat: 1
+        skill_feat: 1
+  fighter:
+    name: Fighter
+    key_ability:
+      options:
+      - dex
+      - str
+    hp: 10
+    perception: E
+    saves:
+      fortitude: E
+      reflex: E
+      will: T
+    skills:
+      trained_count: 3
+      additional: []
+    attacks:
+      simple: E
+      martial: E
+      unarmed: E
+      advanced: T
+    defenses:
+      unarmored: T
+      light: T
+      medium: T
+      heavy: T
+    class_dc: T
+    spellcasting: null
+    advancement:
+      '1':
+        features:
+        - reactive_strike
+        - shield_block
+        class_feat: 1
+        ancestry_feat: 1
+      '2':
+        class_feat: 1
+        skill_feat: 1
+      '3':
+        features:
+        - bravery
+        general_feat: 1
+        skill_increase: 1
+      '4':
+        class_feat: 1
+        skill_feat: 1
+      '5':
+        features:
+        - fighter_weapon_mastery
+        ancestry_feat: 1
+        skill_increase: 1
+      '6':
+        class_feat: 1
+        skill_feat: 1
+      '7':
+        features:
+        - battlefield_surveyor
+        - weapon_specialization
+        general_feat: 1
+        skill_increase: 1
+      '8':
+        class_feat: 1
+        skill_feat: 1
+      '9':
+        features:
+        - battle_hardened
+        - combat_flexibility
+        ancestry_feat: 1
+        skill_increase: 1
+      '10':
+        class_feat: 1
+        skill_feat: 1
+      '11':
+        features:
+        - fighter_expertise
+        - armor_expertise
+        general_feat: 1
+        skill_increase: 1
+      '12':
+        class_feat: 1
+        skill_feat: 1
+      '13':
+        features:
+        - weapon_legend
+        ancestry_feat: 1
+        skill_increase: 1
+      '14':
+        class_feat: 1
+        skill_feat: 1
+      '15':
+        features:
+        - tempered_reflexes
+        - improved_flexibility
+        - greater_weapon_specialization
+        general_feat: 1
+        skill_increase: 1
+      '16':
+        class_feat: 1
+        skill_feat: 1
+      '17':
+        features:
+        - armor_mastery
+        ancestry_feat: 1
+        skill_increase: 1
+      '18':
+        class_feat: 1
+        skill_feat: 1
+      '19':
+        features:
+        - versatile_legend
+        general_feat: 1
+        skill_increase: 1
+      '20':
+        class_feat: 1
+        skill_feat: 1
+  ranger:
+    name: Ranger
+    key_ability:
+      options:
+      - dex
+      - str
+    hp: 10
+    perception: E
+    saves:
+      fortitude: E
+      reflex: E
+      will: T
+    skills:
+      trained_count: 4
+      additional:
+      - survival
+    attacks:
+      simple: T
+      martial: T
+      unarmed: T
+      advanced: U
+    defenses:
+      unarmored: T
+      light: T
+      medium: T
+      heavy: U
+    class_dc: T
+    spellcasting: null
+    advancement:
+      '1':
+        features:
+        - hunter_s_edge
+        - hunt_prey
+        class_feat: 1
+        ancestry_feat: 1
+      '2':
+        class_feat: 1
+        skill_feat: 1
+      '3':
+        features:
+        - will_expertise
+        general_feat: 1
+        skill_increase: 1
+      '4':
+        class_feat: 1
+        skill_feat: 1
+      '5':
+        features:
+        - trackless_journey
+        - ranger_weapon_expertise
+        ancestry_feat: 1
+        skill_increase: 1
+      '6':
+        class_feat: 1
+        skill_feat: 1
+      '7':
+        features:
+        - weapon_specialization
+        - natural_reflexes
+        - perception_mastery
+        general_feat: 1
+        skill_increase: 1
+      '8':
+        class_feat: 1
+        skill_feat: 1
+      '9':
+        features:
+        - nature_s_edge
+        - ranger_expertise
+        ancestry_feat: 1
+        skill_increase: 1
+      '10':
+        class_feat: 1
+        skill_feat: 1
+      '11':
+        features:
+        - medium_armor_expertise
+        - warden_s_endurance
+        - unimpeded_journey
+        general_feat: 1
+        skill_increase: 1
+      '12':
+        class_feat: 1
+        skill_feat: 1
+      '13':
+        features:
+        - weapon_mastery
+        ancestry_feat: 1
+        skill_increase: 1
+      '14':
+        class_feat: 1
+        skill_feat: 1
+      '15':
+        features:
+        - greater_natural_reflexes
+        - greater_weapon_specialization
+        - perception_legend
+        general_feat: 1
+        skill_increase: 1
+      '16':
+        class_feat: 1
+        skill_feat: 1
+      '17':
+        features:
+        - masterful_hunter
+        ancestry_feat: 1
+        skill_increase: 1
+      '18':
+        class_feat: 1
+        skill_feat: 1
+      '19':
+        features:
+        - medium_armor_mastery
+        - swift_prey
+        general_feat: 1
+        skill_increase: 1
+      '20':
+        class_feat: 1
+        skill_feat: 1
   rogue:
     name: Rogue
     key_ability:
-      options: [dex]
+      options:
+      - dex
     hp: 8
     perception: E
     saves:
       fortitude: T
       reflex: E
-      will: T
+      will: E
     skills:
       trained_count: 7
       additional:
-        - stealth
-    languages:
-      starting: []
-      additional: 0
+      - stealth
     attacks:
       simple: T
       martial: T
@@ -260,38 +603,233 @@ charclasses:
     class_dc: T
     spellcasting: null
     advancement:
-      1:
-        features: [sneak_attack, surprise_attack, rogues_racket]
-        class_feat: 1
-        choice:
-          id: rogues_racket
-          pick: 1
-          options: [thief, ruffian, scoundrel]
-      2:
+      '1':
+        features:
+        - rogue_s_racket
+        - sneak_attack
+        - surprise_attack
         class_feat: 1
         skill_feat: 1
-      3:
-        features: [deny_advantage]
-        skill_feat: 1
-        notes: "Rogue skill feats on odd levels are class grants (in addition to universal skill increases)."
-      4:
+        ancestry_feat: 1
+      '2':
         class_feat: 1
         skill_feat: 1
-      5:
-        features: [weapon_tricks]
+        skill_increase: 1
+      '3':
+        features:
+        - deny_advantage
         skill_feat: 1
-        proficiency:
-          attacks:
-            simple: E
-            martial: E
-            unarmed: E
-
-  # Sample only — may not be open to PCs at launch.
-  druid:
-    name: Druid
+        general_feat: 1
+        skill_increase: 1
+      '4':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+      '5':
+        features:
+        - weapon_tricks
+        skill_feat: 1
+        ancestry_feat: 1
+        skill_increase: 1
+      '6':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+      '7':
+        features:
+        - weapon_specialization
+        - perception_mastery
+        - evasive_reflexes
+        skill_feat: 1
+        general_feat: 1
+        skill_increase: 1
+      '8':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+      '9':
+        features:
+        - rogue_resilience
+        - debilitating_strikes
+        skill_feat: 1
+        ancestry_feat: 1
+        skill_increase: 1
+      '10':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+      '11':
+        features:
+        - rogue_expertise
+        skill_feat: 1
+        general_feat: 1
+        skill_increase: 1
+      '12':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+      '13':
+        features:
+        - master_tricks
+        - light_armor_expertise
+        - greater_rogue_reflexes
+        - perception_legend
+        skill_feat: 1
+        ancestry_feat: 1
+        skill_increase: 1
+      '14':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+      '15':
+        features:
+        - greater_weapon_specialization
+        - double_debilitation
+        skill_feat: 1
+        general_feat: 1
+        skill_increase: 1
+      '16':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+      '17':
+        features:
+        - agile_mind
+        skill_feat: 1
+        ancestry_feat: 1
+        skill_increase: 1
+      '18':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+      '19':
+        features:
+        - light_armor_mastery
+        - master_strike
+        skill_feat: 1
+        general_feat: 1
+        skill_increase: 1
+      '20':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+  witch:
+    name: Witch
     key_ability:
-      options: [wis]
-    hp: 8
+      options:
+      - int
+    hp: 6
+    perception: T
+    saves:
+      fortitude: T
+      reflex: T
+      will: E
+    skills:
+      trained_count: 3
+      additional: []
+    attacks:
+      simple: T
+      martial: U
+      unarmed: T
+      advanced: U
+    defenses:
+      unarmored: T
+      light: U
+      medium: U
+      heavy: U
+    class_dc: T
+    spellcasting:
+      enabled: true
+    advancement:
+      '1':
+        features:
+        - witch_spellcasting
+        - familiar_witch
+        - hexes
+        - patron
+        ancestry_feat: 1
+      '2':
+        class_feat: 1
+        skill_feat: 1
+      '3':
+        general_feat: 1
+        skill_increase: 1
+      '4':
+        class_feat: 1
+        skill_feat: 1
+      '5':
+        features:
+        - magical_fortitude
+        ancestry_feat: 1
+        skill_increase: 1
+      '6':
+        class_feat: 1
+        skill_feat: 1
+      '7':
+        features:
+        - expert_spellcaster
+        general_feat: 1
+        skill_increase: 1
+      '8':
+        class_feat: 1
+        skill_feat: 1
+      '9':
+        features:
+        - reflex_expertise
+        ancestry_feat: 1
+        skill_increase: 1
+      '10':
+        class_feat: 1
+        skill_feat: 1
+      '11':
+        features:
+        - weapon_expertise
+        - perception_expertise
+        general_feat: 1
+        skill_increase: 1
+      '12':
+        class_feat: 1
+        skill_feat: 1
+      '13':
+        features:
+        - defensive_robes
+        - weapon_specialization
+        ancestry_feat: 1
+        skill_increase: 1
+      '14':
+        class_feat: 1
+        skill_feat: 1
+      '15':
+        features:
+        - master_spellcaster
+        general_feat: 1
+        skill_increase: 1
+      '16':
+        class_feat: 1
+        skill_feat: 1
+      '17':
+        features:
+        - will_of_the_pupil
+        ancestry_feat: 1
+        skill_increase: 1
+      '18':
+        class_feat: 1
+        skill_feat: 1
+      '19':
+        features:
+        - legendary_spellcaster
+        - patron_s_gift
+        general_feat: 1
+        skill_increase: 1
+      '20':
+        class_feat: 1
+        skill_feat: 1
+  wizard:
+    name: Wizard
+    key_ability:
+      options:
+      - int
+    hp: 6
     perception: T
     saves:
       fortitude: T
@@ -300,10 +838,7 @@ charclasses:
     skills:
       trained_count: 2
       additional:
-        - nature
-    languages:
-      starting: [wildsong]
-      additional: 0
+      - arcana
     attacks:
       simple: T
       martial: U
@@ -311,37 +846,93 @@ charclasses:
       advanced: U
     defenses:
       unarmored: T
-      light: T
+      light: U
       medium: U
       heavy: U
     class_dc: T
     spellcasting:
-      tradition: primal
-      rank: T
-      type: prepared
+      enabled: true
     advancement:
-      1:
-        features: [druid_spellcasting, anathema, druidic_order]
-        class_feat: 1
-        choice:
-          id: druidic_order
-          pick: 1
-          options: [animal, leaf, storm, wild]
-        spellcasting:
-          rank: 1
-      2:
+      '1':
+        features:
+        - wizard_spellcasting
+        - arcane_school
+        - arcane_bond
+        - arcane_thesis
+        ancestry_feat: 1
+      '2':
         class_feat: 1
         skill_feat: 1
-        spellcasting:
-          rank: 1
-      3:
-        spellcasting:
-          rank: 2
-      4:
+      '3':
+        general_feat: 1
+        skill_increase: 1
+      '4':
         class_feat: 1
         skill_feat: 1
-        spellcasting:
-          rank: 2
-      5:
-        spellcasting:
-          rank: 3
+      '5':
+        features:
+        - reflex_expertise
+        ancestry_feat: 1
+        skill_increase: 1
+      '6':
+        class_feat: 1
+        skill_feat: 1
+      '7':
+        features:
+        - expert_spellcaster
+        general_feat: 1
+        skill_increase: 1
+      '8':
+        class_feat: 1
+        skill_feat: 1
+      '9':
+        features:
+        - magical_fortitude
+        ancestry_feat: 1
+        skill_increase: 1
+      '10':
+        class_feat: 1
+        skill_feat: 1
+      '11':
+        features:
+        - perception_expertise
+        - weapon_expertise
+        general_feat: 1
+        skill_increase: 1
+      '12':
+        class_feat: 1
+        skill_feat: 1
+      '13':
+        features:
+        - weapon_specialization
+        - defensive_robes
+        ancestry_feat: 1
+        skill_increase: 1
+      '14':
+        class_feat: 1
+        skill_feat: 1
+      '15':
+        features:
+        - master_spellcaster
+        general_feat: 1
+        skill_increase: 1
+      '16':
+        class_feat: 1
+        skill_feat: 1
+      '17':
+        features:
+        - prodigious_will
+        ancestry_feat: 1
+        skill_increase: 1
+      '18':
+        class_feat: 1
+        skill_feat: 1
+      '19':
+        features:
+        - legendary_spellcaster
+        - archwizard_s_spellcraft
+        general_feat: 1
+        skill_increase: 1
+      '20':
+        class_feat: 1
+        skill_feat: 1
