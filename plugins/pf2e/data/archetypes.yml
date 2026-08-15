@@ -1,8 +1,7 @@
-# Archetype catalog (PF2e Remaster / Pathfinder Player Core + Player Core 2).
-# Lookup: Pf2e.read_data("archetypes", "fighter")
-# EXCLUDED: monk, swashbuckler. TABLED: oracle (not yet).
-# dedication_feat, multiclass, class_slug, grants.skills
-# Policy: 1st free, 2nd staff-only, 3rd never.
+# Archetype catalog (PF2e Remaster).
+# EXCLUDED: monk, swashbuckler, alchemist, barbarian (tonal/Society fit — not yet).
+# TABLED: oracle.
+# Policy: 1st dedication free, 2nd staff-only, 3rd never.
 #
 
 archetypes:
@@ -18,20 +17,6 @@ archetypes:
     source: player_core_2
     prerequisites_text:
     - trained in Acrobatics
-  alchemist:
-    name: Alchemist
-    dedication_feat: alchemist_dedication
-    multiclass: true
-    class_slug: alchemist
-    traits:
-    - multiclass
-    grants:
-      skills:
-      - crafting
-    level: 2
-    source: player_core_2
-    prerequisites_text:
-    - Intelligence +2
   archaeologist:
     name: Archaeologist
     dedication_feat: archaeologist_dedication
@@ -66,20 +51,6 @@ archetypes:
     prerequisites_text:
     - trained in Deception
     - trained in Stealth
-  barbarian:
-    name: Barbarian
-    dedication_feat: barbarian_dedication
-    multiclass: true
-    class_slug: barbarian
-    traits:
-    - multiclass
-    grants:
-      skills: []
-    level: 2
-    source: player_core_2
-    prerequisites_text:
-    - Strength +2
-    - Constitution +2
   bard:
     name: Bard
     dedication_feat: bard_dedication
