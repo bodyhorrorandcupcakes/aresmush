@@ -12,7 +12,9 @@ module AresMUSH
     #                 xp -= xp_to_level; advancing=false
     # -------------------------------------------------
 
-    UNIVERSAL_SKILL_INCREASE_FROM = 2
+    # Skill increases come only from class advancement packages in charclass.yml
+    # (rogue/investigator already list every level; others list odd levels).
+    # Do NOT add a universal skill_increase here — that double-counts.
     UNIVERSAL_ABILITY_BOOST_LEVELS = {
       5 => 4, 10 => 4, 15 => 4, 20 => 4
     }.freeze
@@ -68,7 +70,6 @@ module AresMUSH
     def self.universal_grants_at(level)
       lvl = level.to_i
       {
-        "skill_increase" => (lvl >= UNIVERSAL_SKILL_INCREASE_FROM ? 1 : 0),
         "ability_boost" => UNIVERSAL_ABILITY_BOOST_LEVELS[lvl].to_i
       }
     end
@@ -86,8 +87,8 @@ module AresMUSH
         "skill_feat" => class_pkg["skill_feat"].to_i,
         "general_feat" => class_pkg["general_feat"].to_i,
         "ancestry_feat" => class_pkg["ancestry_feat"].to_i,
-        "skill_increase" => class_pkg["skill_increase"].to_i + uni["skill_increase"],
-        "ability_boost" => class_pkg["ability_boost"].to_i + uni["ability_boost"],
+        "skill_increase" => class_pkg["skill_increase"].to_i,
+        "ability_boost" => class_pkg["ability_boost"].to_i + uni["ability_boost"].to_i,
         "proficiency" => class_pkg["proficiency"].is_a?(Hash) ? class_pkg["proficiency"] : {},
         "choice" => class_pkg["choice"],
         "spellcasting" => class_pkg["spellcasting"].is_a?(Hash) ? class_pkg["spellcasting"] : {},
