@@ -1,80 +1,13 @@
-# Static armor reference data.
-# Lookup: Pf2e.read_data("armor", "leather")
+# Static armor / shield reference data (PF2e Remaster).
+# Lookup: Pf2e.read_data("armor", "leather_armor") or "leather" (alias)
+# Source: Foundry VTT pf2e equipment pack (Pathfinder Player Core; PC2 heavy if needed).
+# Filter: common base armor/shields level 0–2; barding omitted.
 #
-# Fields:
-#   name          — display name
-#   category      — unarmored | light | medium | heavy
-#                   (drives which armor proficiency rank applies)
-#   ac_bonus      — item bonus to AC
-#   dex_cap       — max Dex modifier allowed (null = no cap)
-#   check_penalty — penalty to Str- and Dex-based skill checks (0 or negative)
-#   speed_penalty — penalty to Speed in feet (0 or negative)
-#   strength      — minimum Strength score to ignore check/speed penalties
-#                   (null if none)
-#   bulk          — L / 1 / 2 / etc.
-#   group         — armor group (leather, composite, plate, …) for future effects
-#   traits        — array of trait slugs (comfortable, noisy, …)
-#   price         — optional, in sp
+# category: unarmored | light | medium | heavy | shield
+# strength: minimum Strength *score* (from Foundry modifier requirement)
+# price: silver pieces (sp)
 #
-# Proficiency rank is NOT stored here — it comes from the character
-# (trained in light armor, etc.). The category tells the caller which
-# rank field to read once we store armor proficiencies on the sheet.
-#
-# Unarmored entries exist so the same lookup path works for "no armor".
-
 armor:
-  explorers_clothing:
-    name: "Explorer's Clothing"
-    category: unarmored
-    ac_bonus: 0
-    dex_cap: null
-    check_penalty: 0
-    speed_penalty: 0
-    strength: null
-    bulk: L
-    group: cloth
-    traits: [comfort]
-    price: 1
-
-  leather:
-    name: Leather Armor
-    category: light
-    ac_bonus: 1
-    dex_cap: 4
-    check_penalty: -1
-    speed_penalty: 0
-    strength: 10
-    bulk: 1
-    group: leather
-    traits: []
-    price: 20
-
-  studded_leather:
-    name: Studded Leather Armor
-    category: light
-    ac_bonus: 2
-    dex_cap: 3
-    check_penalty: -1
-    speed_penalty: 0
-    strength: 12
-    bulk: 1
-    group: leather
-    traits: []
-    price: 30
-
-  chain_mail:
-    name: Chain Mail
-    category: medium
-    ac_bonus: 4
-    dex_cap: 1
-    check_penalty: -2
-    speed_penalty: -5
-    strength: 16
-    bulk: 2
-    group: chain
-    traits: [flexible, noisy]
-    price: 60
-
   breastplate:
     name: Breastplate
     category: medium
@@ -83,24 +16,70 @@ armor:
     check_penalty: -2
     speed_penalty: -5
     strength: 16
-    bulk: 2
+    bulk: '2'
     group: plate
     traits: []
+    level: 0
     price: 80
-
-  half_plate:
-    name: Half Plate
-    category: heavy
-    ac_bonus: 5
+  buckler:
+    name: Buckler
+    category: shield
+    ac_bonus: 1
+    dex_cap: null
+    check_penalty: 0
+    speed_penalty: 0
+    strength: null
+    bulk: L
+    group: null
+    traits: []
+    level: 0
+    hardness: 3
+    hp: 6
+    price: 10
+  chain_mail:
+    name: Chain Mail
+    category: medium
+    ac_bonus: 4
     dex_cap: 1
-    check_penalty: -3
-    speed_penalty: -10
+    check_penalty: -2
+    speed_penalty: -5
     strength: 16
-    bulk: 3
-    group: plate
-    traits: []
-    price: 80
-
+    bulk: '2'
+    group: chain
+    traits:
+    - flexible
+    - noisy
+    level: 0
+    price: 60
+  chain_shirt:
+    name: Chain Shirt
+    category: light
+    ac_bonus: 2
+    dex_cap: 3
+    check_penalty: -1
+    speed_penalty: 0
+    strength: 12
+    bulk: '1'
+    group: chain
+    traits:
+    - flexible
+    - noisy
+    level: 0
+    price: 50
+  explorers_clothing:
+    name: Explorer's Clothing
+    category: unarmored
+    ac_bonus: 0
+    dex_cap: null
+    check_penalty: 0
+    speed_penalty: 0
+    strength: null
+    bulk: L
+    group: cloth
+    traits:
+    - comfort
+    level: 0
+    price: 1
   full_plate:
     name: Full Plate
     category: heavy
@@ -109,7 +88,199 @@ armor:
     check_penalty: -3
     speed_penalty: -10
     strength: 18
-    bulk: 4
+    bulk: '4'
     group: plate
-    traits: [bulwark]
+    traits:
+    - bulwark
+    level: 2
     price: 300
+  half_plate:
+    name: Half Plate
+    category: heavy
+    ac_bonus: 5
+    dex_cap: 1
+    check_penalty: -3
+    speed_penalty: -10
+    strength: 16
+    bulk: '3'
+    group: plate
+    traits: []
+    level: 1
+    price: 180
+  hide_armor:
+    name: Hide Armor
+    category: medium
+    ac_bonus: 3
+    dex_cap: 2
+    check_penalty: -2
+    speed_penalty: -5
+    strength: 14
+    bulk: '2'
+    group: leather
+    traits: []
+    level: 0
+    price: 20
+  leather_armor:
+    name: Leather Armor
+    category: light
+    ac_bonus: 1
+    dex_cap: 4
+    check_penalty: -1
+    speed_penalty: 0
+    strength: 10
+    bulk: '1'
+    group: leather
+    traits: []
+    level: 0
+    price: 20
+  padded_armor:
+    name: Padded Armor
+    category: light
+    ac_bonus: 1
+    dex_cap: 3
+    check_penalty: 0
+    speed_penalty: 0
+    strength: 10
+    bulk: L
+    group: null
+    traits:
+    - comfort
+    level: 0
+    price: 2
+  scale_mail:
+    name: Scale Mail
+    category: medium
+    ac_bonus: 3
+    dex_cap: 2
+    check_penalty: -2
+    speed_penalty: -5
+    strength: 14
+    bulk: '2'
+    group: composite
+    traits: []
+    level: 0
+    price: 40
+  splint_mail:
+    name: Splint Mail
+    category: heavy
+    ac_bonus: 5
+    dex_cap: 1
+    check_penalty: -3
+    speed_penalty: -10
+    strength: 16
+    bulk: '3'
+    group: composite
+    traits: []
+    level: 1
+    price: 130
+  steel_shield:
+    name: Steel Shield
+    category: shield
+    ac_bonus: 2
+    dex_cap: null
+    check_penalty: 0
+    speed_penalty: 0
+    strength: null
+    bulk: '1'
+    group: null
+    traits: []
+    level: 0
+    hardness: 5
+    hp: 20
+    price: 20
+  studded_leather_armor:
+    name: Studded Leather Armor
+    category: light
+    ac_bonus: 2
+    dex_cap: 3
+    check_penalty: -1
+    speed_penalty: 0
+    strength: 12
+    bulk: '1'
+    group: leather
+    traits: []
+    level: 0
+    price: 30
+  tower_shield:
+    name: Tower Shield
+    category: shield
+    ac_bonus: 2
+    dex_cap: null
+    check_penalty: 0
+    speed_penalty: -5
+    strength: null
+    bulk: '4'
+    group: null
+    traits: []
+    level: 0
+    hardness: 5
+    hp: 20
+    price: 100
+  wooden_shield:
+    name: Wooden Shield
+    category: shield
+    ac_bonus: 2
+    dex_cap: null
+    check_penalty: 0
+    speed_penalty: 0
+    strength: null
+    bulk: '1'
+    group: null
+    traits: []
+    level: 0
+    hardness: 3
+    hp: 12
+    price: 10
+  leather:
+    name: Leather Armor
+    category: light
+    ac_bonus: 1
+    dex_cap: 4
+    check_penalty: -1
+    speed_penalty: 0
+    strength: 10
+    bulk: '1'
+    group: leather
+    traits: []
+    level: 0
+    price: 20
+  studded_leather:
+    name: Studded Leather Armor
+    category: light
+    ac_bonus: 2
+    dex_cap: 3
+    check_penalty: -1
+    speed_penalty: 0
+    strength: 12
+    bulk: '1'
+    group: leather
+    traits: []
+    level: 0
+    price: 30
+  hide:
+    name: Hide Armor
+    category: medium
+    ac_bonus: 3
+    dex_cap: 2
+    check_penalty: -2
+    speed_penalty: -5
+    strength: 14
+    bulk: '2'
+    group: leather
+    traits: []
+    level: 0
+    price: 20
+  padded:
+    name: Padded Armor
+    category: light
+    ac_bonus: 1
+    dex_cap: 3
+    check_penalty: 0
+    speed_penalty: 0
+    strength: 10
+    bulk: L
+    group: null
+    traits:
+    - comfort
+    level: 0
+    price: 2

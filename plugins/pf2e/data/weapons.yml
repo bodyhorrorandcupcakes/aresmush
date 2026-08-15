@@ -1,10 +1,30 @@
-# Static weapon reference data.
+# Static weapon reference data (PF2e Remaster / Pathfinder Player Core).
 # Lookup: Pf2e.read_data("weapons", "longsword")
-# price — in sp (for vendors)
-
+# Generated from Foundry VTT pf2e equipment pack (publication = Pathfinder Player Core).
+# Filter: type weapon, level 0, rarity common, no parenthetical variants.
+# price — integer silver pieces (sp)
+# range — feet for ranged; null for melee (thrown range lives on traits e.g. thrown_10)
+# reload — integer or null; 0 = usable after firing without a Reload action (bows)
+# category — simple | martial | advanced | unarmed
+#
 weapons:
-  longsword:
-    name: Longsword
+  arbalest:
+    name: Arbalest
+    category: martial
+    damage:
+      dice: 1
+      sides: 10
+      type: piercing
+    hands: 2
+    group: crossbow
+    traits:
+    - backstabber
+    range: 110
+    reload: 1
+    bulk: '2'
+    price: 80
+  bastard_sword:
+    name: Bastard Sword
     category: martial
     damage:
       dice: 1
@@ -12,27 +32,91 @@ weapons:
       type: slashing
     hands: 1
     group: sword
-    traits: [versatile_p]
+    traits:
+    - two_hand_d12
     range: null
     reload: null
-    bulk: 1
+    bulk: '1'
+    price: 40
+  battle_axe:
+    name: Battle Axe
+    category: martial
+    damage:
+      dice: 1
+      sides: 8
+      type: slashing
+    hands: 1
+    group: axe
+    traits:
+    - sweep
+    range: null
+    reload: null
+    bulk: '1'
     price: 10
-
-  shortsword:
-    name: Shortsword
+  bo_staff:
+    name: Bo Staff
+    category: martial
+    damage:
+      dice: 1
+      sides: 8
+      type: bludgeoning
+    hands: 2
+    group: club
+    traits:
+    - monk
+    - parry
+    - reach
+    - trip
+    range: null
+    reload: null
+    bulk: '2'
+    price: 2
+  bola:
+    name: Bola
     category: martial
     damage:
       dice: 1
       sides: 6
-      type: piercing
+      type: bludgeoning
     hands: 1
-    group: sword
-    traits: [agile, finesse, versatile_s]
-    range: null
+    group: sling
+    traits:
+    - nonlethal
+    - ranged_trip
+    - thrown
+    range: 20
     reload: null
     bulk: L
-    price: 9
-
+    price: 5
+  club:
+    name: Club
+    category: simple
+    damage:
+      dice: 1
+      sides: 6
+      type: bludgeoning
+    hands: 1
+    group: club
+    traits:
+    - thrown_10
+    range: null
+    reload: null
+    bulk: '1'
+    price: 0
+  crossbow:
+    name: Crossbow
+    category: simple
+    damage:
+      dice: 1
+      sides: 8
+      type: piercing
+    hands: 2
+    group: crossbow
+    traits: []
+    range: 120
+    reload: 1
+    bulk: '1'
+    price: 30
   dagger:
     name: Dagger
     category: simple
@@ -42,12 +126,766 @@ weapons:
       type: piercing
     hands: 1
     group: knife
-    traits: [agile, finesse, thrown_10, versatile_s]
+    traits:
+    - agile
+    - finesse
+    - thrown_10
+    - versatile_s
     range: null
     reload: null
     bulk: L
     price: 2
-
+  dart:
+    name: Dart
+    category: simple
+    damage:
+      dice: 1
+      sides: 4
+      type: piercing
+    hands: 1
+    group: dart
+    traits:
+    - agile
+    - thrown
+    range: 20
+    reload: null
+    bulk: L
+    price: 0
+  falchion:
+    name: Falchion
+    category: martial
+    damage:
+      dice: 1
+      sides: 10
+      type: slashing
+    hands: 2
+    group: sword
+    traits:
+    - forceful
+    - sweep
+    range: null
+    reload: null
+    bulk: '2'
+    price: 30
+  flail:
+    name: Flail
+    category: martial
+    damage:
+      dice: 1
+      sides: 6
+      type: bludgeoning
+    hands: 1
+    group: flail
+    traits:
+    - disarm
+    - sweep
+    - trip
+    range: null
+    reload: null
+    bulk: '1'
+    price: 8
+  gauntlet:
+    name: Gauntlet
+    category: simple
+    damage:
+      dice: 1
+      sides: 4
+      type: bludgeoning
+    hands: 1
+    group: brawling
+    traits:
+    - agile
+    - free_hand
+    range: null
+    reload: null
+    bulk: L
+    price: 2
+  glaive:
+    name: Glaive
+    category: martial
+    damage:
+      dice: 1
+      sides: 8
+      type: slashing
+    hands: 2
+    group: polearm
+    traits:
+    - deadly_d8
+    - forceful
+    - reach
+    range: null
+    reload: null
+    bulk: '2'
+    price: 10
+  greataxe:
+    name: Greataxe
+    category: martial
+    damage:
+      dice: 1
+      sides: 12
+      type: slashing
+    hands: 2
+    group: axe
+    traits:
+    - sweep
+    range: null
+    reload: null
+    bulk: '2'
+    price: 20
+  greatclub:
+    name: Greatclub
+    category: martial
+    damage:
+      dice: 1
+      sides: 10
+      type: bludgeoning
+    hands: 2
+    group: club
+    traits:
+    - backswing
+    - shove
+    range: null
+    reload: null
+    bulk: '2'
+    price: 10
+  greatpick:
+    name: Greatpick
+    category: martial
+    damage:
+      dice: 1
+      sides: 10
+      type: piercing
+    hands: 2
+    group: pick
+    traits:
+    - fatal_d12
+    range: null
+    reload: null
+    bulk: '2'
+    price: 10
+  greatsword:
+    name: Greatsword
+    category: martial
+    damage:
+      dice: 1
+      sides: 12
+      type: slashing
+    hands: 2
+    group: sword
+    traits:
+    - versatile_p
+    range: null
+    reload: null
+    bulk: '2'
+    price: 20
+  guisarme:
+    name: Guisarme
+    category: martial
+    damage:
+      dice: 1
+      sides: 10
+      type: slashing
+    hands: 2
+    group: polearm
+    traits:
+    - reach
+    - trip
+    range: null
+    reload: null
+    bulk: '2'
+    price: 20
+  halberd:
+    name: Halberd
+    category: martial
+    damage:
+      dice: 1
+      sides: 10
+      type: piercing
+    hands: 2
+    group: polearm
+    traits:
+    - reach
+    - versatile_s
+    range: null
+    reload: null
+    bulk: '2'
+    price: 20
+  hand_crossbow:
+    name: Hand Crossbow
+    category: simple
+    damage:
+      dice: 1
+      sides: 6
+      type: piercing
+    hands: 1
+    group: crossbow
+    traits: []
+    range: 60
+    reload: 1
+    bulk: L
+    price: 30
+  hatchet:
+    name: Hatchet
+    category: martial
+    damage:
+      dice: 1
+      sides: 6
+      type: slashing
+    hands: 1
+    group: axe
+    traits:
+    - agile
+    - sweep
+    - thrown_10
+    range: null
+    reload: null
+    bulk: L
+    price: 4
+  heavy_crossbow:
+    name: Heavy Crossbow
+    category: simple
+    damage:
+      dice: 1
+      sides: 10
+      type: piercing
+    hands: 2
+    group: crossbow
+    traits: []
+    range: 120
+    reload: 2
+    bulk: '2'
+    price: 40
+  javelin:
+    name: Javelin
+    category: simple
+    damage:
+      dice: 1
+      sides: 6
+      type: piercing
+    hands: 1
+    group: dart
+    traits:
+    - thrown
+    range: 30
+    reload: null
+    bulk: L
+    price: 1
+  lance:
+    name: Lance
+    category: martial
+    damage:
+      dice: 1
+      sides: 8
+      type: piercing
+    hands: 2
+    group: spear
+    traits:
+    - deadly_d8
+    - jousting_d6
+    - reach
+    range: null
+    reload: null
+    bulk: '2'
+    price: 10
+  light_hammer:
+    name: Light Hammer
+    category: martial
+    damage:
+      dice: 1
+      sides: 6
+      type: bludgeoning
+    hands: 1
+    group: hammer
+    traits:
+    - agile
+    - thrown_20
+    range: null
+    reload: null
+    bulk: L
+    price: 3
+  light_mace:
+    name: Light Mace
+    category: simple
+    damage:
+      dice: 1
+      sides: 4
+      type: bludgeoning
+    hands: 1
+    group: club
+    traits:
+    - agile
+    - finesse
+    - shove
+    range: null
+    reload: null
+    bulk: L
+    price: 4
+  light_pick:
+    name: Light Pick
+    category: martial
+    damage:
+      dice: 1
+      sides: 4
+      type: piercing
+    hands: 1
+    group: pick
+    traits:
+    - agile
+    - fatal_d8
+    range: null
+    reload: null
+    bulk: L
+    price: 4
+  longbow:
+    name: Longbow
+    category: martial
+    damage:
+      dice: 1
+      sides: 8
+      type: piercing
+    hands: 1
+    group: bow
+    traits:
+    - deadly_d10
+    - volley_30
+    range: 100
+    reload: 0
+    bulk: '2'
+    price: 60
+  longspear:
+    name: Longspear
+    category: simple
+    damage:
+      dice: 1
+      sides: 8
+      type: piercing
+    hands: 2
+    group: spear
+    traits:
+    - reach
+    range: null
+    reload: null
+    bulk: '2'
+    price: 5
+  longsword:
+    name: Longsword
+    category: martial
+    damage:
+      dice: 1
+      sides: 8
+      type: slashing
+    hands: 1
+    group: sword
+    traits:
+    - versatile_p
+    range: null
+    reload: null
+    bulk: '1'
+    price: 10
+  mace:
+    name: Mace
+    category: simple
+    damage:
+      dice: 1
+      sides: 6
+      type: bludgeoning
+    hands: 1
+    group: club
+    traits:
+    - shove
+    range: null
+    reload: null
+    bulk: '1'
+    price: 10
+  main_gauche:
+    name: Main-Gauche
+    category: martial
+    damage:
+      dice: 1
+      sides: 4
+      type: piercing
+    hands: 1
+    group: knife
+    traits:
+    - agile
+    - disarm
+    - finesse
+    - parry
+    - versatile_s
+    range: null
+    reload: null
+    bulk: L
+    price: 5
+  maul:
+    name: Maul
+    category: martial
+    damage:
+      dice: 1
+      sides: 12
+      type: bludgeoning
+    hands: 2
+    group: hammer
+    traits:
+    - shove
+    range: null
+    reload: null
+    bulk: '2'
+    price: 30
+  morningstar:
+    name: Morningstar
+    category: simple
+    damage:
+      dice: 1
+      sides: 6
+      type: bludgeoning
+    hands: 1
+    group: club
+    traits:
+    - versatile_p
+    range: null
+    reload: null
+    bulk: '1'
+    price: 10
+  pick:
+    name: Pick
+    category: martial
+    damage:
+      dice: 1
+      sides: 6
+      type: piercing
+    hands: 1
+    group: pick
+    traits:
+    - fatal_d10
+    range: null
+    reload: null
+    bulk: '1'
+    price: 7
+  ranseur:
+    name: Ranseur
+    category: martial
+    damage:
+      dice: 1
+      sides: 10
+      type: piercing
+    hands: 2
+    group: polearm
+    traits:
+    - disarm
+    - reach
+    range: null
+    reload: null
+    bulk: '2'
+    price: 20
+  rapier:
+    name: Rapier
+    category: martial
+    damage:
+      dice: 1
+      sides: 6
+      type: piercing
+    hands: 1
+    group: sword
+    traits:
+    - deadly_d8
+    - disarm
+    - finesse
+    range: null
+    reload: null
+    bulk: '1'
+    price: 20
+  sap:
+    name: Sap
+    category: martial
+    damage:
+      dice: 1
+      sides: 6
+      type: bludgeoning
+    hands: 1
+    group: club
+    traits:
+    - agile
+    - nonlethal
+    range: null
+    reload: null
+    bulk: L
+    price: 1
+  scimitar:
+    name: Scimitar
+    category: martial
+    damage:
+      dice: 1
+      sides: 6
+      type: slashing
+    hands: 1
+    group: sword
+    traits:
+    - forceful
+    - sweep
+    range: null
+    reload: null
+    bulk: '1'
+    price: 10
+  scythe:
+    name: Scythe
+    category: martial
+    damage:
+      dice: 1
+      sides: 10
+      type: slashing
+    hands: 2
+    group: polearm
+    traits:
+    - deadly_d10
+    - trip
+    range: null
+    reload: null
+    bulk: '2'
+    price: 20
+  shield_boss:
+    name: Shield Boss
+    category: martial
+    damage:
+      dice: 1
+      sides: 6
+      type: bludgeoning
+    hands: 1
+    group: shield
+    traits:
+    - attached_to_shield
+    range: null
+    reload: null
+    bulk: '0'
+    price: 5
+  shield_spikes:
+    name: Shield Spikes
+    category: martial
+    damage:
+      dice: 1
+      sides: 6
+      type: piercing
+    hands: 1
+    group: shield
+    traits:
+    - attached_to_shield
+    range: null
+    reload: null
+    bulk: '0'
+    price: 5
+  shortbow:
+    name: Shortbow
+    category: martial
+    damage:
+      dice: 1
+      sides: 6
+      type: piercing
+    hands: 1
+    group: bow
+    traits:
+    - deadly_d10
+    range: 60
+    reload: 0
+    bulk: '1'
+    price: 30
+  shortsword:
+    name: Shortsword
+    category: martial
+    damage:
+      dice: 1
+      sides: 6
+      type: piercing
+    hands: 1
+    group: sword
+    traits:
+    - agile
+    - finesse
+    - versatile_s
+    range: null
+    reload: null
+    bulk: L
+    price: 9
+  sickle:
+    name: Sickle
+    category: simple
+    damage:
+      dice: 1
+      sides: 4
+      type: slashing
+    hands: 1
+    group: knife
+    traits:
+    - agile
+    - finesse
+    - trip
+    range: null
+    reload: null
+    bulk: L
+    price: 2
+  sling:
+    name: Sling
+    category: simple
+    damage:
+      dice: 1
+      sides: 6
+      type: bludgeoning
+    hands: 1
+    group: sling
+    traits:
+    - propulsive
+    range: 50
+    reload: 1
+    bulk: L
+    price: 0
+  spear:
+    name: Spear
+    category: simple
+    damage:
+      dice: 1
+      sides: 6
+      type: piercing
+    hands: 1
+    group: spear
+    traits:
+    - monk
+    - thrown_20
+    range: null
+    reload: null
+    bulk: '1'
+    price: 1
+  spiked_gauntlet:
+    name: Spiked Gauntlet
+    category: simple
+    damage:
+      dice: 1
+      sides: 4
+      type: piercing
+    hands: 1
+    group: brawling
+    traits:
+    - agile
+    - free_hand
+    range: null
+    reload: null
+    bulk: L
+    price: 3
+  staff:
+    name: Staff
+    category: simple
+    damage:
+      dice: 1
+      sides: 4
+      type: bludgeoning
+    hands: 1
+    group: club
+    traits:
+    - monk
+    - two_hand_d8
+    range: null
+    reload: null
+    bulk: '1'
+    price: 0
+  starknife:
+    name: Starknife
+    category: martial
+    damage:
+      dice: 1
+      sides: 4
+      type: piercing
+    hands: 1
+    group: knife
+    traits:
+    - agile
+    - deadly_d6
+    - finesse
+    - thrown_20
+    - versatile_s
+    range: null
+    reload: null
+    bulk: L
+    price: 20
+  sword_cane:
+    name: Sword Cane
+    category: martial
+    damage:
+      dice: 1
+      sides: 6
+      type: piercing
+    hands: 1
+    group: sword
+    traits:
+    - agile
+    - concealable
+    - finesse
+    range: null
+    reload: null
+    bulk: '1'
+    price: 50
+  trident:
+    name: Trident
+    category: martial
+    damage:
+      dice: 1
+      sides: 8
+      type: piercing
+    hands: 1
+    group: spear
+    traits:
+    - thrown_20
+    range: null
+    reload: null
+    bulk: '1'
+    price: 10
+  war_flail:
+    name: War Flail
+    category: martial
+    damage:
+      dice: 1
+      sides: 10
+      type: bludgeoning
+    hands: 2
+    group: flail
+    traits:
+    - disarm
+    - sweep
+    - trip
+    range: null
+    reload: null
+    bulk: '2'
+    price: 20
+  warhammer:
+    name: Warhammer
+    category: martial
+    damage:
+      dice: 1
+      sides: 8
+      type: bludgeoning
+    hands: 1
+    group: hammer
+    traits:
+    - shove
+    range: null
+    reload: null
+    bulk: '1'
+    price: 10
+  whip:
+    name: Whip
+    category: martial
+    damage:
+      dice: 1
+      sides: 4
+      type: slashing
+    hands: 1
+    group: flail
+    traits:
+    - disarm
+    - finesse
+    - nonlethal
+    - reach
+    - trip
+    range: null
+    reload: null
+    bulk: '1'
+    price: 1
   unarmed:
     name: Fist
     category: unarmed
@@ -57,8 +895,12 @@ weapons:
       type: bludgeoning
     hands: 1
     group: brawling
-    traits: [agile, finesse, nonlethal, unarmed]
+    traits:
+    - agile
+    - finesse
+    - nonlethal
+    - unarmed
     range: null
     reload: null
-    bulk: 0
-    # no price — not for sale
+    bulk: '0'
+    price: 0
