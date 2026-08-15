@@ -149,7 +149,132 @@ subclasses:
             proficiency: M
       notes: "Armor + Fort expert + Shield Block at 1st. Martial weapons at 3rd. Spell proficiency lags cloistered."
 
-  # --- stubs (open options; grants filled later) ---
+  # --- filled: racket + methodology + order ---
+  racket:
+    ruffian:
+      name: Ruffian
+      skills:
+      - intimidation
+      proficiency:
+        defenses:
+          medium: T
+      notes: "Medium armor; may use Strength as key ability. Sneak Attack with a wider weapon set is combat-side later."
+
+    scoundrel:
+      name: Scoundrel
+      skills:
+      - deception
+      - diplomacy
+      notes: "May use Charisma as key ability. Feint upgrades are combat-side later."
+
+    thief:
+      name: Thief
+      skills:
+      - thievery
+      combat_tag: dex_damage_finesse
+      notes: "Dexterity to damage with finesse melee is combat-side later."
+
+    mastermind:
+      name: Mastermind
+      skills:
+      - society
+      notes: "Also trained in one of Arcana, Nature, Occultism, or Religion (player choice — train via skill pick). May use Intelligence as key ability. RK → off-guard is combat-side later."
+
+  methodology:
+    empiricism:
+      name: Empiricism
+      skills: []
+      feats:
+      - thats_odd
+      notes: "Trained in one Intelligence-based skill of the player's choice (train via skill pick). That's Odd + Expeditious Inspection when those feats exist in data."
+
+    forensic_medicine:
+      name: Forensic Medicine
+      skills:
+      - medicine
+      feats:
+      - forensic_acumen
+      - battle_medicine
+      notes: "Battle Medicine level-bonus / 1-hour immunity is combat/medicine resolution later."
+
+    interrogation:
+      name: Interrogation
+      skills:
+      - diplomacy
+      feats:
+      - no_cause_for_alarm
+      notes: "Pointed Question action when coded."
+
+    alchemical_sciences:
+      name: Alchemical Sciences
+      skills:
+      - crafting
+      feats:
+      - alchemical_crafting
+      notes: "Formula book + two 1st-level elixir/tool formulas are inventory/staff side for now."
+
+  order:
+    animal:
+      name: Animal
+      skills:
+      - athletics
+      feats:
+      - animal_companion
+      focus_spells:
+      - heal_animal
+      notes: "Anathema: wanton cruelty to animals / unnecessary killing (roleplay)."
+
+    leaf:
+      name: Leaf
+      skills:
+      - diplomacy
+      feats:
+      - leshy_familiar
+      focus_spells:
+      - cornucopia
+      notes: "Anathema: wanton cruelty to plants/fungi (roleplay)."
+
+    storm:
+      name: Storm
+      skills:
+      - acrobatics
+      feats:
+      - storm_born
+      focus_spells:
+      - tempest_surge
+      notes: "Anathema: major air pollution left unopposed (roleplay)."
+
+    wild:
+      name: Wild
+      skills:
+      - intimidation
+      feats:
+      - wild_shape
+      focus_spells:
+      - wild_morph
+      notes: "Remaster: Untamed Order. Anathema: becoming fully civilized / abandoning the wild (roleplay)."
+
+    wave:
+      name: Wave
+      skills:
+      - medicine
+      feats:
+      - shore_step
+      focus_spells:
+      - rising_surf
+      notes: "Anathema: polluting water / letting major polluters go unpunished (roleplay)."
+
+    flame:
+      name: Flame
+      skills:
+      - acrobatics
+      feats:
+      - fire_lung
+      focus_spells:
+      - wildfire
+      notes: "Anathema: suppressing natural wildfires that cleanse / allowing fire to be extinguished where regrowth needs it (roleplay; tone per table)."
+
+  # --- stubs ---
   contact:
     faiths_flamekeeper:
       name: Faith's Flamekeeper
@@ -205,68 +330,6 @@ subclasses:
       notes: "stub"
     warrior:
       name: Warrior
-      skills: []
-      notes: "stub"
-
-  racket:
-    ruffian:
-      name: Ruffian
-      skills: []
-      notes: "stub"
-    scoundrel:
-      name: Scoundrel
-      skills: []
-      notes: "stub"
-    thief:
-      name: Thief
-      skills: []
-      notes: "stub"
-    mastermind:
-      name: Mastermind
-      skills: []
-      notes: "stub"
-
-  methodology:
-    empiricism:
-      name: Empiricism
-      skills: []
-      notes: "stub"
-    forensic_medicine:
-      name: Forensic Medicine
-      skills: []
-      notes: "stub"
-    interrogation:
-      name: Interrogation
-      skills: []
-      notes: "stub"
-    alchemical_sciences:
-      name: Alchemical Sciences
-      skills: []
-      notes: "stub"
-
-  order:
-    animal:
-      name: Animal
-      skills: []
-      notes: "stub"
-    leaf:
-      name: Leaf
-      skills: []
-      notes: "stub"
-    storm:
-      name: Storm
-      skills: []
-      notes: "stub"
-    wild:
-      name: Wild
-      skills: []
-      notes: "stub"
-    wave:
-      name: Wave
-      skills: []
-      notes: "stub"
-    flame:
-      name: Flame
       skills: []
       notes: "stub"
 
