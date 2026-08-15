@@ -1,0 +1,15 @@
+# Spell catalog (PF2e Remaster) - Pathfinder Player Core
+# From Foundry VTT pf2e packs/pf2e/spells (publication.title == Pathfinder Player Core).
+# Lookup: Pf2e.read_data("spells", "<slug>")
+# rank 0 = cantrip; category: cantrip | spell | focus | ritual
+# Mechanical fields only (no full rules text - use AON at table for prose).
+#
+traditions:
+  arcane:
+    name: Arcane
+  divine:
+    name: Divine
+  occult:
+    name: Occult
+  primal:
+    name: Primal

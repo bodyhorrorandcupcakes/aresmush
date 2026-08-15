@@ -62,7 +62,7 @@ module AresMUSH
       "max"     => 0,
       "temp"    => 0
     }
-    # Focus Points: current and max (max set by staff / future feature grants).
+    # Focus Points: current + max (max set by features / staff; usually 1-3).
     attribute :focus_points,  :type => DataType::Integer, :default => 0
     attribute :focus_max,     :type => DataType::Integer, :default => 0
     attribute :hero_points,   :type => DataType::Integer, :default => 1

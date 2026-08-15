@@ -36,12 +36,27 @@ module AresMUSH
         when "unequip" then return GearUnequipCmd
         when "stow" then return GearStowCmd
         when "retrieve" then return GearRetrieveCmd
+        when "activate", "use" then return GearActivateCmd
         end
       when "shop"
         case cmd.switch
         when nil then return ShopCmd
         when "buy" then return ShopBuyCmd
         when "sell" then return ShopSellCmd
+        end
+      when "spells", "spell"
+        case cmd.switch
+        when nil then return SpellsCmd
+        when "daily", "rest" then return SpellsDailyCmd
+        when "prepare", "prep" then return SpellsPrepareCmd
+        when "learn" then return SpellsLearnCmd
+        when "cast" then return SpellsCastCmd
+        end
+      when "rituals", "ritual"
+        case cmd.switch
+        when nil then return RitualsCmd
+        when "info", "show" then return RitualsInfoCmd
+        when "check", "cast" then return RitualsCheckCmd
         end
       when "roll"
         case cmd.switch
@@ -70,7 +85,6 @@ module AresMUSH
         end
       when "cg"
         case cmd.switch
-        when "start" then return CgStartCmd
         when "ancestry" then return CgAncestryCmd
         when "heritage" then return CgHeritageCmd
         when "background" then return CgBackgroundCmd

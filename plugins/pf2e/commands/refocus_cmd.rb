@@ -12,7 +12,18 @@ module AresMUSH
 
         result = Pf2e.refocus(sheet)
         if !result[:ok]
-          client.emit_failure t(result[:error])
+          err = result[:error]
+          if err == "pf2e.focus_already_full"
+            client.emit_failure t('pf2e.focus_already_full',
+                                 :current => result[:current],
+                                 :max => result[:max])
+          elsif err == "pf2e.focus_exhausted"
+            client.emit_failure t('pf2e.focus_exhausted',
+                                 :current => result[:current],
+                                 :needed => result[:needed])
+          else
+            client.emit_failure t(err || 'pf2e.no_sheet')
+          end
           return
         end
 
