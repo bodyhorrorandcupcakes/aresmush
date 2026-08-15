@@ -1,0 +1,27 @@
+<%= header %>
+%xh<%= title %>%xn
+<%= divider %>
+<% if paginator.out_of_bounds? %>
+<%= paginator.out_of_bounds_msg %>
+<% else %>
+<% paginator.page_items.each do |s| %>
+%xh<%= s[:slug] %>%xn - <%= s[:name] %>  [R<%= s[:rank] %>/<%= s[:category] %>]
+  Traits: <%= s[:traits].empty? ? "-" : s[:traits].join(", ") %>
+  Traditions: <%= s[:traditions].empty? ? "-" : s[:traditions].join(", ") %>
+<% bits = [] %>
+<% bits << "Cast #{s[:cast]}" if s[:cast] && !s[:cast].empty? %>
+<% bits << "Range #{s[:range]}" if s[:range] && !s[:range].empty? %>
+<% bits << "Target #{s[:target]}" if s[:target] && !s[:target].empty? %>
+<% bits << "Area #{s[:area]}" if s[:area] && !s[:area].empty? %>
+<% bits << "Duration #{s[:duration]}" if s[:duration] && !s[:duration].empty? %>
+<% if bits.any? %>
+  <%= bits.join(" | ") %>
+<% end %>
+<% if s[:effect] && !s[:effect].empty? %>
+<%= wrap_effect(s[:effect]) %>
+<% end %>
+
+<% end %>
+<%= paginator.page_footer %>
+<% end %>
+<%= footer %>

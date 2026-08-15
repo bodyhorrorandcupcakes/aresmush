@@ -51,6 +51,7 @@ module AresMUSH
         when "prepare", "prep" then return SpellsPrepareCmd
         when "learn" then return SpellsLearnCmd
         when "cast" then return SpellsCastCmd
+        when "search", "list" then return SpellsSearchCmd
         end
       when "rituals", "ritual"
         case cmd.switch
