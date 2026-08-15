@@ -1,75 +1,140 @@
-# Minimal stubs for class-option grants not present in the Player Core spell dump.
-# Full prose lives on AON; these exist so sheet grants and cast lookups resolve.
-# Prefer replacing with a real data drop from Foundry/PC2 when available.
+# Focus spells granted by open class options but absent from the Player Core dump.
+# Mechanical fields only (catalog convention). Sources: Player Core 2, Secrets of Magic / Rage of Elements.
+# Lookup merges via Pf2e.load_data deep-merge under "spells".
 #
 spells:
   ancestral_memories:
     name: Ancestral Memories
     rank: 1
     category: focus
-    traits: [concentrate, focus, sorcerer]
+    traits:
+    - concentrate
+    - focus
+    - sorcerer
     rarity: uncommon
     cast: 1
     source: Pathfinder Player Core 2
-    notes: "Imperial bloodline initial focus. Stub — expand from PC2 data drop."
+    bloodline: imperial
+    duration: until the end of your turn
+    summary: "+1 status to your next spell attack this turn, or -1 status to one enemy's next save vs your spell this turn (60 ft)."
+    heightened:
+      "5": "Bonus/penalty becomes ±2."
+      "8": "Bonus/penalty becomes ±3."
 
   angelic_halo:
     name: Angelic Halo
     rank: 1
     category: focus
-    traits: [aura, concentrate, focus, light, sorcerer]
+    traits:
+    - aura
+    - concentrate
+    - focus
+    - holy
+    - sorcerer
     rarity: uncommon
     cast: 1
     source: Pathfinder Player Core 2
-    notes: "Angelic bloodline initial focus. Stub — expand from PC2 data drop."
+    bloodline: angelic
+    area: 15-foot emanation
+    duration: 1 minute
+    summary: "Allies in the aura healed by heal gain a status bonus to HP regained equal to double the heal spell's rank."
 
   elemental_toss:
     name: Elemental Toss
     rank: 1
     category: focus
-    traits: [attack, concentrate, focus, manipulate, sorcerer]
+    traits:
+    - attack
+    - focus
+    - manipulate
+    - sorcerer
     rarity: uncommon
     cast: 1
     source: Pathfinder Player Core 2
-    notes: "Elemental bloodline initial focus. Stub — expand from PC2 data drop."
+    bloodline: elemental
+    range: 30 feet
+    target: 1 creature
+    defense: AC
+    summary: "Ranged spell attack; 1d8 damage (element of your influence) on a hit, double on a crit. Gains your element's trait."
+    heightened:
+      "+1": "Damage increases by 1d8."
 
   faerie_dust:
     name: Faerie Dust
     rank: 1
     category: focus
-    traits: [concentrate, focus, manipulate, mental, sorcerer]
+    traits:
+    - concentrate
+    - focus
+    - manipulate
+    - mental
+    - sorcerer
     rarity: uncommon
     cast: 1
     source: Pathfinder Player Core 2
-    notes: "Fey bloodline initial focus. Stub — expand from PC2 data drop."
+    bloodline: fey
+    range: 30 feet
+    area: 5-foot burst
+    defense: Will
+    duration: 1 round
+    summary: "Variable actions: +5 ft radius per extra action. Failure: no reactions, -2 status to Perception and Will. Crit fail: also -1 status to Perception and Will for 1 minute."
+    heightened:
+      "+3": "Initial radius increases by 5 feet."
 
   lay_on_hands:
     name: Lay on Hands
     rank: 1
     category: focus
-    traits: [champion, focus, healing, manipulate, vitality]
+    traits:
+    - champion
+    - focus
+    - healing
+    - manipulate
+    - vitality
     rarity: uncommon
     cast: 1
     source: Pathfinder Player Core 2
     range: touch
-    notes: "Champion devotion spell. Stub — expand from PC2 data drop."
+    target: 1 willing living creature or 1 undead creature
+    summary: "Living: regain 6 HP; if not you, +2 status AC for 1 round. Undead: 1d6 vitality damage (basic Fort); failure also -2 status AC for 1 round."
+    heightened:
+      "+1": "Healing +6; undead damage +1d6."
 
   rising_surf:
     name: Rising Surf
     rank: 1
     category: focus
-    traits: [concentrate, druid, focus, manipulate, move, water]
+    traits:
+    - druid
+    - focus
+    - manipulate
+    - move
+    - water
     rarity: uncommon
     cast: 1
     source: Pathfinder Secrets of Magic
-    notes: "Wave order spell. Stub — expand when SoM data is imported."
+    range: 30 feet
+    summary: "Move up to 35 feet, up to 5 feet above ground (avoids many difficult terrains). Must end on solid footing. Not a Stride; still triggers movement reactions. You alone."
+    heightened:
+      "+2": "Distance +5 feet; max height +5 feet."
 
   wildfire:
     name: Wildfire
     rank: 1
     category: focus
-    traits: [concentrate, druid, fire, focus, manipulate]
+    traits:
+    - concentrate
+    - druid
+    - fire
+    - focus
+    - manipulate
     rarity: uncommon
     cast: 2
     source: Pathfinder Secrets of Magic
-    notes: "Flame order spell. Stub — expand when SoM data is imported."
+    range: 30 feet
+    area: 10-foot burst
+    defense: Reflex
+    duration: sustained up to 1 minute
+    summary: "Hazardous terrain: 1 fire damage per square entered on the ground. End turn in area: Reflex or 1 persistent fire. Each Sustain: +5 ft radius."
+    heightened:
+      "+2": "Damage and persistent fire each +1."
