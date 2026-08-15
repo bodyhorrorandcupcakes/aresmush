@@ -203,6 +203,18 @@ module AresMUSH
         charclass: cc["slug"] || cc[:slug],
         charclass_name: cc["name"] || (class_entry.is_a?(Hash) ? class_entry["name"] : nil),
         key_ability: cc["key_ability"] || cc[:key_ability],
+        subclass_field: cg_required_subclass_field(sheet),
+        subclass_value: (lambda {
+          f = cg_required_subclass_field(sheet)
+          return nil unless f
+          (cc[f] || cc[f.to_sym]).to_s
+        }).call,
+        subclass_name: (lambda {
+          f = cg_required_subclass_field(sheet)
+          return nil unless f
+          v = (cc[f] || cc[f.to_sym]).to_s
+          v.empty? ? nil : cg_subclass_name(v)
+        }).call,
         speed: anc.is_a?(Hash) ? anc["speed"] : sheet.speed,
         hp_ancestry: anc.is_a?(Hash) ? anc["hp"] : nil,
         hp_class: class_entry.is_a?(Hash) ? class_entry["hp"] : nil,
@@ -218,7 +230,8 @@ module AresMUSH
         features_preview: feature_preview.uniq,
         archetypes: sheet_archetypes(sheet),
         complete: !sheet.ancestry.blank? && !sheet.heritage.blank? &&
-                  !sheet.background.blank? && !(cc["slug"] || cc[:slug]).to_s.empty?
+                  !sheet.background.blank? && !(cc["slug"] || cc[:slug]).to_s.empty? &&
+                  cg_subclass_complete?(sheet)
       }
     end
 
@@ -246,6 +259,12 @@ module AresMUSH
       cc = sheet.charclass || {}
       if (cc["slug"] || cc[:slug]).to_s.empty?
         return { ok: false, error: "pf2e.cg_need_class", sheet: sheet }
+      end
+      unless cg_class_open?(cc["slug"] || cc[:slug])
+        return { ok: false, error: "pf2e.cg_class_not_open", sheet: sheet }
+      end
+      unless cg_subclass_complete?(sheet)
+        return { ok: false, error: "pf2e.cg_need_subclass", sheet: sheet }
       end
 
       sheet.update(
