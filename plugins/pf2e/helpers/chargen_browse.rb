@@ -18,61 +18,51 @@ module AresMUSH
       end
     end
 
-    # If sheet has an ancestry, only heritages listed on that ancestry.
-    # Otherwise list all heritages with their parent ancestry note.
-    def self.cg_list_heritages(char = nil)
-      sheet = char ? (cg_ensure_sheet(char)[:sheet] rescue nil) : nil
-      heritages = read_data("heritages") || {}
-
-      if sheet && !sheet.ancestry.blank?
+    # If sheet has an ancestry, only heritages allowed for that ancestry.
+    def self.cg_list_heritages(sheet = nil)
+      data = read_data("heritages") || {}
+      allowed = nil
+      if sheet && !sheet.ancestry.to_s.empty?
         anc = cg_ancestry_entry(sheet.ancestry)
-        allowed = Array(anc && anc["heritages"]).map(&:to_s)
-        return allowed.sort.map do |slug|
-          entry = heritages[slug] || {}
-          {
-            slug: slug,
-            name: entry["name"] || slug,
-            note: sheet.ancestry.to_s
-          }
-        end
+        allowed = Array(anc && anc["heritages"]).map(&:to_s) if anc.is_a?(Hash)
       end
-
-      heritages.keys.sort.map do |slug|
-        entry = heritages[slug] || {}
+      data.keys.sort.map do |slug|
+        next if allowed && !allowed.include?(slug.to_s)
+        entry = data[slug] || {}
         {
           slug: slug.to_s,
           name: entry["name"] || slug.to_s,
-          note: entry["ancestry"].to_s
+          note: entry["ancestry"] ? "ancestry: #{entry["ancestry"]}" : nil
         }
-      end
+      end.compact
     end
 
     def self.cg_list_backgrounds
       data = read_data("backgrounds") || {}
       data.keys.sort.map do |slug|
         entry = data[slug] || {}
-        choices = Array(entry["skill_choices"]).size
-        note_parts = []
-        note_parts << "#{choices} choice(s)" if choices > 0
-        feat = entry["feat"].to_s
-        note_parts << "feat: #{feat}" if !feat.empty? && feat != "null"
         {
           slug: slug.to_s,
           name: entry["name"] || slug.to_s,
-          note: note_parts.join(" · ")
+          note: nil
         }
       end
     end
 
     def self.cg_list_classes
-      data = read_data("charclasses") || {}
-      data.keys.sort.map do |slug|
+      data = read_data("charclasses") || read_data("classes") || {}
+      data.keys.sort.select { |slug| cg_class_open?(slug) }.map do |slug|
         entry = data[slug] || {}
         keys = Array((entry["key_ability"] || {})["options"]).map(&:to_s)
+        field = cg_subclass_field_for_class(slug)
+        note_bits = []
+        note_bits << ("key: " + keys.join("/")) unless keys.empty?
+        note_bits << "HP #{entry["hp"]}"
+        note_bits << ("pick: " + cg_subclass_label(field)) if field
         {
           slug: slug.to_s,
           name: entry["name"] || slug.to_s,
-          note: keys.empty? ? "HP #{entry["hp"]}" : "key: #{keys.join("/")} · HP #{entry["hp"]}"
+          note: note_bits.join(" · ")
         }
       end
     end
