@@ -1,14 +1,8 @@
 # Archetype catalog (PF2e Remaster / Pathfinder Player Core + Player Core 2).
 # Lookup: Pf2e.read_data("archetypes", "fighter")
-# Source: Foundry VTT dedication feats under packs/feats/archetype/
-#
-# dedication_feat — slug of the dedication feat in feats.yml (required)
-# multiclass      — if true, blocked when charclass matches class_slug
-# class_slug      — linked class for multiclass exclusion
-# grants.skills   — trained when dedication is taken (if auto-detectable)
-# Archetype *feats* live in feats.yml with traits: [archetype, <slug>]
-#
-# Dedication policy (code constants): 1st free, 2nd staff-only, 3rd never.
+# EXCLUDED: monk, swashbuckler. TABLED: oracle (not yet).
+# dedication_feat, multiclass, class_slug, grants.skills
+# Policy: 1st free, 2nd staff-only, 3rd never.
 #
 
 archetypes:
@@ -28,6 +22,7 @@ archetypes:
     name: Alchemist
     dedication_feat: alchemist_dedication
     multiclass: true
+    class_slug: alchemist
     traits:
     - multiclass
     grants:
@@ -35,7 +30,6 @@ archetypes:
       - crafting
     level: 2
     source: player_core_2
-    class_slug: alchemist
     prerequisites_text:
     - Intelligence +2
   archaeologist:
@@ -76,13 +70,13 @@ archetypes:
     name: Barbarian
     dedication_feat: barbarian_dedication
     multiclass: true
+    class_slug: barbarian
     traits:
     - multiclass
     grants:
       skills: []
     level: 2
     source: player_core_2
-    class_slug: barbarian
     prerequisites_text:
     - Strength +2
     - Constitution +2
@@ -168,6 +162,7 @@ archetypes:
     name: Champion
     dedication_feat: champion_dedication
     multiclass: true
+    class_slug: champion
     traits:
     - multiclass
     grants:
@@ -175,7 +170,6 @@ archetypes:
       - religion
     level: 2
     source: player_core_2
-    class_slug: champion
     prerequisites_text:
     - Strength +2
     - Charisma +2
@@ -303,6 +297,7 @@ archetypes:
     name: Investigator
     dedication_feat: investigator_dedication
     multiclass: true
+    class_slug: investigator
     traits:
     - multiclass
     grants:
@@ -310,7 +305,6 @@ archetypes:
       - society
     level: 2
     source: player_core_2
-    class_slug: investigator
     prerequisites_text:
     - Intelligence +2
   linguist:
@@ -371,20 +365,6 @@ archetypes:
     prerequisites_text:
     - trained in Medicine
     - Battle Medicine
-  oracle:
-    name: Oracle
-    dedication_feat: oracle_dedication
-    multiclass: true
-    traits:
-    - multiclass
-    grants:
-      skills:
-      - religion
-    level: 2
-    source: player_core_2
-    class_slug: oracle
-    prerequisites_text:
-    - Charisma +2
   pirate:
     name: Pirate
     dedication_feat: pirate_dedication
@@ -503,29 +483,15 @@ archetypes:
     name: Sorcerer
     dedication_feat: sorcerer_dedication
     multiclass: true
-    traits:
-    - multiclass
-    grants:
-      skills: []
-    level: 2
-    source: player_core_2
     class_slug: sorcerer
-    prerequisites_text:
-    - Charisma +2
-  swashbuckler:
-    name: Swashbuckler
-    dedication_feat: swashbuckler_dedication
-    multiclass: true
     traits:
     - multiclass
     grants:
       skills: []
     level: 2
     source: player_core_2
-    class_slug: swashbuckler
     prerequisites_text:
     - Charisma +2
-    - Dexterity +2
   talisman_dabbler:
     name: Talisman Dabbler
     dedication_feat: talisman_dabbler_dedication

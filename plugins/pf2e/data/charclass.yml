@@ -1,6 +1,247 @@
-# Classes — Pathfinder Player Core (Foundry). Advancement levels fixed (.value unwrap).
+# Static class reference data (PF2e Remaster).
+# Pathfinder Player Core + Player Core 2 (allowed set).
+# EXCLUDED: monk, swashbuckler. TABLED: oracle (not yet).
+# Lookup: Pf2e.read_data("charclasses", "fighter")
+# advancement[level]: features, class_feat, skill_feat, general_feat, ancestry_feat, skill_increase
+# Proficiency letters: U T E M L
 #
+
 charclasses:
+  alchemist:
+    name: Alchemist
+    key_ability:
+      options:
+      - int
+    hp: 8
+    perception: T
+    saves:
+      fortitude: E
+      reflex: E
+      will: T
+    skills:
+      trained_count: 3
+      additional:
+      - crafting
+    attacks:
+      simple: T
+      martial: U
+      unarmed: T
+      advanced: U
+    defenses:
+      unarmored: T
+      light: T
+      medium: T
+      heavy: U
+    class_dc: T
+    spellcasting: null
+    source: player_core_2
+    advancement:
+      '1':
+        features:
+        - alchemy
+        - research_field
+        class_feat: 1
+        ancestry_feat: 1
+      '2':
+        class_feat: 1
+        skill_feat: 1
+      '3':
+        general_feat: 1
+        skill_increase: 1
+      '4':
+        class_feat: 1
+        skill_feat: 1
+      '5':
+        features:
+        - field_discovery
+        - powerful_alchemy
+        ancestry_feat: 1
+        skill_increase: 1
+      '6':
+        class_feat: 1
+        skill_feat: 1
+      '7':
+        features:
+        - will_expertise
+        - alchemical_weapon_expertise
+        general_feat: 1
+        skill_increase: 1
+      '8':
+        class_feat: 1
+        skill_feat: 1
+      '9':
+        features:
+        - perception_expertise
+        - double_brew
+        - alchemical_expertise
+        ancestry_feat: 1
+        skill_increase: 1
+      '10':
+        class_feat: 1
+        skill_feat: 1
+      '11':
+        features:
+        - chemical_hardiness
+        - advanced_vials
+        general_feat: 1
+        skill_increase: 1
+      '12':
+        class_feat: 1
+        skill_feat: 1
+      '13':
+        features:
+        - medium_armor_expertise
+        - weapon_specialization
+        - choice_greater_field_discovery
+        ancestry_feat: 1
+        skill_increase: 1
+      '14':
+        class_feat: 1
+        skill_feat: 1
+      '15':
+        features:
+        - alchemical_weapon_mastery
+        - explosion_dodger
+        general_feat: 1
+        skill_increase: 1
+      '16':
+        class_feat: 1
+        skill_feat: 1
+      '17':
+        features:
+        - abundant_vials
+        - alchemical_mastery
+        ancestry_feat: 1
+        skill_increase: 1
+      '18':
+        class_feat: 1
+        skill_feat: 1
+      '19':
+        features:
+        - medium_armor_mastery
+        general_feat: 1
+        skill_increase: 1
+      '20':
+        class_feat: 1
+        skill_feat: 1
+  barbarian:
+    name: Barbarian
+    key_ability:
+      options:
+      - str
+    hp: 12
+    perception: E
+    saves:
+      fortitude: E
+      reflex: T
+      will: E
+    skills:
+      trained_count: 3
+      additional:
+      - athletics
+    attacks:
+      simple: T
+      martial: T
+      unarmed: T
+      advanced: U
+    defenses:
+      unarmored: T
+      light: T
+      medium: T
+      heavy: U
+    class_dc: T
+    spellcasting: null
+    source: player_core_2
+    advancement:
+      '1':
+        features:
+        - instinct
+        - rage
+        - quick_tempered
+        class_feat: 1
+        ancestry_feat: 1
+      '2':
+        class_feat: 1
+        skill_feat: 1
+      '3':
+        features:
+        - furious_footfalls
+        general_feat: 1
+        skill_increase: 1
+      '4':
+        class_feat: 1
+        skill_feat: 1
+      '5':
+        features:
+        - brutality
+        ancestry_feat: 1
+        skill_increase: 1
+      '6':
+        class_feat: 1
+        skill_feat: 1
+      '7':
+        features:
+        - juggernaut
+        - weapon_specialization
+        general_feat: 1
+        skill_increase: 1
+      '8':
+        class_feat: 1
+        skill_feat: 1
+      '9':
+        features:
+        - reflex_expertise
+        - raging_resistance
+        ancestry_feat: 1
+        skill_increase: 1
+      '10':
+        class_feat: 1
+        skill_feat: 1
+      '11':
+        features:
+        - mighty_rage
+        general_feat: 1
+        skill_increase: 1
+      '12':
+        class_feat: 1
+        skill_feat: 1
+      '13':
+        features:
+        - greater_juggernaut
+        - medium_armor_expertise
+        - weapon_mastery
+        ancestry_feat: 1
+        skill_increase: 1
+      '14':
+        class_feat: 1
+        skill_feat: 1
+      '15':
+        features:
+        - indomitable_will
+        - greater_weapon_specialization_barbarian
+        general_feat: 1
+        skill_increase: 1
+      '16':
+        class_feat: 1
+        skill_feat: 1
+      '17':
+        features:
+        - perception_mastery
+        - revitalizing_rage
+        ancestry_feat: 1
+        skill_increase: 1
+      '18':
+        class_feat: 1
+        skill_feat: 1
+      '19':
+        features:
+        - devastator
+        - armor_mastery
+        general_feat: 1
+        skill_increase: 1
+      '20':
+        class_feat: 1
+        skill_feat: 1
   bard:
     name: Bard
     key_ability:
@@ -111,6 +352,128 @@ charclasses:
         features:
         - magnum_opus
         - legendary_spellcaster
+        general_feat: 1
+        skill_increase: 1
+      '20':
+        class_feat: 1
+        skill_feat: 1
+  champion:
+    name: Champion
+    key_ability:
+      options:
+      - dex
+      - str
+    hp: 10
+    perception: T
+    saves:
+      fortitude: E
+      reflex: T
+      will: E
+    skills:
+      trained_count: 2
+      additional:
+      - religion
+    attacks:
+      simple: T
+      martial: T
+      unarmed: T
+      advanced: U
+    defenses:
+      unarmored: T
+      light: T
+      medium: T
+      heavy: T
+    class_dc: T
+    spellcasting:
+      enabled: true
+    source: player_core_2
+    advancement:
+      '1':
+        features:
+        - deity_champion
+        - cause
+        - devotion_spells
+        - shield_block
+        class_feat: 1
+        ancestry_feat: 1
+      '2':
+        class_feat: 1
+        skill_feat: 1
+      '3':
+        features:
+        - blessing_of_the_devoted
+        general_feat: 1
+        skill_increase: 1
+      '4':
+        class_feat: 1
+        skill_feat: 1
+      '5':
+        features:
+        - weapon_expertise
+        ancestry_feat: 1
+        skill_increase: 1
+      '6':
+        class_feat: 1
+        skill_feat: 1
+      '7':
+        features:
+        - armor_expertise
+        - weapon_specialization
+        general_feat: 1
+        skill_increase: 1
+      '8':
+        class_feat: 1
+        skill_feat: 1
+      '9':
+        features:
+        - champion_expertise
+        - reflex_expertise
+        - relentless_reaction
+        - sacred_body
+        ancestry_feat: 1
+        skill_increase: 1
+      '10':
+        class_feat: 1
+        skill_feat: 1
+      '11':
+        features:
+        - exalted_reaction
+        - divine_will
+        - perception_expertise
+        general_feat: 1
+        skill_increase: 1
+      '12':
+        class_feat: 1
+        skill_feat: 1
+      '13':
+        features:
+        - armor_mastery
+        - weapon_mastery
+        ancestry_feat: 1
+        skill_increase: 1
+      '14':
+        class_feat: 1
+        skill_feat: 1
+      '15':
+        features:
+        - greater_weapon_specialization
+        general_feat: 1
+        skill_increase: 1
+      '16':
+        class_feat: 1
+        skill_feat: 1
+      '17':
+        features:
+        - champion_mastery
+        - legendary_armor
+        ancestry_feat: 1
+        skill_increase: 1
+      '18':
+        class_feat: 1
+        skill_feat: 1
+      '19':
+        features:
+        - hero_s_defiance
         general_feat: 1
         skill_increase: 1
       '20':
@@ -456,6 +819,145 @@ charclasses:
       '20':
         class_feat: 1
         skill_feat: 1
+  investigator:
+    name: Investigator
+    key_ability:
+      options:
+      - int
+    hp: 8
+    perception: E
+    saves:
+      fortitude: T
+      reflex: E
+      will: E
+    skills:
+      trained_count: 4
+      additional:
+      - society
+    attacks:
+      simple: T
+      martial: T
+      unarmed: T
+      advanced: U
+    defenses:
+      unarmored: T
+      light: T
+      medium: U
+      heavy: U
+    class_dc: T
+    spellcasting: null
+    source: player_core_2
+    advancement:
+      '1':
+        features:
+        - on_the_case
+        - methodology
+        - devise_a_stratagem
+        - strategic_strike
+        class_feat: 1
+        ancestry_feat: 1
+      '2':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+      '3':
+        features:
+        - keen_recollection
+        - skillful_lessons
+        skill_feat: 1
+        general_feat: 1
+        skill_increase: 1
+      '4':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+      '5':
+        features:
+        - weapon_expertise
+        skill_feat: 1
+        ancestry_feat: 1
+        skill_increase: 1
+      '6':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+      '7':
+        features:
+        - vigilant_senses
+        - weapon_specialization
+        skill_feat: 1
+        general_feat: 1
+        skill_increase: 1
+      '8':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+      '9':
+        features:
+        - fortitude_expertise
+        - investigator_expertise
+        skill_feat: 1
+        ancestry_feat: 1
+        skill_increase: 1
+      '10':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+      '11':
+        features:
+        - deductive_improvisation
+        - dogged_will
+        skill_feat: 1
+        general_feat: 1
+        skill_increase: 1
+      '12':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+      '13':
+        features:
+        - incredible_senses
+        - weapon_mastery
+        - light_armor_expertise
+        skill_feat: 1
+        ancestry_feat: 1
+        skill_increase: 1
+      '14':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+      '15':
+        features:
+        - savvy_reflexes
+        - greater_weapon_specialization_level_15
+        skill_feat: 1
+        general_feat: 1
+        skill_increase: 1
+      '16':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+      '17':
+        features:
+        - greater_dogged_will
+        skill_feat: 1
+        ancestry_feat: 1
+        skill_increase: 1
+      '18':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
+      '19':
+        features:
+        - light_armor_mastery_level_19
+        - master_detective
+        skill_feat: 1
+        general_feat: 1
+        skill_increase: 1
+      '20':
+        class_feat: 1
+        skill_feat: 1
+        skill_increase: 1
   ranger:
     name: Ranger
     key_ability:
@@ -713,6 +1215,121 @@ charclasses:
         class_feat: 1
         skill_feat: 1
         skill_increase: 1
+  sorcerer:
+    name: Sorcerer
+    key_ability:
+      options:
+      - cha
+    hp: 6
+    perception: T
+    saves:
+      fortitude: T
+      reflex: T
+      will: E
+    skills:
+      trained_count: 2
+      additional: []
+    attacks:
+      simple: T
+      martial: U
+      unarmed: T
+      advanced: U
+    defenses:
+      unarmored: T
+      light: U
+      medium: U
+      heavy: U
+    class_dc: T
+    spellcasting:
+      enabled: true
+    source: player_core_2
+    advancement:
+      '1':
+        features:
+        - spell_repertoire
+        - sorcerous_potency
+        - sorcerer_spellcasting
+        - bloodline
+        - bloodline_spells
+        ancestry_feat: 1
+      '2':
+        class_feat: 1
+        skill_feat: 1
+      '3':
+        features:
+        - signature_spells
+        general_feat: 1
+        skill_increase: 1
+      '4':
+        class_feat: 1
+        skill_feat: 1
+      '5':
+        features:
+        - magical_fortitude
+        ancestry_feat: 1
+        skill_increase: 1
+      '6':
+        class_feat: 1
+        skill_feat: 1
+      '7':
+        features:
+        - expert_spellcaster
+        general_feat: 1
+        skill_increase: 1
+      '8':
+        class_feat: 1
+        skill_feat: 1
+      '9':
+        features:
+        - reflex_expertise
+        ancestry_feat: 1
+        skill_increase: 1
+      '10':
+        class_feat: 1
+        skill_feat: 1
+      '11':
+        features:
+        - perception_expertise
+        - weapon_expertise
+        general_feat: 1
+        skill_increase: 1
+      '12':
+        class_feat: 1
+        skill_feat: 1
+      '13':
+        features:
+        - weapon_specialization
+        - defensive_robes
+        ancestry_feat: 1
+        skill_increase: 1
+      '14':
+        class_feat: 1
+        skill_feat: 1
+      '15':
+        features:
+        - master_spellcaster
+        general_feat: 1
+        skill_increase: 1
+      '16':
+        class_feat: 1
+        skill_feat: 1
+      '17':
+        features:
+        - majestic_will
+        ancestry_feat: 1
+        skill_increase: 1
+      '18':
+        class_feat: 1
+        skill_feat: 1
+      '19':
+        features:
+        - bloodline_paragon
+        - legendary_spellcaster
+        general_feat: 1
+        skill_increase: 1
+      '20':
+        class_feat: 1
+        skill_feat: 1
   witch:
     name: Witch
     key_ability:
