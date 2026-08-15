@@ -18,33 +18,48 @@ module AresMUSH
       end
     end
 
-    # If sheet has an ancestry, only heritages allowed for that ancestry.
-    def self.cg_list_heritages(sheet = nil)
-      data = read_data("heritages") || {}
-      allowed = nil
-      if sheet && !sheet.ancestry.to_s.empty?
+    # If sheet has an ancestry, only heritages listed on that ancestry.
+    # Otherwise list all heritages with their parent ancestry note.
+    def self.cg_list_heritages(char = nil)
+      sheet = char ? (cg_ensure_sheet(char)[:sheet] rescue nil) : nil
+      heritages = read_data("heritages") || {}
+
+      if sheet && !sheet.ancestry.blank?
         anc = cg_ancestry_entry(sheet.ancestry)
-        allowed = Array(anc && anc["heritages"]).map(&:to_s) if anc.is_a?(Hash)
+        allowed = Array(anc && anc["heritages"]).map(&:to_s)
+        return allowed.sort.map do |slug|
+          entry = heritages[slug] || {}
+          {
+            slug: slug,
+            name: entry["name"] || slug,
+            note: sheet.ancestry.to_s
+          }
+        end
       end
-      data.keys.sort.map do |slug|
-        next if allowed && !allowed.include?(slug.to_s)
-        entry = data[slug] || {}
+
+      heritages.keys.sort.map do |slug|
+        entry = heritages[slug] || {}
         {
           slug: slug.to_s,
           name: entry["name"] || slug.to_s,
-          note: entry["ancestry"] ? "ancestry: #{entry["ancestry"]}" : nil
+          note: entry["ancestry"].to_s
         }
-      end.compact
+      end
     end
 
     def self.cg_list_backgrounds
       data = read_data("backgrounds") || {}
       data.keys.sort.map do |slug|
         entry = data[slug] || {}
+        choices = Array(entry["skill_choices"]).size
+        note_parts = []
+        note_parts << "#{choices} choice(s)" if choices > 0
+        feat = entry["feat"].to_s
+        note_parts << "feat: #{feat}" if !feat.empty? && feat != "null"
         {
           slug: slug.to_s,
           name: entry["name"] || slug.to_s,
-          note: nil
+          note: note_parts.join(" · ")
         }
       end
     end
