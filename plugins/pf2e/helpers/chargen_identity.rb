@@ -267,6 +267,13 @@ module AresMUSH
         return { ok: false, error: "pf2e.cg_need_subclass", sheet: sheet }
       end
 
+      # Key ability must remain legal after racket (or other) option
+      opts = cg_effective_key_ability_options(sheet)
+      ka = ability_key((sheet.charclass || {})["key_ability"])
+      if opts.any? && (ka.nil? || !opts.include?(ka))
+        return { ok: false, error: "pf2e.cg_invalid_key_ability", sheet: sheet }
+      end
+
       sheet.update(
         ability_boosts: {},
         background_skill_picks: [],
