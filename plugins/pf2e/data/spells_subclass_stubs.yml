@@ -1,0 +1,75 @@
+# Minimal stubs for class-option grants not present in the Player Core spell dump.
+# Full prose lives on AON; these exist so sheet grants and cast lookups resolve.
+# Prefer replacing with a real data drop from Foundry/PC2 when available.
+#
+spells:
+  ancestral_memories:
+    name: Ancestral Memories
+    rank: 1
+    category: focus
+    traits: [concentrate, focus, sorcerer]
+    rarity: uncommon
+    cast: 1
+    source: Pathfinder Player Core 2
+    notes: "Imperial bloodline initial focus. Stub — expand from PC2 data drop."
+
+  angelic_halo:
+    name: Angelic Halo
+    rank: 1
+    category: focus
+    traits: [aura, concentrate, focus, light, sorcerer]
+    rarity: uncommon
+    cast: 1
+    source: Pathfinder Player Core 2
+    notes: "Angelic bloodline initial focus. Stub — expand from PC2 data drop."
+
+  elemental_toss:
+    name: Elemental Toss
+    rank: 1
+    category: focus
+    traits: [attack, concentrate, focus, manipulate, sorcerer]
+    rarity: uncommon
+    cast: 1
+    source: Pathfinder Player Core 2
+    notes: "Elemental bloodline initial focus. Stub — expand from PC2 data drop."
+
+  faerie_dust:
+    name: Faerie Dust
+    rank: 1
+    category: focus
+    traits: [concentrate, focus, manipulate, mental, sorcerer]
+    rarity: uncommon
+    cast: 1
+    source: Pathfinder Player Core 2
+    notes: "Fey bloodline initial focus. Stub — expand from PC2 data drop."
+
+  lay_on_hands:
+    name: Lay on Hands
+    rank: 1
+    category: focus
+    traits: [champion, focus, healing, manipulate, vitality]
+    rarity: uncommon
+    cast: 1
+    source: Pathfinder Player Core 2
+    range: touch
+    notes: "Champion devotion spell. Stub — expand from PC2 data drop."
+
+  rising_surf:
+    name: Rising Surf
+    rank: 1
+    category: focus
+    traits: [concentrate, druid, focus, manipulate, move, water]
+    rarity: uncommon
+    cast: 1
+    source: Pathfinder Secrets of Magic
+    notes: "Wave order spell. Stub — expand when SoM data is imported."
+
+  wildfire:
+    name: Wildfire
+    rank: 1
+    category: focus
+    traits: [concentrate, druid, fire, focus, manipulate]
+    rarity: uncommon
+    cast: 2
+    source: Pathfinder Secrets of Magic
+    notes: "Flame order spell. Stub — expand when SoM data is imported."

@@ -1,0 +1,23 @@
+# Minimal stubs for class-option feats not present in the Player Core feat dump.
+# Prefer replacing with a real data drop (Secrets of Magic / PC2) when available.
+#
+feats:
+  fire_lung:
+    name: Fire Lung
+    level: 1
+    traits: [druid]
+    category: class
+    slots:
+    - class
+    source: Pathfinder Secrets of Magic
+    notes: "Flame order feat. Stub — expand when SoM data is imported."
+
+  shore_step:
+    name: Shore Step
+    level: 1
+    traits: [druid]
+    category: class
+    slots:
+    - class
+    source: Pathfinder Secrets of Magic
+    notes: "Wave order feat. Stub — expand when SoM data is imported."
