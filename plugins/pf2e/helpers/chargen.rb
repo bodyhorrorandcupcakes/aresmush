@@ -321,6 +321,7 @@ module AresMUSH
       key = slug.to_s.strip.downcase
       entry = cg_background_entry(key)
       return { ok: false, error: "pf2e.cg_unknown_background", sheet: sheet } unless entry.is_a?(Hash)
+      return { ok: false, error: "pf2e.cg_background_not_open", sheet: sheet } unless cg_background_open?(key)
 
       sheet.update(background: key)
       { ok: true, error: nil, sheet: sheet, entry: entry }
