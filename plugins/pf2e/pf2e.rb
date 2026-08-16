@@ -13,8 +13,11 @@ module AresMUSH
       load_data
     end
 
+    def self.unload
+    end
+
     def self.get_cmd_handler(client, cmd, enactor)
-      case cmd.root
+      case cmd.root.downcase
       when "sheet"
         case cmd.switch
         when "combat" then return SheetCombatCmd
@@ -74,6 +77,7 @@ module AresMUSH
         case cmd.switch
         when "set" then return Pf2eSetCmd
         when "reset" then return Pf2eResetCmd
+        when "review", "status" then return Pf2eReviewCmd
         end
       when "adv", "level"
         case cmd.switch
@@ -86,6 +90,7 @@ module AresMUSH
         end
       when "cg"
         case cmd.switch
+        when nil, "status" then return CgStatusCmd
         when "ancestry" then return CgAncestryCmd
         when "heritage" then return CgHeritageCmd
         when "background" then return CgBackgroundCmd
