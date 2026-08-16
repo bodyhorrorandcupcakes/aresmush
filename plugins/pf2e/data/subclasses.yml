@@ -1,7 +1,5 @@
-# Class option grants (Remaster-oriented). Open lists gated in chargen_policy.rb.
-# Lookup: Pf2e.read_data("subclasses", "bloodline") then [slug]
-# apply via Pf2e.apply_subclass_grants!(sheet)
-
+# Class option grants. chargen_open: true required for player picks (missing = closed).
+#
 subclasses:
   bloodline:
     imperial:
@@ -11,10 +9,10 @@ subclasses:
       cantrips: [detect_magic]
       focus_spells: [ancestral_memories]
       repertoire_gifts:
-        "0": detect_magic
-        "1": force_barrage
-      notes: "Bloodline spells and gifts scale with level; initial focus is ancestral_memories."
-
+        '0': detect_magic
+        '1': force_barrage
+      notes: Bloodline spells and gifts scale with level; initial focus is ancestral_memories.
+      chargen_open: true
     elemental:
       name: Elemental
       tradition: primal
@@ -22,10 +20,11 @@ subclasses:
       cantrips: [ignition]
       focus_spells: [elemental_toss]
       repertoire_gifts:
-        "0": ignition
-        "1": breathe_fire
-      notes: "Default elemental influence = fire for v1. Air/earth/metal/water/wood influence can be added later."
-
+        '0': ignition
+        '1': breathe_fire
+      notes: Default elemental influence = fire for v1. Air/earth/metal/water/wood
+        influence can be added later.
+      chargen_open: true
     fey:
       name: Fey
       tradition: primal
@@ -33,10 +32,10 @@ subclasses:
       cantrips: [figment]
       focus_spells: [faerie_dust]
       repertoire_gifts:
-        "0": figment
-        "1": charm
-      notes: "Bloodline focus: faerie_dust (initial)."
-
+        '0': figment
+        '1': charm
+      notes: 'Bloodline focus: faerie_dust (initial).'
+      chargen_open: true
     angelic:
       name: Angelic
       tradition: divine
@@ -44,10 +43,10 @@ subclasses:
       cantrips: [light]
       focus_spells: [angelic_halo]
       repertoire_gifts:
-        "0": light
-        "1": heal
-      notes: "Bloodline focus: angelic_halo (initial)."
-
+        '0': light
+        '1': heal
+      notes: 'Bloodline focus: angelic_halo (initial).'
+      chargen_open: true
   doctrine:
     cloistered:
       name: Cloistered Cleric
@@ -77,8 +76,9 @@ subclasses:
           features: [final_doctrine_cloistered]
           spellcasting:
             proficiency: L
-      notes: "Domain Initiate at 1st. Spell proficiency advances on the cloistered track."
-
+      notes: Domain Initiate at 1st. Spell proficiency advances on the cloistered
+        track.
+      chargen_open: true
     warpriest:
       name: Warpriest
       steps:
@@ -359,12 +359,14 @@ subclasses:
       name: Precision
       skills: []
       combat_tag: precision
-      notes: "Combat resolution later; token only."
+      notes: Combat resolution later; token only.
+      chargen_open: true
     flurry:
       name: Flurry
       skills: []
       combat_tag: flurry
-      notes: "Combat resolution later; token only."
+      notes: Combat resolution later; token only.
+      chargen_open: true
     outwit:
       name: Outwit
       skills: []

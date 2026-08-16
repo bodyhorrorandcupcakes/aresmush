@@ -1,9 +1,7 @@
-# Static class reference data (PF2e Remaster).
-# EXCLUDED (PC for now): monk, swashbuckler, alchemist, barbarian.
-# TABLED: oracle (not yet).
-# Lookup: Pf2e.read_data("charclasses", "fighter")
+# Classes — Player Core + Player Core 2.
+# chargen_open: true required for player picks (missing = closed).
+# Closed stubs present for alchemist/barbarian/monk/oracle/swashbuckler.
 #
-
 charclasses:
   bard:
     name: Bard
@@ -120,6 +118,7 @@ charclasses:
       '20':
         class_feat: 1
         skill_feat: 1
+    chargen_open: true
   champion:
     name: Champion
     key_ability:
@@ -242,6 +241,7 @@ charclasses:
       '20':
         class_feat: 1
         skill_feat: 1
+    chargen_open: true
   cleric:
     name: Cleric
     key_ability:
@@ -355,6 +355,7 @@ charclasses:
       '20':
         class_feat: 1
         skill_feat: 1
+    chargen_open: true
   druid:
     name: Druid
     key_ability:
@@ -468,6 +469,7 @@ charclasses:
       '20':
         class_feat: 1
         skill_feat: 1
+    chargen_open: true
   fighter:
     name: Fighter
     key_ability:
@@ -582,6 +584,7 @@ charclasses:
       '20':
         class_feat: 1
         skill_feat: 1
+    chargen_open: true
   investigator:
     name: Investigator
     key_ability:
@@ -721,6 +724,7 @@ charclasses:
         class_feat: 1
         skill_feat: 1
         skill_increase: 1
+    chargen_open: true
   ranger:
     name: Ranger
     key_ability:
@@ -840,6 +844,7 @@ charclasses:
       '20':
         class_feat: 1
         skill_feat: 1
+    chargen_open: true
   rogue:
     name: Rogue
     key_ability:
@@ -978,6 +983,7 @@ charclasses:
         class_feat: 1
         skill_feat: 1
         skill_increase: 1
+    chargen_open: true
   sorcerer:
     name: Sorcerer
     key_ability:
@@ -1093,6 +1099,7 @@ charclasses:
       '20':
         class_feat: 1
         skill_feat: 1
+    chargen_open: true
   witch:
     name: Witch
     key_ability:
@@ -1204,6 +1211,7 @@ charclasses:
       '20':
         class_feat: 1
         skill_feat: 1
+    chargen_open: true
   wizard:
     name: Wizard
     key_ability:
@@ -1316,3 +1324,145 @@ charclasses:
       '20':
         class_feat: 1
         skill_feat: 1
+    chargen_open: true
+  alchemist:
+    name: Alchemist
+    key_ability:
+      options:
+      - int
+    hp: 8
+    source: player_core_2
+    perception: T
+    saves:
+      fortitude: T
+      reflex: T
+      will: T
+    skills:
+      trained_count: 3
+      additional: []
+    attacks:
+      simple: T
+      martial: T
+      unarmed: T
+    defenses:
+      unarmored: T
+      light: T
+    class_dc: T
+    spellcasting: null
+    advancement:
+      '1':
+        features: []
+    notes: Data stub — closed for chargen (policy). Expand when/if opened.
+  barbarian:
+    name: Barbarian
+    key_ability:
+      options:
+      - str
+    hp: 12
+    source: player_core_2
+    perception: T
+    saves:
+      fortitude: T
+      reflex: T
+      will: T
+    skills:
+      trained_count: 3
+      additional: []
+    attacks:
+      simple: T
+      martial: T
+      unarmed: T
+    defenses:
+      unarmored: T
+      light: T
+    class_dc: T
+    spellcasting: null
+    advancement:
+      '1':
+        features: []
+    notes: Data stub — closed for chargen (policy). Expand when/if opened.
+  monk:
+    name: Monk
+    key_ability:
+      options:
+      - dex
+      - str
+    hp: 10
+    source: player_core_2
+    perception: T
+    saves:
+      fortitude: T
+      reflex: T
+      will: T
+    skills:
+      trained_count: 3
+      additional: []
+    attacks:
+      simple: T
+      martial: T
+      unarmed: T
+    defenses:
+      unarmored: T
+      light: T
+    class_dc: T
+    spellcasting: null
+    advancement:
+      '1':
+        features: []
+    notes: Data stub — closed for chargen (policy). Expand when/if opened.
+  oracle:
+    name: Oracle
+    key_ability:
+      options:
+      - cha
+    hp: 8
+    source: player_core_2
+    perception: T
+    saves:
+      fortitude: T
+      reflex: T
+      will: T
+    skills:
+      trained_count: 3
+      additional: []
+    attacks:
+      simple: T
+      martial: T
+      unarmed: T
+    defenses:
+      unarmored: T
+      light: T
+    class_dc: T
+    spellcasting: null
+    advancement:
+      '1':
+        features: []
+    notes: Data stub — closed for chargen (policy). Expand when/if opened.
+  swashbuckler:
+    name: Swashbuckler
+    key_ability:
+      options:
+      - dex
+    hp: 10
+    source: player_core_2
+    perception: T
+    saves:
+      fortitude: T
+      reflex: T
+      will: T
+    skills:
+      trained_count: 3
+      additional: []
+    attacks:
+      simple: T
+      martial: T
+      unarmed: T
+    defenses:
+      unarmored: T
+      light: T
+    class_dc: T
+    spellcasting: null
+    advancement:
+      '1':
+        features: []
+    notes: Data stub — closed for chargen (policy). Expand when/if opened.

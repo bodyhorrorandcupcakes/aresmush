@@ -1,4 +1,7 @@
-# Ancestries — Pathfinder Player Core (Foundry). common→tradetongue, elven→iliari.
+# Ancestries — Player Core + Player Core 2.
+# chargen_open: true required for player picks (missing = closed).
+# Open: human, dwarf, elf, goblin, halfing.
+# Languages: common→tradetongue, elven→iliari.
 #
 ancestries:
   dwarf:
@@ -32,6 +35,7 @@ ancestries:
     - strong_blooded_dwarf
     features:
     - darkvision
+    chargen_open: true
   elf:
     name: Elf
     hp: 6
@@ -63,6 +67,7 @@ ancestries:
     - whisper_elf
     - woodland_elf
     features: []
+    chargen_open: true
   gnome:
     name: Gnome
     hp: 8
@@ -125,6 +130,7 @@ ancestries:
     - unbreakable_goblin
     features:
     - darkvision
+    chargen_open: true
   halfling:
     name: Halfling
     hp: 6
@@ -156,6 +162,7 @@ ancestries:
     - twilight_halfling
     - wildwood_halfling
     features: []
+    chargen_open: true
   human:
     name: Human
     hp: 8
@@ -181,6 +188,7 @@ ancestries:
     - versatile_heritage
     - versatile_human
     features: []
+    chargen_open: true
   leshy:
     name: Leshy
     hp: 8
@@ -245,3 +253,258 @@ ancestries:
     - winter_orc
     features:
     - darkvision
+  catfolk:
+    name: Catfolk
+    hp: 8
+    size: medium
+    speed: 25
+    boosts:
+      fixed:
+      - dex
+      - cha
+      free: 1
+    flaws:
+      fixed:
+      - wis
+      free: 0
+    traits:
+    - catfolk
+    - humanoid
+    languages:
+      starting:
+      - tradetongue
+      - amurrun
+      additional_per_int: true
+    vision: low_light_vision
+    heritages:
+    - clawed_catfolk
+    - hunting_catfolk
+    - jungle_catfolk
+    - liminal_catfolk
+    - nine_lives_catfolk
+    - sharp_eared_catfolk
+    - winter_catfolk
+    features: []
+  hobgoblin:
+    name: Hobgoblin
+    hp: 8
+    size: medium
+    speed: 25
+    boosts:
+      fixed:
+      - con
+      - int
+      free: 1
+    flaws:
+      fixed:
+      - wis
+      free: 0
+    traits:
+    - hobgoblin
+    - humanoid
+    - goblin
+    languages:
+      starting:
+      - tradetongue
+      - goblin
+      additional_per_int: true
+    vision: darkvision
+    heritages:
+    - elfbane_hobgoblin
+    - runtboss_hobgoblin
+    - shortshanks_hobgoblin
+    - smokeworker_hobgoblin
+    - warmarch_hobgoblin
+    - warrenbred_hobgoblin
+    features:
+    - darkvision
+  kholo:
+    name: Kholo
+    hp: 8
+    size: medium
+    speed: 25
+    boosts:
+      fixed:
+      - str
+      - int
+      free: 1
+    flaws:
+      fixed:
+      - wis
+      free: 0
+    traits:
+    - kholo
+    - humanoid
+    languages:
+      starting:
+      - tradetongue
+      - kholo
+      additional_per_int: true
+    vision: low_light_vision
+    heritages:
+    - ant_kholo
+    - cave_kholo
+    - dog_kholo
+    - great_kholo
+    - sweetbreath_kholo
+    - winter_kholo
+    - witch_kholo
+    features: []
+  kobold:
+    name: Kobold
+    hp: 6
+    size: small
+    speed: 25
+    boosts:
+      fixed:
+      - dex
+      - cha
+      free: 1
+    flaws:
+      fixed:
+      - con
+      free: 0
+    traits:
+    - kobold
+    - humanoid
+    languages:
+      starting:
+      - tradetongue
+      - sakvroth
+      additional_per_int: true
+    vision: darkvision
+    heritages:
+    - cavernstalker_kobold
+    - dragonscaled_kobold
+    - elementheart_kobold
+    - spellhorn_kobold
+    - strongjaw_kobold
+    - tunnelflood_kobold
+    - venomtail_kobold
+    features:
+    - darkvision
+  lizardfolk:
+    name: Lizardfolk
+    hp: 8
+    size: medium
+    speed: 25
+    boosts:
+      fixed:
+      - str
+      - wis
+      free: 1
+    flaws:
+      fixed:
+      - int
+      free: 0
+    traits:
+    - lizardfolk
+    - humanoid
+    languages:
+      starting:
+      - tradetongue
+      - iruxi
+      additional_per_int: true
+    vision: normal
+    heritages:
+    - cliffscale_lizardfolk
+    - cloudleaper_lizardfolk
+    - frilled_lizardfolk
+    - sandstrider_lizardfolk
+    - unseen_lizardfolk
+    - wetlander_lizardfolk
+    - woodstalker_lizardfolk
+    features: []
+  ratfolk:
+    name: Ratfolk
+    hp: 6
+    size: small
+    speed: 25
+    boosts:
+      fixed:
+      - dex
+      - int
+      free: 1
+    flaws:
+      fixed:
+      - str
+      free: 0
+    traits:
+    - ratfolk
+    - humanoid
+    languages:
+      starting:
+      - tradetongue
+      - ysoki
+      additional_per_int: true
+    vision: low_light_vision
+    heritages:
+    - deep_rat
+    - desert_rat
+    - longsnout_rat
+    - sewer_rat
+    - shadow_rat
+    - snow_rat
+    - tunnel_rat
+    features: []
+  tengu:
+    name: Tengu
+    hp: 6
+    size: medium
+    speed: 25
+    boosts:
+      fixed:
+      - dex
+      free: 2
+    flaws:
+      fixed: []
+      free: 0
+    traits:
+    - tengu
+    - humanoid
+    languages:
+      starting:
+      - tradetongue
+      - tengu
+      additional_per_int: true
+    vision: low_light_vision
+    heritages:
+    - dogtooth_tengu
+    - jinxed_tengu
+    - mountainkeeper_tengu
+    - skyborn_tengu
+    - stormtossed_tengu
+    - taloned_tengu
+    - wavediver_tengu
+    features: []
+  tripkee:
+    name: Tripkee
+    hp: 6
+    size: small
+    speed: 25
+    boosts:
+      fixed:
+      - dex
+      - wis
+      free: 1
+    flaws:
+      fixed:
+      - str
+      free: 0
+    traits:
+    - tripkee
+    - humanoid
+    languages:
+      starting:
+      - tradetongue
+      - tripkee
+      additional_per_int: true
+    vision: low_light_vision
+    heritages:
+    - poisonhide_tripkee
+    - riverside_tripkee
+    - snaptongue_tripkee
+    - stickytoe_tripkee
+    - thickskin_tripkee
+    - windweb_tripkee
+    features: []
