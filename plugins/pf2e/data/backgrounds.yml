@@ -1,8 +1,10 @@
 # Backgrounds — Pathfinder Player Core (Foundry).
+# chargen_open: true required for player picks (missing = closed).
 #
 backgrounds:
   acolyte:
     name: Acolyte
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -17,6 +19,7 @@ backgrounds:
     traits: []
   acrobat:
     name: Acrobat
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -31,6 +34,7 @@ backgrounds:
     traits: []
   animal_whisperer:
     name: Animal Whisperer
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -44,6 +48,7 @@ backgrounds:
     traits: []
   artisan:
     name: Artisan
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -58,6 +63,7 @@ backgrounds:
     traits: []
   artist:
     name: Artist
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -72,6 +78,7 @@ backgrounds:
     traits: []
   bandit:
     name: Bandit
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -88,6 +95,7 @@ backgrounds:
     traits: []
   barkeep:
     name: Barkeep
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -102,6 +110,7 @@ backgrounds:
     traits: []
   barrister:
     name: Barrister
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -116,6 +125,7 @@ backgrounds:
     traits: []
   bounty_hunter:
     name: Bounty Hunter
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -130,6 +140,7 @@ backgrounds:
     traits: []
   charlatan:
     name: Charlatan
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -144,6 +155,7 @@ backgrounds:
     traits: []
   cook:
     name: Cook
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -158,6 +170,7 @@ backgrounds:
     traits: []
   criminal:
     name: Criminal
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -172,6 +185,7 @@ backgrounds:
     traits: []
   cultist:
     name: Cultist
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -189,6 +203,7 @@ backgrounds:
     traits: []
   detective:
     name: Detective
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -203,6 +218,7 @@ backgrounds:
     traits: []
   emissary:
     name: Emissary
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -220,6 +236,7 @@ backgrounds:
     traits: []
   entertainer:
     name: Entertainer
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -234,6 +251,7 @@ backgrounds:
     traits: []
   farmhand:
     name: Farmhand
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -248,6 +266,7 @@ backgrounds:
     traits: []
   field_medic:
     name: Field Medic
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -262,6 +281,7 @@ backgrounds:
     traits: []
   fortune_teller:
     name: Fortune Teller
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -276,6 +296,7 @@ backgrounds:
     traits: []
   gambler:
     name: Gambler
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -290,6 +311,7 @@ backgrounds:
     traits: []
   gladiator:
     name: Gladiator
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -304,6 +326,7 @@ backgrounds:
     traits: []
   guard:
     name: Guard
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -322,6 +345,7 @@ backgrounds:
     traits: []
   herbalist:
     name: Herbalist
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -336,6 +360,7 @@ backgrounds:
     traits: []
   hermit:
     name: Hermit
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -357,6 +382,7 @@ backgrounds:
     traits: []
   hunter:
     name: Hunter
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -371,6 +397,7 @@ backgrounds:
     traits: []
   laborer:
     name: Laborer
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -385,6 +412,7 @@ backgrounds:
     traits: []
   martial_disciple:
     name: Martial Disciple
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -406,6 +434,7 @@ backgrounds:
     traits: []
   merchant:
     name: Merchant
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -420,6 +449,7 @@ backgrounds:
     traits: []
   miner:
     name: Miner
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -434,6 +464,7 @@ backgrounds:
     traits: []
   noble:
     name: Noble
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -452,6 +483,7 @@ backgrounds:
     traits: []
   nomad:
     name: Nomad
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -468,6 +500,7 @@ backgrounds:
     traits: []
   prisoner:
     name: Prisoner
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -482,6 +515,7 @@ backgrounds:
     traits: []
   raised_by_belief:
     name: Raised by Belief
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -491,6 +525,7 @@ backgrounds:
     traits: []
   sailor:
     name: Sailor
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -505,6 +540,7 @@ backgrounds:
     traits: []
   scholar:
     name: Scholar
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -525,6 +561,7 @@ backgrounds:
     traits: []
   scout:
     name: Scout
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -541,6 +578,7 @@ backgrounds:
     traits: []
   street_urchin:
     name: Street Urchin
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -558,6 +596,7 @@ backgrounds:
     traits: []
   teacher:
     name: Teacher
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -576,6 +615,7 @@ backgrounds:
     traits: []
   tinker:
     name: Tinker
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
@@ -590,6 +630,7 @@ backgrounds:
     traits: []
   warrior:
     name: Warrior
+    chargen_open: true
     boosts:
       fixed: []
       free: 2
