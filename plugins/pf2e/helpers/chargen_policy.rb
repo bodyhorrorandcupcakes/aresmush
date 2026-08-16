@@ -2,8 +2,8 @@ module AresMUSH
   module Pf2e
 
     # Chargen policy — openness is data-driven via chargen_open: true on catalog
-    # entries (ancestries, heritages, classes, subclasses). Missing key = closed.
-    # Structural maps (required subclass field, labels) stay in code.
+    # entries (ancestries, heritages, backgrounds, classes, subclasses).
+    # Missing key = closed. Structural maps stay in code.
 
     CG_REQUIRED_SUBCLASS = {
       "witch" => "contact",
@@ -31,7 +31,6 @@ module AresMUSH
       "doctrine" => "Doctrine"
     }.freeze
 
-    # Display-name fallbacks when an entry has no name field.
     CG_SUBCLASS_NAMES = {
       "faiths_flamekeeper" => "Faith's Flamekeeper",
       "the_inscribed_one" => "The Inscribed One",
@@ -89,6 +88,10 @@ module AresMUSH
 
     def self.cg_heritage_open?(slug)
       chargen_open_entry?(cg_heritage_entry(slug))
+    end
+
+    def self.cg_background_open?(slug)
+      chargen_open_entry?(cg_background_entry(slug))
     end
 
     def self.cg_class_open?(slug)
