@@ -81,6 +81,7 @@ subclasses:
       chargen_open: true
     warpriest:
       name: Warpriest
+      chargen_open: true
       steps:
         "1":
           features: [first_doctrine_warpriest]
@@ -121,6 +122,7 @@ subclasses:
   racket:
     ruffian:
       name: Ruffian
+      chargen_open: true
       skills: [intimidation]
       key_ability_options: [str, dex]
       proficiency:
@@ -130,12 +132,14 @@ subclasses:
 
     scoundrel:
       name: Scoundrel
+      chargen_open: true
       skills: [deception, diplomacy]
       key_ability_options: [cha, dex]
       notes: "Key ability Cha or Dex (cg/racket scoundrel cha). Feint upgrades are combat-side later."
 
     thief:
       name: Thief
+      chargen_open: true
       skills: [thievery]
       key_ability_options: [dex]
       combat_tag: dex_damage_finesse
@@ -143,6 +147,7 @@ subclasses:
 
     mastermind:
       name: Mastermind
+      chargen_open: true
       skills: [society]
       key_ability_options: [int, dex]
       skill_choices:
@@ -153,6 +158,7 @@ subclasses:
   methodology:
     empiricism:
       name: Empiricism
+      chargen_open: true
       skills: []
       feats: [thats_odd]
       skill_choices:
@@ -162,18 +168,21 @@ subclasses:
 
     forensic_medicine:
       name: Forensic Medicine
+      chargen_open: true
       skills: [medicine]
       feats: [forensic_acumen, battle_medicine]
       notes: "Battle Medicine extras are resolution-side later."
 
     interrogation:
       name: Interrogation
+      chargen_open: true
       skills: [diplomacy]
       feats: [no_cause_for_alarm]
       notes: "Pointed Question when coded."
 
     alchemical_sciences:
       name: Alchemical Sciences
+      chargen_open: true
       skills: [crafting]
       feats: [alchemical_crafting]
       notes: "Formula book / starter formulas are inventory/staff side for now."
@@ -181,6 +190,7 @@ subclasses:
   order:
     animal:
       name: Animal
+      chargen_open: true
       skills: [athletics]
       feats: [animal_companion]
       focus_spells: [heal_animal]
@@ -188,6 +198,7 @@ subclasses:
 
     leaf:
       name: Leaf
+      chargen_open: true
       skills: [diplomacy]
       feats: [leshy_familiar]
       focus_spells: [cornucopia]
@@ -195,6 +206,7 @@ subclasses:
 
     storm:
       name: Storm
+      chargen_open: true
       skills: [acrobatics]
       feats: [storm_born]
       focus_spells: [tempest_surge]
@@ -202,6 +214,7 @@ subclasses:
 
     wild:
       name: Wild
+      chargen_open: true
       skills: [intimidation]
       feats: [untamed_form]
       focus_spells: [untamed_shift]
@@ -209,6 +222,7 @@ subclasses:
 
     wave:
       name: Wave
+      chargen_open: true
       skills: [medicine]
       feats: [shore_step]
       focus_spells: [rising_surf]
@@ -216,6 +230,7 @@ subclasses:
 
     flame:
       name: Flame
+      chargen_open: true
       skills: [acrobatics]
       feats: [fire_lung]
       focus_spells: [wildfire]
@@ -224,6 +239,7 @@ subclasses:
   muse:
     maestro:
       name: Maestro
+      chargen_open: true
       feats: [lingering_composition]
       repertoire_gifts:
         "1": soothe
@@ -231,6 +247,7 @@ subclasses:
 
     enigma:
       name: Enigma
+      chargen_open: true
       feats: [bardic_lore]
       repertoire_gifts:
         "1": sure_strike
@@ -238,11 +255,13 @@ subclasses:
 
     polymath:
       name: Polymath
+      chargen_open: true
       feats: [versatile_performance]
       notes: "Versatile Performance at 1st. Additional Lore / flexible skill use is skill-side."
 
     warrior:
       name: Warrior
+      chargen_open: true
       skills: [athletics]
       feats: [martial_performance]
       proficiency:
@@ -255,6 +274,7 @@ subclasses:
   contact:
     faiths_flamekeeper:
       name: Faith's Flamekeeper
+      chargen_open: true
       tradition: divine
       skills: [religion]
       focus_spells: [stoke_the_heart]
@@ -262,6 +282,7 @@ subclasses:
 
     the_inscribed_one:
       name: The Inscribed One
+      chargen_open: true
       tradition: arcane
       skills: [arcana]
       focus_spells: [discern_secrets]
@@ -269,6 +290,7 @@ subclasses:
 
     silence_in_snow:
       name: Silence in Snow
+      chargen_open: true
       tradition: primal
       skills: [nature]
       focus_spells: [clinging_ice]
@@ -276,6 +298,7 @@ subclasses:
 
     spinner_of_threads:
       name: Spinner of Threads
+      chargen_open: true
       tradition: occult
       skills: [occultism]
       focus_spells: [nudge_fate]
@@ -283,6 +306,7 @@ subclasses:
 
     wilding_steward:
       name: Wilding Steward
+      chargen_open: true
       tradition: primal
       skills: [nature]
       focus_spells: [wilding_word]
@@ -291,24 +315,28 @@ subclasses:
   cause:
     justice:
       name: Justice
+      chargen_open: true
       features: [cause_justice, retributive_strike]
       focus_spells: [lay_on_hands]
       notes: "Edicts: follow the law, respect legitimate authority. Anathema: cheat / take advantage. Reaction: Retributive Strike."
 
     liberation:
       name: Liberation
+      chargen_open: true
       features: [cause_liberation, liberating_step]
       focus_spells: [lay_on_hands]
       notes: "Edicts: oppose slavery and tyranny; fight for others' freedom. Anathema: force or threaten others' choices. Reaction: Liberating Step."
 
     redemption:
       name: Redemption
+      chargen_open: true
       features: [cause_redemption, glimpse_of_redemption]
       focus_spells: [lay_on_hands]
       notes: "Edicts: redeem the wicked, show compassion. Anathema: kill a creature that could be redeemed / refuse a sincere plea. Reaction: Glimpse of Redemption."
 
     obedience:
       name: Obedience
+      chargen_open: true
       features: [cause_obedience, iron_command]
       focus_spells: [lay_on_hands]
       notes: "Edicts: enforce proper hierarchies; lead when suited. Anathema: submit to one lesser than you. Reaction: Iron Command. Table tone may restrict this cause."
@@ -316,41 +344,49 @@ subclasses:
   school:
     abjuration:
       name: Abjuration
+      chargen_open: true
       features: [school_abjuration]
       notes: "Curriculum cantrip + two 1st-rank school spells into spellbook (staff/catalog pass). School focus when curriculum data exists."
 
     conjuration:
       name: Conjuration
+      chargen_open: true
       features: [school_conjuration]
       notes: "Curriculum cantrip + two 1st-rank school spells into spellbook (staff/catalog pass)."
 
     divination:
       name: Divination
+      chargen_open: true
       features: [school_divination]
       notes: "Curriculum cantrip + two 1st-rank school spells into spellbook (staff/catalog pass)."
 
     enchantment:
       name: Enchantment
+      chargen_open: true
       features: [school_enchantment]
       notes: "Curriculum cantrip + two 1st-rank school spells into spellbook (staff/catalog pass)."
 
     evocation:
       name: Evocation
+      chargen_open: true
       features: [school_evocation]
       notes: "Curriculum cantrip + two 1st-rank school spells into spellbook (staff/catalog pass)."
 
     illusion:
       name: Illusion
+      chargen_open: true
       features: [school_illusion]
       notes: "Curriculum cantrip + two 1st-rank school spells into spellbook (staff/catalog pass)."
 
     transmutation:
       name: Transmutation
+      chargen_open: true
       features: [school_transmutation]
       notes: "Curriculum cantrip + two 1st-rank school spells into spellbook (staff/catalog pass)."
 
     universalist:
       name: Universalist
+      chargen_open: true
       features: [school_universalist]
       notes: "No specialist curriculum. Extra 1st-level class feat when feat data/slots support it; Drain Bonded Item flexibility is combat/magic-side."
 
@@ -369,6 +405,7 @@ subclasses:
       chargen_open: true
     outwit:
       name: Outwit
+      chargen_open: true
       skills: []
       combat_tag: outwit
       notes: "Combat resolution later; token only."
