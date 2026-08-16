@@ -1,14 +1,9 @@
 module AresMUSH
   module Pf2e
 
-    # -------------------------------------------------
-    # Browse helpers — available identity options
-    # Returns arrays of { slug:, name:, note: } for CLI/web.
-    # -------------------------------------------------
-
     def self.cg_list_ancestries
       data = read_data("ancestries") || {}
-      data.keys.sort.map do |slug|
+      data.keys.sort.select { |slug| cg_ancestry_open?(slug) }.map do |slug|
         entry = data[slug] || {}
         {
           slug: slug.to_s,
@@ -18,8 +13,8 @@ module AresMUSH
       end
     end
 
-    # If sheet has an ancestry, only heritages listed on that ancestry.
-    # Otherwise list all heritages with their parent ancestry note.
+    # If sheet has an ancestry, only open heritages listed on that ancestry.
+    # Otherwise list all open heritages with their parent ancestry note.
     def self.cg_list_heritages(char = nil)
       sheet = char ? (cg_ensure_sheet(char)[:sheet] rescue nil) : nil
       heritages = read_data("heritages") || {}
@@ -27,7 +22,7 @@ module AresMUSH
       if sheet && !sheet.ancestry.blank?
         anc = cg_ancestry_entry(sheet.ancestry)
         allowed = Array(anc && anc["heritages"]).map(&:to_s)
-        return allowed.sort.map do |slug|
+        return allowed.sort.select { |slug| cg_heritage_open?(slug) }.map do |slug|
           entry = heritages[slug] || {}
           {
             slug: slug,
@@ -37,7 +32,7 @@ module AresMUSH
         end
       end
 
-      heritages.keys.sort.map do |slug|
+      heritages.keys.sort.select { |slug| cg_heritage_open?(slug) }.map do |slug|
         entry = heritages[slug] || {}
         {
           slug: slug.to_s,
@@ -49,7 +44,14 @@ module AresMUSH
 
     def self.cg_list_backgrounds
       data = read_data("backgrounds") || {}
-      data.keys.sort.map do |slug|
+      data.keys.sort.select { |slug|
+        entry = data[slug]
+        if data.values.any? { |e| e.is_a?(Hash) && e.key?("chargen_open") }
+          chargen_open_entry?(entry)
+        else
+          true
+        end
+      }.map do |slug|
         entry = data[slug] || {}
         choices = Array(entry["skill_choices"]).size
         note_parts = []
