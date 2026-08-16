@@ -1,13 +1,9 @@
 module AresMUSH
   module Pf2e
 
-    # Chargen policy gates — open lists only. Expand constants to unlock later.
-    # Player docs: TapestryMUSH OOC/Open Character Options.md
-
-    CG_OPEN_CLASSES = %w[
-      bard champion cleric druid fighter investigator
-      ranger rogue sorcerer witch wizard
-    ].freeze
+    # Chargen policy — openness is data-driven via chargen_open: true on catalog
+    # entries (ancestries, heritages, classes, subclasses). Missing key = closed.
+    # Structural maps (required subclass field, labels) stay in code.
 
     CG_REQUIRED_SUBCLASS = {
       "witch" => "contact",
@@ -20,40 +16,6 @@ module AresMUSH
       "ranger" => "edge",
       "wizard" => "school",
       "cleric" => "doctrine"
-    }.freeze
-
-    CG_OPEN_CONTACTS = %w[
-      faiths_flamekeeper the_inscribed_one silence_in_snow
-      spinner_of_threads wilding_steward
-    ].freeze
-
-    CG_OPEN_BLOODLINES = %w[imperial elemental fey angelic].freeze
-    CG_OPEN_CAUSES = %w[justice liberation redemption obedience].freeze
-    CG_OPEN_MUSES = %w[maestro enigma polymath warrior].freeze
-    CG_OPEN_RACKETS = %w[ruffian scoundrel thief mastermind].freeze
-    CG_OPEN_METHODOLOGIES = %w[
-      empiricism forensic_medicine interrogation alchemical_sciences
-    ].freeze
-    CG_OPEN_ORDERS = %w[animal leaf storm wild wave flame].freeze
-    CG_OPEN_EDGES = %w[precision flurry outwit].freeze
-    CG_OPEN_DOCTRINES = %w[cloistered warpriest].freeze
-    # necromancy excluded — undeath hard line
-    CG_OPEN_SCHOOLS = %w[
-      abjuration conjuration divination enchantment
-      evocation illusion transmutation universalist
-    ].freeze
-
-    CG_SUBCLASS_OPEN = {
-      "contact" => CG_OPEN_CONTACTS,
-      "bloodline" => CG_OPEN_BLOODLINES,
-      "cause" => CG_OPEN_CAUSES,
-      "muse" => CG_OPEN_MUSES,
-      "racket" => CG_OPEN_RACKETS,
-      "methodology" => CG_OPEN_METHODOLOGIES,
-      "order" => CG_OPEN_ORDERS,
-      "edge" => CG_OPEN_EDGES,
-      "school" => CG_OPEN_SCHOOLS,
-      "doctrine" => CG_OPEN_DOCTRINES
     }.freeze
 
     CG_SUBCLASS_LABELS = {
@@ -69,6 +31,7 @@ module AresMUSH
       "doctrine" => "Doctrine"
     }.freeze
 
+    # Display-name fallbacks when an entry has no name field.
     CG_SUBCLASS_NAMES = {
       "faiths_flamekeeper" => "Faith's Flamekeeper",
       "the_inscribed_one" => "The Inscribed One",
@@ -116,22 +79,51 @@ module AresMUSH
       "warpriest" => "Warpriest"
     }.freeze
 
+    def self.chargen_open_entry?(entry)
+      entry.is_a?(Hash) && entry["chargen_open"] == true
+    end
+
+    def self.cg_ancestry_open?(slug)
+      chargen_open_entry?(cg_ancestry_entry(slug))
+    end
+
+    def self.cg_heritage_open?(slug)
+      chargen_open_entry?(cg_heritage_entry(slug))
+    end
+
     def self.cg_class_open?(slug)
-      CG_OPEN_CLASSES.include?(slug.to_s.strip.downcase)
+      chargen_open_entry?(cg_class_entry(slug))
+    end
+
+    def self.cg_subclass_field_data(field)
+      root = read_data("subclasses") || {}
+      data = root[field.to_s]
+      data.is_a?(Hash) ? data : {}
+    end
+
+    def self.cg_subclass_entry(field, option_slug)
+      cg_subclass_field_data(field)[option_slug.to_s.strip.downcase]
+    end
+
+    def self.cg_subclass_open?(field, option_slug)
+      chargen_open_entry?(cg_subclass_entry(field, option_slug))
     end
 
     def self.cg_subclass_field_for_class(class_slug)
       CG_REQUIRED_SUBCLASS[class_slug.to_s.strip.downcase]
     end
 
-    def self.cg_subclass_open?(field, option_slug)
-      list = CG_SUBCLASS_OPEN[field.to_s]
-      return false unless list
-      list.include?(option_slug.to_s.strip.downcase)
-    end
-
     def self.cg_subclass_name(slug)
       key = slug.to_s.strip.downcase
+      entry = nil
+      CG_REQUIRED_SUBCLASS.values.uniq.each do |field|
+        e = cg_subclass_entry(field, key)
+        if e.is_a?(Hash) && e["name"]
+          entry = e
+          break
+        end
+      end
+      return entry["name"] if entry.is_a?(Hash) && entry["name"]
       CG_SUBCLASS_NAMES[key] || key.split("_").map(&:capitalize).join(" ")
     end
 
