@@ -13,8 +13,6 @@ module AresMUSH
       end
     end
 
-    # If sheet has an ancestry, only open heritages listed on that ancestry.
-    # Otherwise list all open heritages with their parent ancestry note.
     def self.cg_list_heritages(char = nil)
       sheet = char ? (cg_ensure_sheet(char)[:sheet] rescue nil) : nil
       heritages = read_data("heritages") || {}
@@ -44,14 +42,7 @@ module AresMUSH
 
     def self.cg_list_backgrounds
       data = read_data("backgrounds") || {}
-      data.keys.sort.select { |slug|
-        entry = data[slug]
-        if data.values.any? { |e| e.is_a?(Hash) && e.key?("chargen_open") }
-          chargen_open_entry?(entry)
-        else
-          true
-        end
-      }.map do |slug|
+      data.keys.sort.select { |slug| cg_background_open?(slug) }.map do |slug|
         entry = data[slug] || {}
         choices = Array(entry["skill_choices"]).size
         note_parts = []
