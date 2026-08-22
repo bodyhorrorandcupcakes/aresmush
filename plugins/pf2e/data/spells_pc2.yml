@@ -1,0 +1,1989 @@
+# Spells — Pathfinder Player Core 2 (mechanical fields only).
+# Deep-merged under `spells` by Pf2e.load_data with other spells_*.yml.
+# Includes PC2 tradition list spells and class focus options (bloodline / mystery / devotion / order).
+# Full rule text lives in the published book.
+#
+spells:
+  animal_vision:
+    name: Animal Vision
+    rank: 4
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - primal
+    cast: '2'
+  animated_assault:
+    name: Animated Assault
+    rank: 2
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - occult
+    cast: '2'
+  anointed_ground:
+    name: Anointed Ground
+    rank: 3
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    cast: '2'
+  bestial_curse:
+    name: Bestial Curse
+    rank: 3
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - occult
+    - primal
+    cast: '2'
+  blanket_of_stars:
+    name: Blanket of Stars
+    rank: 6
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - primal
+    cast: '2'
+  blinding_fury:
+    name: Blinding Fury
+    rank: 6
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    - primal
+    cast: '2'
+  blister:
+    name: Blister
+    rank: 5
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - occult
+    - primal
+    cast: '2'
+  blistering_invective:
+    name: Blistering Invective
+    rank: 2
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - occult
+    cast: '2'
+  bullhorn:
+    name: Bullhorn
+    rank: 0
+    category: cantrip
+    traits:
+    - auditory
+    - cantrip
+    - concentrate
+    - illusion
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - divine
+    cast: '2'
+    duration: 10 minutes
+  carryall:
+    name: Carryall
+    rank: 1
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - occult
+    cast: '2'
+  chameleon_coat:
+    name: Chameleon Coat
+    rank: 5
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - primal
+    cast: '2'
+  charitable_urge:
+    name: Charitable Urge
+    rank: 2
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - divine
+    - occult
+    cast: '2'
+  chilling_spray:
+    name: Chilling Spray
+    rank: 1
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - primal
+    cast: '2'
+  chroma_leach:
+    name: Chroma Leach
+    rank: 4
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - occult
+    cast: '2'
+  cloak_of_colors:
+    name: Cloak of Colors
+    rank: 5
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - occult
+    cast: '2'
+  collective_transposition:
+    name: Collective Transposition
+    rank: 6
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - primal
+    cast: '2'
+  concordant_choir:
+    name: Concordant Choir
+    rank: 1
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    - occult
+    cast: '2'
+  confusing_colors:
+    name: Confusing Colors
+    rank: 0
+    category: cantrip
+    traits:
+    - cantrip
+    - concentrate
+    - illusion
+    - manipulate
+    - visual
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - occult
+    cast: '2'
+  containment:
+    name: Containment
+    rank: 4
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - occult
+    cast: '2'
+  corrosive_muck:
+    name: Corrosive Muck
+    rank: 5
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - primal
+    cast: '2'
+  countless_eyes:
+    name: Countless Eyes
+    rank: 3
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - occult
+    - primal
+    cast: '2'
+  crashing_wave:
+    name: Crashing Wave
+    rank: 4
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - primal
+    cast: '2'
+  curse_of_lost_time:
+    name: Curse of Lost Time
+    rank: 4
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - occult
+    - primal
+    cast: '2'
+  deja_vu:
+    name: Déjà Vu
+    rank: 1
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - occult
+    cast: '2'
+  dismantle:
+    name: Dismantle
+    rank: 2
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - primal
+    cast: '2'
+  dream_council:
+    name: Dream Council
+    rank: 0
+    category: cantrip
+    traits:
+    - cantrip
+    - concentrate
+    - manipulate
+    - mental
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - occult
+    cast: 1 minute
+  drop_dead:
+    name: Drop Dead
+    rank: 5
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: uncommon
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - divine
+    - occult
+    cast: '2'
+  dull_ambition:
+    name: Dull Ambition
+    rank: 4
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - divine
+    - occult
+    cast: '2'
+  familiars_face:
+    name: Familiar's Face
+    rank: 4
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    cast: '2'
+  final_sacrifice:
+    name: Final Sacrifice
+    rank: 2
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    cast: '2'
+  fungal_infestation:
+    name: Fungal Infestation
+    rank: 2
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - primal
+    cast: '2'
+  gale_blast:
+    name: Gale Blast
+    rank: 0
+    category: cantrip
+    traits:
+    - air
+    - cantrip
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - primal
+    cast: '2'
+  ghostly_tragedy:
+    name: Ghostly Tragedy
+    rank: 4
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: uncommon
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    - occult
+    cast: '2'
+  ghoulish_cravings:
+    name: Ghoulish Cravings
+    rank: 2
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    - occult
+    cast: '2'
+  gravity_well:
+    name: Gravity Well
+    rank: 3
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - occult
+    cast: '2'
+  grisly_growths:
+    name: Grisly Growths
+    rank: 5
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - primal
+    cast: '2'
+  haunting_hymn:
+    name: Haunting Hymn
+    rank: 0
+    category: cantrip
+    traits:
+    - auditory
+    - cantrip
+    - concentrate
+    - sonic
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    cast: '2'
+  holy_cascade:
+    name: Holy Cascade
+    rank: 4
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    cast: '2'
+  ice_storm:
+    name: Ice Storm
+    rank: 3
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - primal
+    cast: '2'
+  imaginary_lockbox:
+    name: Imaginary Lockbox
+    rank: 5
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - occult
+    cast: '2'
+  imprint_message:
+    name: Imprint Message
+    rank: 1
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - occult
+    cast: '2'
+  invisible_item:
+    name: Invisible Item
+    rank: 1
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - occult
+    cast: '2'
+  leaden_steps:
+    name: Leaden Steps
+    rank: 1
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - primal
+    cast: '2'
+  lifewood_cage:
+    name: Lifewood Cage
+    rank: 7
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - occult
+    cast: '2'
+  lightning_storm:
+    name: Lightning Storm
+    rank: 5
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - primal
+    cast: '2'
+  live_wire:
+    name: Live Wire
+    rank: 0
+    category: cantrip
+    traits:
+    - attack
+    - cantrip
+    - concentrate
+    - electricity
+    - manipulate
+    - metal
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - primal
+    cast: '2'
+    range: 30 feet
+    target: 1 creature
+    defense: AC
+  mud_pit:
+    name: Mud Pit
+    rank: 1
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - primal
+    cast: '2'
+  natures_enmity:
+    name: Nature's Enmity
+    rank: 7
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - primal
+    cast: '2'
+  noxious_vapors:
+    name: Noxious Vapors
+    rank: 1
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - primal
+    cast: '2'
+  object_reading:
+    name: Object Reading
+    rank: 1
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - occult
+    cast: '2'
+  phantasmal_treasure:
+    name: Phantasmal Treasure
+    rank: 2
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - occult
+    cast: '2'
+  primal_herd:
+    name: Primal Herd
+    rank: 10
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - primal
+    cast: '2'
+  protector_tree:
+    name: Protector Tree
+    rank: 1
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - primal
+    cast: '2'
+  puff_of_poison:
+    name: Puff of Poison
+    rank: 0
+    category: cantrip
+    traits:
+    - cantrip
+    - concentrate
+    - manipulate
+    - poison
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - primal
+    cast: '2'
+  reapers_lantern:
+    name: Reaper's Lantern
+    rank: 2
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    - occult
+    - primal
+    cast: '2'
+  resplendent_mansion:
+    name: Resplendent Mansion
+    rank: 9
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - occult
+    cast: '2'
+  rouse_skeletons:
+    name: Rouse Skeletons
+    rank: 3
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - divine
+    - occult
+    cast: '2'
+  sacred_form:
+    name: Sacred Form
+    rank: 6
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    cast: '2'
+  scatter_scree:
+    name: Scatter Scree
+    rank: 0
+    category: cantrip
+    traits:
+    - cantrip
+    - concentrate
+    - earth
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - primal
+    cast: '2'
+  schadenfreude:
+    name: Schadenfreude
+    rank: 1
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - divine
+    - occult
+    cast: '2'
+  scintillating_safeguard:
+    name: Scintillating Safeguard
+    rank: 6
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    - primal
+    cast: '2'
+  seal_fate:
+    name: Seal Fate
+    rank: 4
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - divine
+    - occult
+    cast: '2'
+  shared_invisibility:
+    name: Shared Invisibility
+    rank: 3
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - occult
+    cast: '2'
+  shrink_item:
+    name: Shrink Item
+    rank: 3
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    cast: '2'
+  spell_riposte:
+    name: Spell Riposte
+    rank: 6
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: uncommon
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    - primal
+    cast: '2'
+  spirit_sense:
+    name: Spirit Sense
+    rank: 2
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    - occult
+    cast: '2'
+  spirit_song:
+    name: Spirit Song
+    rank: 6
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    - occult
+    cast: '2'
+  spiritual_epidemic:
+    name: Spiritual Epidemic
+    rank: 6
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    - occult
+    cast: '2'
+  spout:
+    name: Spout
+    rank: 0
+    category: cantrip
+    traits:
+    - cantrip
+    - concentrate
+    - manipulate
+    - water
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - primal
+    cast: '2'
+  strange_geometry:
+    name: Strange Geometry
+    rank: 5
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - occult
+    cast: '2'
+  sudden_blight:
+    name: Sudden Blight
+    rank: 2
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    - primal
+    cast: '2'
+  summon_lesser_servitor:
+    name: Summon Lesser Servitor
+    rank: 1
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    cast: '2'
+  synesthesia:
+    name: Synesthesia
+    rank: 5
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - occult
+    cast: '2'
+  telepathic_demand:
+    name: Telepathic Demand
+    rank: 9
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - divine
+    - occult
+    cast: '2'
+  thoughtful_gift:
+    name: Thoughtful Gift
+    rank: 1
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - divine
+    - occult
+    cast: '2'
+  threefold_aspect:
+    name: Threefold Aspect
+    rank: 4
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - occult
+    - primal
+    cast: '2'
+  vampiric_maiden:
+    name: Vampiric Maiden
+    rank: 4
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - divine
+    - occult
+    cast: '2'
+  visions_of_danger:
+    name: Visions of Danger
+    rank: 6
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - primal
+    cast: '2'
+  vomit_swarm:
+    name: Vomit Swarm
+    rank: 2
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - occult
+    - primal
+    cast: '2'
+  wall_of_flesh:
+    name: Wall of Flesh
+    rank: 5
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    - occult
+    - primal
+    cast: '2'
+  wanderers_guide:
+    name: Wanderer's Guide
+    rank: 3
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    - occult
+    cast: '2'
+  weapon_of_judgment:
+    name: Weapon of Judgment
+    rank: 9
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    cast: '2'
+  web:
+    name: Web
+    rank: 2
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - arcane
+    - primal
+    cast: '2'
+  whispers_of_the_void:
+    name: Whispers of the Void
+    rank: 4
+    category: spell
+    traits:
+    - concentrate
+    - manipulate
+    rarity: common
+    source: Pathfinder Player Core 2
+    traditions:
+    - divine
+    - occult
+    cast: '2'
+  ancestral_memories:
+    name: Ancestral Memories
+    rank: 1
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: +1 status to next spell attack this turn, or -1 status to one enemy save
+      vs your spell (60 ft).
+    bloodline: imperial
+  angelic_halo:
+    name: Angelic Halo
+    rank: 1
+    category: focus
+    traits:
+    - aura
+    - concentrate
+    - focus
+    - holy
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Allies in aura healed by heal gain status bonus HP equal to double the
+      heal spell rank.
+    bloodline: angelic
+  elemental_toss:
+    name: Elemental Toss
+    rank: 1
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - manipulate
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Ranged spell attack; elemental damage by bloodline element.
+    bloodline: elemental
+  faerie_dust:
+    name: Faerie Dust
+    rank: 1
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - manipulate
+    - mental
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Creatures in small burst dazzled / mental effect on fail.
+    bloodline: fey
+  lay_on_hands:
+    name: Lay on Hands
+    rank: 1
+    category: focus
+    traits:
+    - champion
+    - focus
+    - healing
+    - manipulate
+    - vitality
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Touch heals living or harms undead; scales with rank.
+  rising_surf:
+    name: Rising Surf
+    rank: 1
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - manipulate
+    - water
+    - druid
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Ride a surge of water; movement / difficult terrain help.
+    order: wave order
+  wildfire:
+    name: Wildfire
+    rank: 1
+    category: focus
+    traits:
+    - concentrate
+    - fire
+    - focus
+    - manipulate
+    - druid
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Spark a spreading fire effect in an area.
+    order: flame order
+  tentacular_limbs:
+    name: Tentacular Limbs
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - manipulate
+    - morph
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Arms become tentacles; +reach on touch spells and arm unarmed.
+    bloodline: aberrant
+  aberrant_whispers:
+    name: Aberrant Whispers
+    rank: 3
+    category: focus
+    traits:
+    - auditory
+    - concentrate
+    - focus
+    - mental
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Emanation mental assault; Will save.
+    bloodline: aberrant
+  unusual_anatomy:
+    name: Unusual Anatomy
+    rank: 5
+    category: focus
+    traits:
+    - focus
+    - morph
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Shift anatomy for resistance/defense benefits.
+    bloodline: aberrant
+  angelic_wings:
+    name: Angelic Wings
+    rank: 3
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - manipulate
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Gain wings and fly Speed for a short duration.
+    bloodline: angelic
+  celestial_brand:
+    name: Celestial Brand
+    rank: 5
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - holy
+    - manipulate
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Brand a foe; allies gain benefits against it.
+    bloodline: angelic
+  gluttons_jaws:
+    name: Glutton's Jaws
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - manipulate
+    - morph
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Grow jaws Strike; temporary HP on damage.
+    bloodline: demonic
+  swamp_of_sloth:
+    name: Swamp of Sloth
+    rank: 3
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - manipulate
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Area slows foes on failed save.
+    bloodline: demonic
+  chthonian_wrath:
+    name: Chthonian Wrath
+    rank: 5
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - manipulate
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Burst of demonic damage and conditions.
+    bloodline: demonic
+  diabolic_edict:
+    name: Diabolic Edict
+    rank: 1
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - manipulate
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Compel a course of action with diabolic force.
+    bloodline: diabolic
+  embrace_the_pit:
+    name: Embrace the Pit
+    rank: 3
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - manipulate
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Hellish transformation defenses.
+    bloodline: diabolic
+  hellfire_plume:
+    name: Hellfire Plume
+    rank: 5
+    category: focus
+    traits:
+    - concentrate
+    - fire
+    - focus
+    - manipulate
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Column of hellfire; fire and spirit/good-adjacent harm.
+    bloodline: diabolic
+  flurry_of_claws:
+    name: Flurry of Claws
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - manipulate
+    - morph
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Claw flurry Strikes.
+    bloodline: draconic
+  dragon_breath:
+    name: Dragon Breath
+    rank: 3
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - manipulate
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Breath weapon by dragon type.
+    bloodline: draconic
+  dragon_wings:
+    name: Dragon Wings
+    rank: 5
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - manipulate
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Draconic wings and flight.
+    bloodline: draconic
+  elemental_motion:
+    name: Elemental Motion
+    rank: 3
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - manipulate
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Elemental movement mode (fly/swim/burrow by element).
+    bloodline: elemental
+  elemental_blast:
+    name: Elemental Blast
+    rank: 5
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - manipulate
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Large elemental damage blast.
+    bloodline: elemental
+  fey_disappearance:
+    name: Fey Disappearance
+    rank: 3
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - illusion
+    - manipulate
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Become hidden / briefly undetectable.
+    bloodline: fey
+  fey_glamour:
+    name: Fey Glamour
+    rank: 5
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - illusion
+    - manipulate
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Powerful glamour illusion over an area or self.
+    bloodline: fey
+  jealous_hex:
+    name: Jealous Hex
+    rank: 1
+    category: focus
+    traits:
+    - curse
+    - focus
+    - manipulate
+    - mental
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Hex that penalizes a foe and feeds you.
+    bloodline: hag
+  horrific_visage:
+    name: Horrific Visage
+    rank: 3
+    category: focus
+    traits:
+    - emotion
+    - fear
+    - focus
+    - manipulate
+    - mental
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Fear effect with a horrific face.
+    bloodline: hag
+  youre_mine:
+    name: You're Mine
+    rank: 5
+    category: focus
+    traits:
+    - curse
+    - focus
+    - incapacitation
+    - manipulate
+    - mental
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Attempt to seize control of a weakened mind.
+    bloodline: hag
+  extend_blood_magic:
+    name: Extend Blood Magic
+    rank: 3
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Extend duration of blood magic benefits.
+    bloodline: imperial
+  arcane_countermeasure:
+    name: Arcane Countermeasure
+    rank: 5
+    category: focus
+    traits:
+    - concentrate
+    - focus
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Counter or blunt an incoming spell.
+    bloodline: imperial
+  undeaths_blessing:
+    name: Undeath's Blessing
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - manipulate
+    - void
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Void-tinged benefit or harm living.
+    bloodline: undead
+  drain_life:
+    name: Drain Life
+    rank: 3
+    category: focus
+    traits:
+    - focus
+    - manipulate
+    - void
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Siphon life; damage and temporary HP.
+    bloodline: undead
+  grasping_grave:
+    name: Grasping Grave
+    rank: 5
+    category: focus
+    traits:
+    - focus
+    - manipulate
+    - void
+    - sorcerer
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Grave hands impede and damage foes.
+    bloodline: undead
+  ancestral_touch:
+    name: Ancestral Touch
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - manipulate
+    - mental
+    - oracle
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Touch mental effect from ancestral spirits.
+    mystery: ancestors
+  ancestral_defense:
+    name: Ancestral Defense
+    rank: 3
+    category: focus
+    traits:
+    - focus
+    - manipulate
+    - oracle
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Ancestral ward improves defenses.
+    mystery: ancestors
+  ancestral_form:
+    name: Ancestral Form
+    rank: 6
+    category: focus
+    traits:
+    - focus
+    - manipulate
+    - oracle
+    - polymorph
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Take on an ancestral spirit form.
+    mystery: ancestors
+  weapon_trance:
+    name: Weapon Trance
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - manipulate
+    - oracle
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Enter a battle trance with weapon benefits.
+    mystery: battle
+  battlefield_persistence:
+    name: Battlefield Persistence
+    rank: 3
+    category: focus
+    traits:
+    - focus
+    - oracle
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Stay up when you would fall.
+    mystery: battle
+  revel_in_retribution:
+    name: Revel in Retribution
+    rank: 6
+    category: focus
+    traits:
+    - focus
+    - oracle
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Retributive damage when struck.
+    mystery: battle
+  soul_siphon:
+    name: Soul Siphon
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - manipulate
+    - void
+    - oracle
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Siphon vitality/void from a foe.
+    mystery: bones
+  armor_of_bones:
+    name: Armor of Bones
+    rank: 3
+    category: focus
+    traits:
+    - focus
+    - manipulate
+    - oracle
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Ossify for resistances.
+    mystery: bones
+  claim_undead:
+    name: Claim Undead
+    rank: 6
+    category: focus
+    traits:
+    - focus
+    - incapacitation
+    - manipulate
+    - oracle
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Attempt to seize control of undead.
+    mystery: bones
+  incendiary_aura:
+    name: Incendiary Aura
+    rank: 1
+    category: focus
+    traits:
+    - fire
+    - focus
+    - manipulate
+    - oracle
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Aura that sets fire-damaged creatures ablaze.
+    mystery: flames
+  whirling_flames:
+    name: Whirling Flames
+    rank: 3
+    category: focus
+    traits:
+    - fire
+    - focus
+    - manipulate
+    - oracle
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Multiple small fire bursts.
+    mystery: flames
+  flaming_fusillade:
+    name: Flaming Fusillade
+    rank: 6
+    category: focus
+    traits:
+    - fire
+    - focus
+    - manipulate
+    - oracle
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Sustain a barrage that accelerates ignition.
+    mystery: flames
+  life_link:
+    name: Life Link
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - healing
+    - manipulate
+    - oracle
+    - vitality
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Share damage between you and an ally.
+    mystery: life
+  delay_affliction:
+    name: Delay Affliction
+    rank: 3
+    category: focus
+    traits:
+    - focus
+    - healing
+    - manipulate
+    - oracle
+    - vitality
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Heal and suspend an affliction briefly.
+    mystery: life
+  life_giving_form:
+    name: Life-Giving Form
+    rank: 6
+    category: focus
+    traits:
+    - focus
+    - healing
+    - light
+    - manipulate
+    - oracle
+    - vitality
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Beacon form that heals on touch.
+    mystery: life
+  brain_drain:
+    name: Brain Drain
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - manipulate
+    - mental
+    - oracle
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Mental damage and steal knowledge.
+    mystery: lore
+  access_lore:
+    name: Access Lore
+    rank: 3
+    category: focus
+    traits:
+    - focus
+    - manipulate
+    - oracle
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Temporarily gain a lore skill.
+    mystery: lore
+  dread_secret:
+    name: Dread Secret
+    rank: 6
+    category: focus
+    traits:
+    - focus
+    - manipulate
+    - mental
+    - oracle
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Reveal a secret that harms the mind.
+    mystery: lore
+  tempest_touch:
+    name: Tempest Touch
+    rank: 1
+    category: focus
+    traits:
+    - cold
+    - focus
+    - manipulate
+    - oracle
+    - water
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Icy water clings; speed penalty.
+    mystery: tempest
+  thunderburst:
+    name: Thunderburst
+    rank: 3
+    category: focus
+    traits:
+    - air
+    - focus
+    - manipulate
+    - oracle
+    - sonic
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Thunderous burst; sonic damage.
+    mystery: tempest
+  tempest_form:
+    name: Tempest Form
+    rank: 6
+    category: focus
+    traits:
+    - focus
+    - manipulate
+    - oracle
+    - polymorph
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Become air, water, or mist.
+    mystery: tempest
+  spray_of_stars:
+    name: Spray of Stars
+    rank: 1
+    category: focus
+    traits:
+    - fire
+    - focus
+    - light
+    - manipulate
+    - oracle
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Spray of burning star-motes.
+    mystery: cosmos
+  interstellar_void:
+    name: Interstellar Void
+    rank: 3
+    category: focus
+    traits:
+    - cold
+    - focus
+    - manipulate
+    - oracle
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Freezing void; ongoing cold while sustained.
+    mystery: cosmos
+  moonlight_bridge:
+    name: Moonlight Bridge
+    rank: 6
+    category: focus
+    traits:
+    - focus
+    - light
+    - manipulate
+    - oracle
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Bridge of solid moonlight.
+    mystery: cosmos
+  touch_of_the_void:
+    name: Touch of the Void
+    rank: 1
+    category: focus
+    traits:
+    - champion
+    - focus
+    - manipulate
+    - void
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Devotion harm version of lay on hands.
+  shields_of_the_spirit:
+    name: Shields of the Spirit
+    rank: 1
+    category: focus
+    traits:
+    - champion
+    - focus
+    - manipulate
+    - spirit
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Spirit shields aid ally AC/saves.
+  champions_sacrifice:
+    name: Champion's Sacrifice
+    rank: 3
+    category: focus
+    traits:
+    - champion
+    - focus
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Take harm in place of an ally.
+  heros_defiance:
+    name: Hero's Defiance
+    rank: 5
+    category: focus
+    traits:
+    - champion
+    - focus
+    - healing
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Refuse to fall; heal when reduced to 0 HP.
+  spectral_advance:
+    name: Spectral Advance
+    rank: 3
+    category: focus
+    traits:
+    - champion
+    - focus
+    - manipulate
+    rarity: uncommon
+    cast: '1'
+    source: Pathfinder Player Core 2
+    summary: Advance as a spectral form.

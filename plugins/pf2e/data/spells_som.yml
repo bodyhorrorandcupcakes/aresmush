@@ -1,0 +1,3206 @@
+# Spells — Pathfinder Secrets of Magic (mechanical fields only).
+# Deep-merged under `spells` by Pf2e.load_data with other spells_*.yml.
+# Full rule text lives in the published book; this catalog supports lookups/grants.
+#
+spells:
+  approximate:
+    name: Approximate
+    rank: 0
+    category: cantrip
+    traits:
+    - cantrip
+    - detection
+    - divination
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    range: 10 feet
+    area: 1 cubic foot
+  boost_eidolon:
+    name: Boost Eidolon
+    rank: 0
+    category: cantrip
+    traits:
+    - uncommon
+    - cantrip
+    - evocation
+    - summoner
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    range: 100 feet
+    target: your eidolon
+    duration: 1 round
+  bullhorn:
+    name: Bullhorn
+    rank: 0
+    category: cantrip
+    traits:
+    - auditory
+    - cantrip
+    - illusion
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    duration: 10 minutes
+  gale_blast:
+    name: Gale Blast
+    rank: 0
+    category: cantrip
+    traits:
+    - air
+    - cantrip
+    - evocation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    defense: Fortitude
+  haunting_hymn:
+    name: Haunting Hymn
+    rank: 0
+    category: cantrip
+    traits:
+    - auditory
+    - cantrip
+    - evocation
+    - sonic
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    - occult
+    area: 15-foot cone
+    defense: Fortitude
+  healing_plaster:
+    name: Healing Plaster
+    rank: 0
+    category: cantrip
+    traits:
+    - cantrip
+    - earth
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    traditions:
+    - primal
+    range: 5 feet
+    target: a handful of dirt or mud
+    duration: 10 minutes
+  infectious_enthusiasm:
+    name: Infectious Enthusiasm
+    rank: 0
+    category: cantrip
+    traits:
+    - cantrip
+    - emotion
+    - enchantment
+    - mental
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    duration: 1 round
+  invoke_true_name:
+    name: Invoke True Name
+    rank: 0
+    category: cantrip
+    traits:
+    - rare
+    - cantrip
+    - enchantment
+    - true_name
+    rarity: rare
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    range: 30 feet
+    target: 1 creature whose true name you know
+  protect_companion:
+    name: Protect Companion
+    rank: 0
+    category: cantrip
+    traits:
+    - abjuration
+    - cantrip
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    range: 30 feet
+    target: your eidolon, or a creature with the minion trait under your control
+    duration: until the start of your next turn
+  puff_of_poison:
+    name: Puff of Poison
+    rank: 0
+    category: cantrip
+    traits:
+    - cantrip
+    - evocation
+    - inhaled
+    - poison
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    range: 5 feet
+    target: 1 creature
+    defense: Fortitude
+  read_the_air:
+    name: Read the Air
+    rank: 0
+    category: cantrip
+    traits:
+    - cantrip
+    - divination
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    - occult
+    duration: 1 minute
+  reinforce_eidolon:
+    name: Reinforce Eidolon
+    rank: 0
+    category: cantrip
+    traits:
+    - uncommon
+    - abjuration
+    - cantrip
+    - summoner
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    range: 100 feet
+    target: your eidolon
+    duration: 1 round
+  scatter_scree:
+    name: Scatter Scree
+    rank: 0
+    category: cantrip
+    traits:
+    - cantrip
+    - earth
+    - evocation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    range: 30 feet
+    area: two contiguous 5-foot cubes
+    defense: basic Reflex
+    duration: 1 minute
+  spout:
+    name: Spout
+    rank: 0
+    category: cantrip
+    traits:
+    - cantrip
+    - evocation
+    - water
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    range: 30 feet
+    area: a 5-foot cube
+    defense: Reflex
+  tame:
+    name: Tame
+    rank: 0
+    category: cantrip
+    traits:
+    - auditory
+    - cantrip
+    - enchantment
+    - mental
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - occult
+    - primal
+    range: 10 feet
+    target: 1 non-hostile domesticated animal
+    defense: Will
+    duration: 1 minute
+  wash_your_luck:
+    name: Wash Your Luck
+    rank: 0
+    category: cantrip
+    traits:
+    - abjuration
+    - cantrip
+    - fortune
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    - occult
+    duration: 1 minute
+  crushing_ground:
+    name: Crushing Ground
+    rank: 1
+    category: focus
+    traits:
+    - uncommon
+    - concentrate
+    - earth
+    - focus
+    - manipulate
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    range: 60 feet
+    target: 1 creature
+    duration: 1 round
+  dimensional_assault:
+    name: Dimensional Assault
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - uncommon
+    - conjuration
+    - magus
+    - teleportation
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    range: half your Speed
+  efficient_apport:
+    name: Efficient Apport
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - uncommon
+    - conjuration
+    - teleportation
+    - wizard
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    range: 60 feet
+    target: 1 unattended object of light Bulk or less
+  evolution_surge:
+    name: Evolution Surge
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - uncommon
+    - morph
+    - summoner
+    - transmutation
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    range: 100 feet
+    target: your eidolon
+    duration: 1 minute
+  extend_boost:
+    name: Extend Boost
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - uncommon
+    - divination
+    - metamagic
+    - summoner
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: free
+  force_fang:
+    name: Force Fang
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - uncommon
+    - evocation
+    - force
+    - magus
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    range: varies
+    target: 1 creature
+  rising_surf:
+    name: Rising Surf
+    rank: 1
+    category: focus
+    traits:
+    - uncommon
+    - focus
+    - manipulate
+    - move
+    - water
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    range: 30 feet
+  shielding_strike:
+    name: Shielding Strike
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - uncommon
+    - abjuration
+    - magus
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+  shooting_star:
+    name: Shooting Star
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - uncommon
+    - divination
+    - magus
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+  spinning_staff:
+    name: Spinning Staff
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - uncommon
+    - evocation
+    - magus
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+  thunderous_strike:
+    name: Thunderous Strike
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - uncommon
+    - evocation
+    - magus
+    - sonic
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+  unfetter_eidolon:
+    name: Unfetter Eidolon
+    rank: 1
+    category: focus
+    traits:
+    - focus
+    - uncommon
+    - abjuration
+    - summoner
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    range: 100 feet
+    target: your eidolon
+    duration: 1 minute
+  updraft:
+    name: Updraft
+    rank: 1
+    category: focus
+    traits:
+    - uncommon
+    - air
+    - concentrate
+    - focus
+    - manipulate
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    range: 60 feet
+    target: 1 creature
+  wildfire:
+    name: Wildfire
+    rank: 1
+    category: focus
+    traits:
+    - uncommon
+    - concentrate
+    - fire
+    - focus
+    - manipulate
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    range: 30 feet
+    area: 10-foot burst
+    duration: sustained up to 1 minute
+  lifelink_surge:
+    name: Lifelink Surge
+    rank: 2
+    category: focus
+    traits:
+    - focus
+    - uncommon
+    - healing
+    - necromancy
+    - positive
+    - summoner
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    duration: 4 rounds
+  cascade_countermeasure:
+    name: Cascade Countermeasure
+    rank: 3
+    category: focus
+    traits:
+    - focus
+    - uncommon
+    - abjuration
+    - magus
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    duration: until the Arcane Cascade stance ends
+  combustion:
+    name: Combustion
+    rank: 3
+    category: focus
+    traits:
+    - uncommon
+    - concentrate
+    - fire
+    - focus
+    - manipulate
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    range: 120 feet
+    target: 1 creature
+  eidolons_wrath:
+    name: Eidolon's Wrath
+    rank: 3
+    category: focus
+    traits:
+    - focus
+    - uncommon
+    - eidolon
+    - evocation
+    - summoner
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    area: 20-foot emanation around your eidolon
+    defense: basic Reflex
+  inscrutable_mask:
+    name: Inscrutable Mask
+    rank: 3
+    category: focus
+    traits:
+    - focus
+    - uncommon
+    - illusion
+    - shadow
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    duration: 10 minutes
+  powerful_inhalation:
+    name: Powerful Inhalation
+    rank: 3
+    category: focus
+    traits:
+    - uncommon
+    - air
+    - concentrate
+    - focus
+    - manipulate
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    area: 10-foot emanation
+  pulverizing_cascade:
+    name: Pulverizing Cascade
+    rank: 3
+    category: focus
+    traits:
+    - uncommon
+    - concentrate
+    - focus
+    - manipulate
+    - water
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    range: 120 feet
+    area: 10-foot radius, 20-foot-tall  cylinder
+  stone_lance:
+    name: Stone Lance
+    rank: 3
+    category: focus
+    traits:
+    - uncommon
+    - attack
+    - concentrate
+    - earth
+    - focus
+    - manipulate
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    range: 120 feet
+    target: 1 creature
+    duration: 1 minute
+  runic_impression:
+    name: Runic Impression
+    rank: 4
+    category: focus
+    traits:
+    - focus
+    - uncommon
+    - evocation
+    - magus
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    range: touch
+    target: you or one weapon you're wielding
+    duration: 1 minute
+  darklight:
+    name: Darklight
+    rank: 7
+    category: focus
+    traits:
+    - focus
+    - uncommon
+    - darkness
+    - evocation
+    - shadow
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    range: 120 feet
+    area: 20-foot burst
+    duration: 1 minute
+  hasted_assault:
+    name: Hasted Assault
+    rank: 7
+    category: focus
+    traits:
+    - focus
+    - uncommon
+    - magus
+    - transmutation
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    duration: 1 minute
+  animal_allies:
+    name: Animal Allies
+    rank: 1
+    category: spell
+    traits:
+    - conjuration
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - primal
+    area: 5-foot emanation
+    defense: basic Reflex
+  biting_words:
+    name: Biting Words
+    rank: 1
+    category: spell
+    traits:
+    - attack
+    - auditory
+    - evocation
+    - linguistic
+    - sonic
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - occult
+    duration: 1 minute
+  breadcrumbs:
+    name: Breadcrumbs
+    rank: 1
+    category: spell
+    traits:
+    - abjuration
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: 1 minute (material, somatic, verbal)
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    range: touch
+    target: 1 willing creature
+    duration: 1 hour
+  concordant_choir:
+    name: Concordant Choir
+    rank: 1
+    category: spell
+    traits:
+    - evocation
+    - sonic
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    traditions:
+    - divine
+    - occult
+    range: 30 feet
+    target: varies
+    defense: basic Fortitude
+  draw_ire:
+    name: Draw Ire
+    rank: 1
+    category: spell
+    traits:
+    - emotion
+    - enchantment
+    - mental
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    range: 120 feet
+    target: 1 creature
+    defense: Will
+    duration: 1 minute
+  echoing_weapon:
+    name: Echoing Weapon
+    rank: 1
+    category: spell
+    traits:
+    - evocation
+    - sonic
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    range: touch
+    target: 1 weapon
+    duration: 1 minute
+  gravitational_pull:
+    name: Gravitational Pull
+    rank: 1
+    category: spell
+    traits:
+    - evocation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    traditions:
+    - arcane
+    - occult
+    range: 30 feet
+    target: 1 creature
+    defense: Fortitude
+  horizon_thunder_sphere:
+    name: Horizon Thunder Sphere
+    rank: 1
+    category: spell
+    traits:
+    - attack
+    - electricity
+    - evocation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    range: varies
+    target: 1 creature
+  juvenile_companion:
+    name: Juvenile Companion
+    rank: 1
+    category: spell
+    traits:
+    - polymorph
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - primal
+    range: touch
+    target: your companion
+    duration: 10 minutes
+  lose_the_path:
+    name: Lose the Path
+    rank: 1
+    category: spell
+    traits:
+    - illusion
+    - mental
+    - visual
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: reaction
+    traditions:
+    - occult
+    - primal
+    range: 60 feet
+    target: the triggering creature
+    defense: Will
+  mud_pit:
+    name: Mud Pit
+    rank: 1
+    category: spell
+    traits:
+    - conjuration
+    - earth
+    - water
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - primal
+    range: 60 feet
+    area: squares on the ground in a 15-foot burst
+    duration: 1 minute
+  necromancers_generosity:
+    name: Necromancer's Generosity
+    rank: 1
+    category: spell
+    traits:
+    - necromancy
+    - negative
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    range: 30 feet
+    target: 1 undead minion you control
+    duration: 1 minute
+  nudge_the_odds:
+    name: Nudge the Odds
+    rank: 1
+    category: spell
+    traits:
+    - uncommon
+    - divination
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    duration: 1 hour
+  pocket_library:
+    name: Pocket Library
+    rank: 1
+    category: spell
+    traits:
+    - divination
+    - extradimensional
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - occult
+    duration: 24 hours
+  protector_tree:
+    name: Protector Tree
+    rank: 1
+    category: spell
+    traits:
+    - conjuration
+    - plant
+    - wood
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - primal
+    range: 30 feet
+    duration: 1 minute
+  quick_sort:
+    name: Quick Sort
+    rank: 1
+    category: spell
+    traits:
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    range: 10 feet
+    target: up to 200 unattended objects in range, each of light Bulk or less
+    duration: up to 1 minute
+  restyle:
+    name: Restyle
+    rank: 1
+    category: spell
+    traits:
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: 1 minute (material, somatic, verbal)
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    range: touch
+    target: 1 piece of clothing currently worn by you or an ally
+    duration: unlimited
+  schadenfreude:
+    name: Schadenfreude
+    rank: 1
+    category: spell
+    traits:
+    - emotion
+    - enchantment
+    - mental
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: reaction
+    traditions:
+    - arcane
+    - divine
+    - occult
+    range: 30 feet
+    target: the triggering foe
+    defense: Will
+  seashell_of_stolen_sound:
+    name: Seashell of Stolen Sound
+    rank: 1
+    category: spell
+    traits:
+    - divination
+    - sonic
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: reaction
+    traditions:
+    - arcane
+    - occult
+    - primal
+    range: 30 feet
+    duration: until your next daily preparations
+  summon_lesser_servitor:
+    name: Summon Lesser Servitor
+    rank: 1
+    category: spell
+    traits:
+    - conjuration
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - divine
+    range: 30 feet
+    duration: sustained up to 1 minute
+  synchronize:
+    name: Synchronize
+    rank: 1
+    category: spell
+    traits:
+    - divination
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    range: touch
+    target: up to 5 willing creatures
+    duration: 24 hours
+  thicket_of_knives:
+    name: Thicket of Knives
+    rank: 1
+    category: spell
+    traits:
+    - illusion
+    - visual
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    duration: 1 minute
+  ash_cloud:
+    name: Ash Cloud
+    rank: 2
+    category: spell
+    traits:
+    - air
+    - conjuration
+    - fire
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - primal
+    range: 120 feet
+    area: 20-foot burst
+    defense: Fortitude
+    duration: 1 minute
+  befitting_attire:
+    name: Befitting Attire
+    rank: 2
+    category: spell
+    traits:
+    - illusion
+    - visual
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    range: 30 feet
+    target: 5 willing creatures
+    duration: 1 hour
+  elemental_zone:
+    name: Elemental Zone
+    rank: 2
+    category: spell
+    traits:
+    - evocation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    range: 120 feet
+    area: 20-foot radius burst
+    duration: 1 minute
+  extract_poison:
+    name: Extract Poison
+    rank: 2
+    category: spell
+    traits:
+    - abjuration
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    range: touch
+    target: 1 poison on or in an object
+  feral_shades:
+    name: Feral Shades
+    rank: 2
+    category: spell
+    traits:
+    - necromancy
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - primal
+    area: 30-foot cone
+    defense: basic Fortitude
+  flame_wisp:
+    name: Flame Wisp
+    rank: 2
+    category: spell
+    traits:
+    - evocation
+    - fire
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    duration: 1 minute
+  guiding_star:
+    name: Guiding Star
+    rank: 2
+    category: spell
+    traits:
+    - detection
+    - divination
+    - mental
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    - primal
+    range: planetary
+    target: 1 creature you've met
+    duration: until your next daily preparations
+  ignite_fireworks:
+    name: Ignite Fireworks
+    rank: 2
+    category: spell
+    traits:
+    - evocation
+    - fire
+    - sonic
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    range: 60 feet
+    area: 10-foot burst
+    defense: Reflex
+  inner_radiance_torrent:
+    name: Inner Radiance Torrent
+    rank: 2
+    category: spell
+    traits:
+    - force
+    - light
+    - necromancy
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    - occult
+    area: line 60 feet or longer
+    defense: basic Reflex
+  instant_armor:
+    name: Instant Armor
+    rank: 2
+    category: spell
+    traits:
+    - conjuration
+    - contingency
+    - extradimensional
+    - metal
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: 10 minutes (material, somatic, verbal)
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    duration: 24 hours
+  lucky_number:
+    name: Lucky Number
+    rank: 2
+    category: spell
+    traits:
+    - contingency
+    - divination
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: 10 minutes (material, somatic, verbal)
+    traditions:
+    - arcane
+    - divine
+    - occult
+    duration: until the next time you make your daily preparations
+  magnetic_attraction:
+    name: Magnetic Attraction
+    rank: 2
+    category: spell
+    traits:
+    - evocation
+    - metal
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    range: 60 feet
+    target: up to 10 metal objects with a total Bulk or 1 or less
+  magnetic_repulsion:
+    name: Magnetic Repulsion
+    rank: 2
+    category: spell
+    traits:
+    - abjuration
+    - metal
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    duration: 1 minute
+  mimic_undead:
+    name: Mimic Undead
+    rank: 2
+    category: spell
+    traits:
+    - necromancy
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    - occult
+    duration: 10 minutes
+  persistent_servant:
+    name: Persistent Servant
+    rank: 2
+    category: spell
+    traits:
+    - conjuration
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: 1 minute (material, somatic, verbal)
+    traditions:
+    - arcane
+    - occult
+    range: 120 feet
+    area: 60-foot burst
+    duration: until your next daily preparations
+  phantom_crowd:
+    name: Phantom Crowd
+    rank: 2
+    category: spell
+    traits:
+    - illusion
+    - visual
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    range: 60 feet
+    area: a 10-foot square
+    duration: sustained up to 10 minutes
+  rapid_adaptation:
+    name: Rapid Adaptation
+    rank: 2
+    category: spell
+    traits:
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    range: touch
+    target: your companion or eidolon
+    duration: 1 hour
+  sonata_span:
+    name: Sonata Span
+    rank: 2
+    category: spell
+    traits:
+    - auditory
+    - conjuration
+    - sonic
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - occult
+    area: 30-foot line
+    duration: sustained
+  summoners_precaution:
+    name: Summoner's Precaution
+    rank: 2
+    category: spell
+    traits:
+    - contingency
+    - necromancy
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: 10 minutes (material, somatic, verbal)
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    duration: until your next daily preparations
+  summoners_visage:
+    name: Summoner's Visage
+    rank: 2
+    category: spell
+    traits:
+    - polymorph
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    range: touch
+    target: your eidolon
+    duration: 10 minutes
+  thundering_dominance:
+    name: Thundering Dominance
+    rank: 2
+    category: spell
+    traits:
+    - enchantment
+    - mental
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - occult
+    - primal
+    range: 30 feet
+    target: your companion or eidolon
+    duration: 1 minute
+  timely_tutor:
+    name: Timely Tutor
+    rank: 2
+    category: spell
+    traits:
+    - divination
+    - mental
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    traditions:
+    - arcane
+    - occult
+    range: touch
+    target: your eidolon or familiar
+    duration: sustained up to 1 minute
+  umbral_extraction:
+    name: Umbral Extraction
+    rank: 2
+    category: spell
+    traits:
+    - illusion
+    - mental
+    - shadow
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    duration: 3 rounds
+  warriors_regret:
+    name: Warrior's Regret
+    rank: 2
+    category: spell
+    traits:
+    - curse
+    - emotion
+    - enchantment
+    - mental
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    range: touch
+    target: 1 creature
+    defense: Will
+  blazing_dive:
+    name: Blazing Dive
+    rank: 3
+    category: spell
+    traits:
+    - air
+    - evocation
+    - fire
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    defense: basic Reflex
+  bottomless_stomach:
+    name: Bottomless Stomach
+    rank: 3
+    category: spell
+    traits:
+    - conjuration
+    - extradimensional
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - occult
+    - primal
+    range: touch
+    target: 1 willing creature
+    duration: 1 hour
+  claim_curse:
+    name: Claim Curse
+    rank: 3
+    category: spell
+    traits:
+    - necromancy
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    - occult
+    range: touch
+    target: 1 creature affected by a curse
+    duration: 5 minutes
+  days_weight:
+    name: Day's Weight
+    rank: 3
+    category: spell
+    traits:
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    - primal
+    range: 120 feet
+    target: 1 living creature
+    defense: Fortitude
+    duration: 1 minute
+  distracting_chatter:
+    name: Distracting Chatter
+    rank: 3
+    category: spell
+    traits:
+    - auditory
+    - illusion
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    range: 30 feet
+    target: 1 creature
+    defense: Will
+    duration: varies
+  elemental_absorption:
+    name: Elemental Absorption
+    rank: 3
+    category: spell
+    traits:
+    - abjuration
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    duration: 1 minute
+  elemental_annihilation_wave:
+    name: Elemental Annihilation Wave
+    rank: 3
+    category: spell
+    traits:
+    - air
+    - earth
+    - evocation
+    - fire
+    - water
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    area: 30-foot cone
+    defense: basic Reflex
+  envenom_companion:
+    name: Envenom Companion
+    rank: 3
+    category: spell
+    traits:
+    - necromancy
+    - poison
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - primal
+    range: 30 feet
+    target: your companion or eidolon
+    duration: 1 minute
+  gravity_well:
+    name: Gravity Well
+    rank: 3
+    category: spell
+    traits:
+    - evocation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    range: 120 feet
+    area: 30-foot-radius burst
+    defense: Reflex
+  impending_doom:
+    name: Impending Doom
+    rank: 3
+    category: spell
+    traits:
+    - divination
+    - emotion
+    - fear
+    - incapacitation
+    - mental
+    - prediction
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    range: 30 feet
+    target: 1 living creature
+    defense: Will
+    duration: 3 rounds
+  life_connection:
+    name: Life Connection
+    rank: 3
+    category: spell
+    traits:
+    - contingency
+    - necromancy
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: 10 minutes (material, somatic, verbal)
+    traditions:
+    - divine
+    - primal
+    range: touch
+    target: 1 living creature
+    duration: 24 hours
+  magnetic_acceleration:
+    name: Magnetic Acceleration
+    rank: 3
+    category: spell
+    traits:
+    - attack
+    - evocation
+    - metal
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    range: 120 feet
+    target: 1 creature or object
+  mind_of_menace:
+    name: Mind of Menace
+    rank: 3
+    category: spell
+    traits:
+    - contingency
+    - emotion
+    - enchantment
+    - fear
+    - mental
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: 10 minutes (material, somatic, verbal)
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    duration: 24 hours
+  oneiric_mire:
+    name: Oneiric Mire
+    rank: 3
+    category: spell
+    traits:
+    - illusion
+    - mental
+    - visual
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - occult
+    - primal
+    range: 120 feet
+    area: 20-foot burst
+    duration: 1 minute
+  ooze_form:
+    name: Ooze Form
+    rank: 3
+    category: spell
+    traits:
+    - polymorph
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    duration: 1 minute
+  organsight:
+    name: Organsight
+    rank: 3
+    category: spell
+    traits:
+    - divination
+    - revelation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    range: 30 feet
+    target: 1 living or undead creature that has organs
+    duration: 1 minute
+  phantom_prison:
+    name: Phantom Prison
+    rank: 3
+    category: spell
+    traits:
+    - illusion
+    - incapacitation
+    - mental
+    - visual
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - occult
+    range: 50 feet
+    target: 1 creature
+    defense: Will
+    duration: 1 minute
+  positive_attunement:
+    name: Positive Attunement
+    rank: 3
+    category: spell
+    traits:
+    - healing
+    - necromancy
+    - positive
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    - primal
+    range: touch
+    target: 1 living or undead creature
+    defense: Will
+    duration: sustained up to 1 minute
+  roaring_applause:
+    name: Roaring Applause
+    rank: 3
+    category: spell
+    traits:
+    - emotion
+    - enchantment
+    - mental
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    range: 60 feet
+    target: 1 creature
+    defense: Will
+    duration: sustained
+  rouse_skeletons:
+    name: Rouse Skeletons
+    rank: 3
+    category: spell
+    traits:
+    - necromancy
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    range: 60 feet
+    area: 10-foot burst
+    defense: Reflex
+    duration: sustained up to 1 minute
+  shadow_projectile:
+    name: Shadow Projectile
+    rank: 3
+    category: spell
+    traits:
+    - illusion
+    - shadow
+    - visual
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: reaction
+    traditions:
+    - arcane
+    - occult
+    defense: Will
+  shift_blame:
+    name: Shift Blame
+    rank: 3
+    category: spell
+    traits:
+    - enchantment
+    - mental
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: reaction
+    traditions:
+    - arcane
+    - occult
+    range: 30 feet
+    target: the target of the triggering attack or skill check
+    defense: Will
+  soothing_blossoms:
+    name: Soothing Blossoms
+    rank: 3
+    category: spell
+    traits:
+    - conjuration
+    - plant
+    - wood
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    - primal
+    range: 30 feet
+    area: 10-foot burst
+    duration: 10 minutes
+  sudden_recollection:
+    name: Sudden Recollection
+    rank: 3
+    category: spell
+    traits:
+    - uncommon
+    - enchantment
+    - mental
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - occult
+    range: 30 feet
+    target: 1 creature
+    defense: Will
+    duration: unlimited
+  time_jump:
+    name: Time Jump
+    rank: 3
+    category: spell
+    traits:
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    traditions:
+    - arcane
+    - occult
+  wall_of_water:
+    name: Wall of Water
+    rank: 3
+    category: spell
+    traits:
+    - conjuration
+    - water
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - primal
+    range: 120 feet
+    duration: 1 minute
+  warding_aggression:
+    name: Warding Aggression
+    rank: 3
+    category: spell
+    traits:
+    - abjuration
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - primal
+    duration: up to 1 minute
+  web_of_eyes:
+    name: Web of Eyes
+    rank: 3
+    category: spell
+    traits:
+    - divination
+    - scrying
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    range: 30 feet
+    target: up to 5 willing creatures
+    duration: 10 minutes
+  bloodspray_curse:
+    name: Bloodspray Curse
+    rank: 4
+    category: spell
+    traits:
+    - curse
+    - necromancy
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    - occult
+    - primal
+    range: 30 feet
+    target: 1 creature
+    defense: Fortitude
+    duration: varies
+  chromatic_armor:
+    name: Chromatic Armor
+    rank: 4
+    category: spell
+    traits:
+    - abjuration
+    - light
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    range: touch
+    target: 1 willing creature
+    duration: 1 minute
+  chromatic_ray:
+    name: Chromatic Ray
+    rank: 4
+    category: spell
+    traits:
+    - attack
+    - evocation
+    - light
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    range: 30 feet
+    target: 1 creature
+  compel_true_name:
+    name: Compel True Name
+    rank: 4
+    category: spell
+    traits:
+    - rare
+    - auditory
+    - enchantment
+    - incapacitation
+    - linguistic
+    - mental
+    - true_name
+    rarity: rare
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    range: 30 feet
+    target: 1 creature whose true name you know
+    defense: Will
+    duration: varies
+  coral_eruption:
+    name: Coral Eruption
+    rank: 4
+    category: spell
+    traits:
+    - conjuration
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - primal
+    range: 120 feet
+    area: two 10-foot bursts that don't overlap
+    defense: basic Reflex
+    duration: 1 minute
+  draw_the_lightning:
+    name: Draw the Lightning
+    rank: 4
+    category: spell
+    traits:
+    - electricity
+    - evocation
+    - metal
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    range: 120 feet
+    target: 1 creature that is either taller than you or higher In the air than you
+    defense: Reflex
+    duration: 1 minute
+  elemental_gift:
+    name: Elemental Gift
+    rank: 4
+    category: spell
+    traits:
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - primal
+    range: 30 feet
+    target: 1 willing creature
+    duration: 1 minute
+  fey_form:
+    name: Fey Form
+    rank: 4
+    category: spell
+    traits:
+    - polymorph
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - occult
+    - primal
+    duration: 1 minute
+  infectious_melody:
+    name: Infectious Melody
+    rank: 4
+    category: spell
+    traits:
+    - auditory
+    - enchantment
+    - mental
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - occult
+    area: 15-foot emanation
+    target: enemies in the area
+    defense: Will
+    duration: varies
+  invisibility_curtain:
+    name: Invisibility Curtain
+    rank: 4
+    category: spell
+    traits:
+    - illusion
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - occult
+    range: 120 feet
+    duration: sustained
+  magic_mailbox:
+    name: Magic Mailbox
+    rank: 4
+    category: spell
+    traits:
+    - uncommon
+    - conjuration
+    - teleportation
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: 1 hour (material, somatic, verbal)
+    traditions:
+    - arcane
+    - divine
+    - occult
+    range: touch
+    target: 2 containers, each no larger than 5 feet in any dimension
+    duration: until your next daily preparations
+  mirrors_misfortune:
+    name: Mirror's Misfortune
+    rank: 4
+    category: spell
+    traits:
+    - illusion
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    duration: 1 minute
+  murderous_vine:
+    name: Murderous Vine
+    rank: 4
+    category: spell
+    traits:
+    - attack
+    - conjuration
+    - plant
+    - wood
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - primal
+    range: 60 feet
+    target: 1 creature adjacent to a flat surface
+    duration: 1 minute
+  ocular_overload:
+    name: Ocular Overload
+    rank: 4
+    category: spell
+    traits:
+    - contingency
+    - illusion
+    - incapacitation
+    - visual
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: 10 minutes (material, somatic, verbal)
+    traditions:
+    - arcane
+    - occult
+    - primal
+    duration: 24 hours
+  painful_vibrations:
+    name: Painful Vibrations
+    rank: 4
+    category: spell
+    traits:
+    - evocation
+    - sonic
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    - occult
+    range: 100 feet
+    target: 1 living creature
+    defense: Fortitude
+  pernicious_poltergeist:
+    name: Pernicious Poltergeist
+    rank: 4
+    category: spell
+    traits:
+    - necromancy
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    - occult
+    range: 60 feet
+    area: 10-foot burst
+    duration: sustained up to 1 minute
+  petal_storm:
+    name: Petal Storm
+    rank: 4
+    category: spell
+    traits:
+    - air
+    - conjuration
+    - plant
+    - wood
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - primal
+    range: 120 feet
+    area: 15-foot radius burst
+    duration: 1 minute
+  ravenous_portal:
+    name: Ravenous Portal
+    rank: 4
+    category: spell
+    traits:
+    - abjuration
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - occult
+    range: 30 feet
+    target: 1 door no more than 10 feet tall and 5 feet wide
+    duration: 1 hour
+  replicate:
+    name: Replicate
+    rank: 4
+    category: spell
+    traits:
+    - illusion
+    - shadow
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - occult
+    range: 60 feet
+    target: 1 willing or unconscious creature of 8th level or lower
+    duration: sustained
+  sanguine_mist:
+    name: Sanguine Mist
+    rank: 4
+    category: spell
+    traits:
+    - death
+    - necromancy
+    - negative
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    range: 60 feet
+    area: 10-foot burst
+    defense: basic Fortitude
+    duration: sustained up to 1 minute
+  soothing_spring:
+    name: Soothing Spring
+    rank: 4
+    category: spell
+    traits:
+    - healing
+    - necromancy
+    - positive
+    - water
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: 1 minute (material, somatic, verbal)
+    traditions:
+    - divine
+    - primal
+    range: 30 feet
+    duration: 1 hour
+  spiritual_attunement:
+    name: Spiritual Attunement
+    rank: 4
+    category: spell
+    traits:
+    - uncommon
+    - abjuration
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    - occult
+    duration: 1 minute
+  tortoise_and_the_hare:
+    name: Tortoise and the Hare
+    rank: 4
+    category: spell
+    traits:
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - occult
+    - primal
+    range: 30 feet
+    target: 1 foe, and either yourself or 1 ally
+    defense: Fortitude
+  umbral_graft:
+    name: Umbral Graft
+    rank: 4
+    category: spell
+    traits:
+    - illusion
+    - shadow
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    duration: 3 rounds
+  variable_gravity:
+    name: Variable Gravity
+    rank: 4
+    category: spell
+    traits:
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    duration: 5 minutes
+  winning_streak:
+    name: Winning Streak
+    rank: 4
+    category: spell
+    traits:
+    - divination
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    traditions:
+    - arcane
+    - occult
+    range: 20 feet
+    target: 1 creature
+    duration: 1 round (see text)
+  aberrant_form:
+    name: Aberrant Form
+    rank: 5
+    category: spell
+    traits:
+    - polymorph
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - occult
+    duration: 1 minute
+  bandits_doom:
+    name: Bandit's Doom
+    rank: 5
+    category: spell
+    traits:
+    - abjuration
+    - curse
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: 30 minutes (material, somatic, verbal)
+    traditions:
+    - arcane
+    - divine
+    - occult
+    target: 1 item of 2 Bulk or less
+    duration: 1 month
+  blazing_fissure:
+    name: Blazing Fissure
+    rank: 5
+    category: spell
+    traits:
+    - earth
+    - evocation
+    - fire
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    area: 120-foot line
+    defense: Reflex
+  blessing_of_defiance:
+    name: Blessing of Defiance
+    rank: 5
+    category: spell
+    traits:
+    - abjuration
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    traditions:
+    - divine
+    - primal
+    range: 30 feet
+    target: varies
+    duration: 1 round
+  blink_charge:
+    name: Blink Charge
+    rank: 5
+    category: spell
+    traits:
+    - conjuration
+    - force
+    - teleportation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    range: 60 feet
+    target: 1 creature
+  flammable_fumes:
+    name: Flammable Fumes
+    rank: 5
+    category: spell
+    traits:
+    - conjuration
+    - poison
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - primal
+    range: 120 feet
+    area: 20-foot burst
+    duration: 1 minute
+  flowing_strike:
+    name: Flowing Strike
+    rank: 5
+    category: spell
+    traits:
+    - evocation
+    - water
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - primal
+  forceful_hand:
+    name: Forceful Hand
+    rank: 5
+    category: spell
+    traits:
+    - evocation
+    - force
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    range: 60 feet
+    duration: sustained up to 1 minute
+  geyser:
+    name: Geyser
+    rank: 5
+    category: spell
+    traits:
+    - evocation
+    - fire
+    - water
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    range: 500 feet
+    area: 10-foot radius, 50-foot-tall cylinder
+    defense: Reflex
+    duration: 1 round
+  glimmer_of_charm:
+    name: Glimmer of Charm
+    rank: 5
+    category: spell
+    traits:
+    - aura
+    - emotion
+    - enchantment
+    - incapacitation
+    - mental
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    - primal
+    area: 20-foot emanation centered on you
+    defense: Will
+    duration: sustained up to 1 minute
+  healing_well:
+    name: Healing Well
+    rank: 5
+    category: spell
+    traits:
+    - healing
+    - necromancy
+    - positive
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - divine
+    - primal
+    range: 30 feet
+    duration: 1 minute
+  inevitable_disaster:
+    name: Inevitable Disaster
+    rank: 5
+    category: spell
+    traits:
+    - curse
+    - divination
+    - prediction
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    - occult
+    range: 60 feet
+    target: 1 creature
+    defense: Fortitude
+  invoke_spirits:
+    name: Invoke Spirits
+    rank: 5
+    category: spell
+    traits:
+    - emotion
+    - fear
+    - mental
+    - necromancy
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    range: 120 feet
+    area: 10-foot burst
+    defense: Will
+    duration: sustained up to 1 minute
+  mantle_of_the_frozen_heart:
+    name: Mantle of the Frozen Heart
+    rank: 5
+    category: spell
+    traits:
+    - cold
+    - morph
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    duration: 1 minute
+  mantle_of_the_magma_heart:
+    name: Mantle of the Magma Heart
+    rank: 5
+    category: spell
+    traits:
+    - fire
+    - morph
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    duration: 1 minute
+  mirror_malefactors:
+    name: Mirror Malefactors
+    rank: 5
+    category: spell
+    traits:
+    - illusion
+    - mental
+    - visual
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    range: 30 feet
+    target: 1 creature
+    defense: basic Will
+    duration: sustained up to 1 minute
+  portrait_of_the_artist:
+    name: Portrait of the Artist
+    rank: 5
+    category: spell
+    traits:
+    - illusion
+    - visual
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: 1 minute (somatic, verbal, material)
+    traditions:
+    - occult
+    duration: 1 hour
+  repelling_pulse:
+    name: Repelling Pulse
+    rank: 5
+    category: spell
+    traits:
+    - evocation
+    - force
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    - occult
+    area: 30-foot emanation
+    defense: Reflex
+  rewinding_step:
+    name: Rewinding Step
+    rank: 5
+    category: spell
+    traits:
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: 1 minute (material, somatic, verbal)
+    traditions:
+    - arcane
+    - divine
+    - occult
+    duration: 10 minutes
+  rip_the_spirit:
+    name: Rip the Spirit
+    rank: 5
+    category: spell
+    traits:
+    - death
+    - necromancy
+    - negative
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '1'
+    traditions:
+    - divine
+    - occult
+    range: 30 feet
+    target: 1 living creature
+    defense: basic Fortitude
+  summon_anarch:
+    name: Summon Anarch
+    rank: 5
+    category: spell
+    traits:
+    - conjuration
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - divine
+    range: 30 feet
+    duration: sustained up to 1 minute
+  summon_axiom:
+    name: Summon Axiom
+    rank: 5
+    category: spell
+    traits:
+    - conjuration
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - divine
+    range: 30 feet
+    duration: sustained up to 1 minute
+  temporary_glyph:
+    name: Temporary Glyph
+    rank: 5
+    category: spell
+    traits:
+    - abjuration
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    range: 30 feet
+    area: a 5-foot square
+    duration: 1 minute
+  cast_into_time:
+    name: Cast into Time
+    rank: 6
+    category: spell
+    traits:
+    - divination
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    area: 15-foot cone
+    defense: Fortitude
+  catch_your_name:
+    name: Catch Your Name
+    rank: 6
+    category: spell
+    traits:
+    - rare
+    - divination
+    rarity: rare
+    source: Pathfinder Secrets of Magic
+    cast: reaction
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    defense: Will
+  chromatic_image:
+    name: Chromatic Image
+    rank: 6
+    category: spell
+    traits:
+    - illusion
+    - visual
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    duration: 1 minute
+  daemon_form:
+    name: Daemon Form
+    rank: 6
+    category: spell
+    traits:
+    - evil
+    - polymorph
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    duration: 1 minute
+  demon_form:
+    name: Demon Form
+    rank: 6
+    category: spell
+    traits:
+    - chaotic
+    - evil
+    - polymorph
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    duration: 1 minute
+  devil_form:
+    name: Devil Form
+    rank: 6
+    category: spell
+    traits:
+    - evil
+    - lawful
+    - polymorph
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    duration: 1 minute
+  elemental_confluence:
+    name: Elemental Confluence
+    rank: 6
+    category: spell
+    traits:
+    - air
+    - conjuration
+    - earth
+    - fire
+    - water
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - primal
+    range: 60 feet
+    area: 10-foot burst
+    duration: sustained up to 1 minute
+  flame_vortex:
+    name: Flame Vortex
+    rank: 6
+    category: spell
+    traits:
+    - air
+    - evocation
+    - fire
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - primal
+    range: 120 feet
+    area: 5-foot radius, 40-foot tall cylinder
+    defense: basic Reflex
+    duration: sustained up to 1 minute
+  natures_reprisal:
+    name: Nature's Reprisal
+    rank: 6
+    category: spell
+    traits:
+    - plant
+    - poison
+    - transmutation
+    - wood
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - primal
+    range: 120 feet
+    area: all squares on the ground that contain plants in an 80-foot burst
+    duration: 1 minute
+  necrotize:
+    name: Necrotize
+    rank: 6
+    category: spell
+    traits:
+    - necromancy
+    - negative
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - primal
+    range: 60 feet
+    target: 1 living creature
+    defense: Fortitude
+    duration: varies
+  unexpected_transposition:
+    name: Unexpected Transposition
+    rank: 6
+    category: spell
+    traits:
+    - conjuration
+    - teleportation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: reaction
+    traditions:
+    - arcane
+    - occult
+    range: 30 feet
+    target: 1 creature other than the triggering enemy
+    defense: Will
+  zero_gravity:
+    name: Zero Gravity
+    rank: 6
+    category: spell
+    traits:
+    - uncommon
+    - evocation
+    rarity: uncommon
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - occult
+    range: 120 feet
+    area: 20-foot radius, 40-foot tall cylinder
+    duration: sustained up to 1 minute
+  angel_form:
+    name: Angel Form
+    rank: 7
+    category: spell
+    traits:
+    - good
+    - polymorph
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    duration: 1 minute
+  corrosive_body:
+    name: Corrosive Body
+    rank: 7
+    category: spell
+    traits:
+    - acid
+    - polymorph
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    duration: 1 minute
+  cosmic_form:
+    name: Cosmic Form
+    rank: 7
+    category: spell
+    traits:
+    - polymorph
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    - primal
+    duration: 1 minute
+  deitys_strike:
+    name: Deity's Strike
+    rank: 7
+    category: spell
+    traits:
+    - evocation
+    - force
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    range: 500 feet
+    target: 1 creature (see text)
+  frigid_flurry:
+    name: Frigid Flurry
+    rank: 7
+    category: spell
+    traits:
+    - cold
+    - evocation
+    - water
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    area: line up to 120 feet
+    defense: basic Reflex
+  inexhaustible_cynicism:
+    name: Inexhaustible Cynicism
+    rank: 7
+    category: spell
+    traits:
+    - emotion
+    - enchantment
+    - mental
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    range: 30 feet
+    target: up to 5 creatures
+    defense: Will
+  prismatic_armor:
+    name: Prismatic Armor
+    rank: 7
+    category: spell
+    traits:
+    - abjuration
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    range: touch
+    target: 1 willing creature
+    duration: 1 minute
+  shadow_raid:
+    name: Shadow Raid
+    rank: 7
+    category: spell
+    traits:
+    - illusion
+    - shadow
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - occult
+    range: 120 feet
+    area: 30-foot burst
+    defense: basic Reflex or Will (target's choice)
+    duration: 1 minute
+  tempest_of_shades:
+    name: Tempest of Shades
+    rank: 7
+    category: spell
+    traits:
+    - incarnate
+    - necromancy
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    range: 100 feet
+    duration: until the end of your next turn
+  boil_blood:
+    name: Boil Blood
+    rank: 8
+    category: spell
+    traits:
+    - evocation
+    - fire
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - primal
+    range: 60 feet
+    target: 1 creature
+    defense: Fortitude
+  burning_blossoms:
+    name: Burning Blossoms
+    rank: 8
+    category: spell
+    traits:
+    - enchantment
+    - fire
+    - plant
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - primal
+    range: 120 feet
+    area: 30-foot radius, 100-foot tall cylinder
+    defense: Will
+    duration: 1 minute
+  clone_companion:
+    name: Clone Companion
+    rank: 8
+    category: spell
+    traits:
+    - conjuration
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - primal
+    range: 30 feet
+    target: your companion
+    duration: sustained up to 1 minute
+  divine_armageddon:
+    name: Divine Armageddon
+    rank: 8
+    category: spell
+    traits:
+    - necromancy
+    - negative
+    - positive
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    range: 120 feet
+    area: 60-foot burst
+    defense: basic Fortitude
+  summon_archmage:
+    name: Summon Archmage
+    rank: 8
+    category: spell
+    traits:
+    - conjuration
+    - incarnate
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    range: 100 feet
+    duration: until the end of your next turn
+  summon_deific_herald:
+    name: Summon Deific Herald
+    rank: 8
+    category: spell
+    traits:
+    - conjuration
+    - incarnate
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - divine
+    range: 100 feet
+    duration: until the end of your next turn
+  whirlwind:
+    name: Whirlwind
+    rank: 8
+    category: spell
+    traits:
+    - air
+    - evocation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - primal
+    range: 500 feet
+    area: 15-foot radius, 80-foot tall cylinder
+    defense: Reflex
+    duration: sustained up to 1 minute
+  one_with_the_land:
+    name: One with the Land
+    rank: 9
+    category: spell
+    traits:
+    - earth
+    - plant
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - primal
+    duration: 1 minute
+  proliferating_eyes:
+    name: Proliferating Eyes
+    rank: 9
+    category: spell
+    traits:
+    - divination
+    - scrying
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    range: touch
+    target: 1 creature (see text)
+    duration: 8 hours
+  summon_draconic_legion:
+    name: Summon Draconic Legion
+    rank: 9
+    category: spell
+    traits:
+    - conjuration
+    - incarnate
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    range: 100 feet
+    duration: until the end of your next turn
+  unspeakable_shadow:
+    name: Unspeakable Shadow
+    rank: 9
+    category: spell
+    traits:
+    - death
+    - emotion
+    - fear
+    - illusion
+    - mental
+    - shadow
+    - visual
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - arcane
+    - occult
+    range: 120 feet
+    target: 1 creature
+    defense: Will
+    duration: varies
+  voracious_gestalt:
+    name: Voracious Gestalt
+    rank: 9
+    category: spell
+    traits:
+    - aura
+    - death
+    - evil
+    - necromancy
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - divine
+    - occult
+    area: 30-foot emanation
+    defense: basic Fortitude
+    duration: sustained up to 1 minute
+  element_embodied:
+    name: Element Embodied
+    rank: 10
+    category: spell
+    traits:
+    - polymorph
+    - transmutation
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '2'
+    traditions:
+    - primal
+    duration: 1 minute
+  fated_confrontation:
+    name: Fated Confrontation
+    rank: 10
+    category: spell
+    traits:
+    - divination
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    range: 120 feet
+    target: 1 willing ally and 1 enemy
+    duration: 1 minute
+  nullify:
+    name: Nullify
+    rank: 10
+    category: spell
+    traits:
+    - abjuration
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: reaction
+    traditions:
+    - arcane
+    - divine
+    - occult
+    - primal
+    range: 120 feet
+    target: the triggering spell
+  shadow_army:
+    name: Shadow Army
+    rank: 10
+    category: spell
+    traits:
+    - auditory
+    - illusion
+    - mental
+    - shadow
+    - visual
+    rarity: common
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - arcane
+    - occult
+    range: 500 feet
+    area: 50-foot burst
+    defense: Will
+    duration: 1 minute
+  summon_kaiju:
+    name: Summon Kaiju
+    rank: 10
+    category: spell
+    traits:
+    - rare
+    - conjuration
+    - incarnate
+    rarity: rare
+    source: Pathfinder Secrets of Magic
+    cast: '3'
+    traditions:
+    - primal
+    range: 500 feet
+    duration: until the end of your next turn

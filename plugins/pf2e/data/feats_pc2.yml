@@ -33,7 +33,8 @@ feats:
     slots:
     - class
     source: Pathfinder Player Core 2
-    summary: Strengthen Pursue a Lead; skill increases against the subject of your lead.
+    summary: Strengthen Pursue a Lead; skill increases against the subject of your
+      lead.
   stylish_tricks:
     name: Stylish Tricks
     level: 2
