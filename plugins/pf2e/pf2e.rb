@@ -1,6 +1,10 @@
 module AresMUSH
   module Pf2e
 
+    def self.plugin_version
+      "1.0"
+    end
+
     def self.plugin_dir
       File.dirname(__FILE__)
     end
@@ -79,24 +83,16 @@ module AresMUSH
         when "reset" then return Pf2eResetCmd
         when "review", "status" then return Pf2eReviewCmd
         end
-      when "adv", "level"
-        case cmd.switch
-        when nil, "status" then return AdvStatusCmd
-        when "start" then return AdvStartCmd
-        when "finish", "done" then return AdvFinishCmd
-        when "skill" then return AdvSkillCmd
-        when "boost" then return AdvBoostCmd
-        when "feat" then return AdvFeatCmd
-        end
       when "cg"
         case cmd.switch
-        when nil, "status" then return CgStatusCmd
+        when "start" then return CgStartCmd
         when "ancestry" then return CgAncestryCmd
         when "heritage" then return CgHeritageCmd
         when "background" then return CgBackgroundCmd
         when "class" then return CgClassCmd
-        when "identity" then return CgIdentityCmd
         when "commit" then return CgCommitCmd
+        when "identity" then return CgIdentityCmd
+        when "status" then return CgStatusCmd
         when "reset" then return CgResetCmd
         when "boost" then return CgBoostCmd
         when "skill" then return CgSkillCmd
@@ -114,6 +110,15 @@ module AresMUSH
         when "edge" then return CgEdgeCmd
         when "school" then return CgSchoolCmd
         when "doctrine" then return CgDoctrineCmd
+        end
+      when "adv"
+        case cmd.switch
+        when "start" then return AdvStartCmd
+        when "skill" then return AdvSkillCmd
+        when "boost" then return AdvBoostCmd
+        when "feat" then return AdvFeatCmd
+        when "finish" then return AdvFinishCmd
+        when nil, "status" then return AdvStatusCmd
         end
       end
       nil
@@ -149,7 +154,7 @@ module AresMUSH
           Global.logger.error "Pf2e data load failed for #{path}: #{e.message}"
         end
       end
-      Global.logger.info "Pf2e loaded static data from #{Dir[File.join(data_dir, '*.yml')].size} file(s)."
+      Global.logger.info "Pf2e loaded static data from #{Dir[File.join(data_dir, "*.yml")].size} file(s)."
     end
 
     def self.read_data(section = nil, key = nil)
