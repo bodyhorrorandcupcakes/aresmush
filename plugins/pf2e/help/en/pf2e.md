@@ -21,7 +21,7 @@ This game uses **Pathfinder 2e (Remaster / Player Core)** for character building
 * Chargen identity lock, boosts, skills, languages, and feats
 * Coin purse, Society account, encumbrance
 * Inventory, bags (stow/retrieve), mundane vendors
-* Staff tools to fix sheets and issue Society gear
+* Staff tools to fix sheets and issue gear
 * Focus Points pool and Refocus (`focus`, `refocus`)
 
 Combat is **not** fully automated. Rolls and sheet numbers support table play; you still narrate the fight.
@@ -48,12 +48,12 @@ When a roll includes a DC (`roll athletics vs 15` or `roll melee vs 20`), the sy
 
 Ranks use TEML letters: **U** Untrained, **T** Trained, **E** Expert, **M** Master, **L** Legendary. Trained+ adds proficiency bonus + level to the relevant check.
 
-## Society economy notes
+## Economy notes
 
 * **Purse** — physical coin on your person (counts toward Bulk when encumbrance is on).
-* **Society account** — Hall ledger for your character. Not physical coin; not Bulk. Withdraw to the purse before buying from shops.
-* Starting wealth is granted at `cg/commit` into the Society account by default (configurable).
-* There is **no** Hall storage for bags or gear. Everything physical stays on your sheet and counts toward load.
+* **Society account** — Optional off-person ledger for your character (if your game uses one). Not physical coin; not Bulk. Withdraw to the purse before buying from shops.
+* Starting wealth is granted at `cg/commit` into the on-person purse by default (configurable via starting_wealth_to).
+* There is **no** shared storage for bags or gear in this plugin. Everything physical stays on your sheet and counts toward load.
 
 ## Command reference
 

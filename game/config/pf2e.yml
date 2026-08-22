@@ -20,8 +20,8 @@ pf2e:
   use_encumbrance: true
   # Granted once at cg/commit (identity lock). Re-granted after cg/reset + commit.
   starting_wealth: "15gp"
-  # society = Hall ledger (default); purse = coins on person
-  starting_wealth_to: society
+  # purse = coins on person (default); society = optional off-person ledger if your game uses one
+  starting_wealth_to: purse
 
   # -------------------------------------------------
   # Experience (PF2e Remaster / Player Core)
