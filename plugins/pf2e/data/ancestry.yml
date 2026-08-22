@@ -147,12 +147,12 @@ ancestries:
       - str
       free: 0
     traits:
-    - halvling
+    - halfling
     - humanoid
     languages:
       starting:
       - common
-      - halvling
+      - halfling
       additional_per_int: true
     vision: normal
     heritages:
