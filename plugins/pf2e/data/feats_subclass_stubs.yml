@@ -1,29 +1,3 @@
-# Order feats from Secrets of Magic not present in the Player Core feat dump.
-# Mechanical fields only. Prefer full Foundry/SoM import later.
-#
-feats:
-  fire_lung:
-    name: Fire Lung
-    level: 1
-    traits:
-    - druid
-    category: class
-    slots:
-    - class
-    source: Pathfinder Secrets of Magic
-    prerequisites:
-      special: flame order
-    summary: "Ignore concealment from smoke/ash; success vs persistent fire becomes critical success (treat critical failures as failures)."
-
-  shore_step:
-    name: Shore Step
-    level: 1
-    traits:
-    - druid
-    category: class
-    slots:
-    - class
-    source: Pathfinder Secrets of Magic
-    prerequisites:
-      special: wave order
-    summary: "Ignore difficult terrain from shallow water. Success on Balance (slippery/wet) or Swim becomes critical success."
+# Deprecated: SoM order feats moved to feats_som.yml.
+# Kept as an empty merge target for older docs.
+feats: {}

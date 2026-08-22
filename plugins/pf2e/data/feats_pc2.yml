@@ -1,0 +1,90 @@
+# Feats — Pathfinder Player Core 2 addenda (mechanical fields only).
+# Deep-merged under `feats` with feats.yml (large Core dump) and feats_som.yml.
+# Most PC2 class feats already live in feats.yml; this file holds source-tagged
+# addenda and grant anchors so book-specific content stays split and navigable.
+#
+feats:
+  oracular_warning:
+    name: Oracular Warning
+    level: 1
+    traits:
+    - oracle
+    category: class
+    slots:
+    - class
+    source: Pathfinder Player Core 2
+    summary: Grant an ally a reactive defense bonus from a flash of prophecy.
+  domain_acumen:
+    name: Domain Acumen
+    level: 2
+    traits:
+    - oracle
+    category: class
+    slots:
+    - class
+    source: Pathfinder Player Core 2
+    summary: Gain an additional domain spell from a related domain.
+  investigator_dedication_notes:
+    name: Pursue a Lead Focus
+    level: 1
+    traits:
+    - investigator
+    category: class
+    slots:
+    - class
+    source: Pathfinder Player Core 2
+    summary: Strengthen Pursue a Lead; skill increases against the subject of your lead.
+  stylish_tricks:
+    name: Stylish Tricks
+    level: 2
+    traits:
+    - swashbuckler
+    category: class
+    slots:
+    - class
+    source: Pathfinder Player Core 2
+    summary: Additional skill feats tied to your style skills.
+  instinct_ability_refinement:
+    name: Instinct Ability
+    level: 1
+    traits:
+    - barbarian
+    category: class
+    slots:
+    - class
+    source: Pathfinder Player Core 2
+    summary: Your instinct grants its listed ability; tracked for grants.
+  basic_bloodline_spell_pc2:
+    name: Basic Bloodline Spell
+    level: 1
+    traits:
+    - sorcerer
+    category: class
+    slots:
+    - class
+    source: Pathfinder Player Core 2
+    summary: Gain the basic bloodline focus spell for your bloodline (see spells_pc2.yml).
+  advanced_bloodline_spell_pc2:
+    name: Advanced Bloodline Spell
+    level: 6
+    traits:
+    - sorcerer
+    category: class
+    slots:
+    - class
+    source: Pathfinder Player Core 2
+    summary: Gain the advanced bloodline focus spell for your bloodline.
+    prerequisites:
+      level: 6
+  greater_bloodline_spell_pc2:
+    name: Greater Bloodline Spell
+    level: 12
+    traits:
+    - sorcerer
+    category: class
+    slots:
+    - class
+    source: Pathfinder Player Core 2
+    summary: Gain the greater bloodline focus spell for your bloodline.
+    prerequisites:
+      level: 12
