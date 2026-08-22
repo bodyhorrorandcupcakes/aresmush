@@ -5,21 +5,25 @@
 heritages:
   nephilim:
     name: Nephilim
+    chargen_open: true
     ancestry: null
     features:
     - nephilim
   aiuvarin:
     name: Aiuvarin
+    chargen_open: true
     ancestry: null
     features:
     - aiuvarin
   changeling:
     name: Changeling
+    chargen_open: true
     ancestry: null
     features:
     - changeling
   dromaar:
     name: Dromaar
+    chargen_open: true
     ancestry: null
     features:
     - dromaar
@@ -91,81 +95,97 @@ heritages:
     chargen_open: true
   lotus_leshy:
     name: Lotus Leshy
+    chargen_open: true
     ancestry: leshy
     features:
     - lotus_leshy
   seaweed_leshy:
     name: Seaweed Leshy
+    chargen_open: true
     ancestry: leshy
     features:
     - seaweed_leshy
   root_leshy:
     name: Root Leshy
+    chargen_open: true
     ancestry: leshy
     features:
     - root_leshy
   fruit_leshy:
     name: Fruit Leshy
+    chargen_open: true
     ancestry: leshy
     features:
     - fruit_leshy
   leaf_leshy:
     name: Leaf Leshy
+    chargen_open: true
     ancestry: leshy
     features:
     - leaf_leshy
   vine_leshy:
     name: Vine Leshy
+    chargen_open: true
     ancestry: leshy
     features:
     - vine_leshy
   cactus_leshy:
     name: Cactus Leshy
+    chargen_open: true
     ancestry: leshy
     features:
     - cactus_leshy
   gourd_leshy:
     name: Gourd Leshy
+    chargen_open: true
     ancestry: leshy
     features:
     - gourd_leshy
   fungus_leshy:
     name: Fungus Leshy
+    chargen_open: true
     ancestry: leshy
     features:
     - fungus_leshy
   battle_ready_orc:
     name: Battle-Ready Orc
+    chargen_open: true
     ancestry: orc
     features:
     - battle_ready_orc
   rainfall_orc:
     name: Rainfall Orc
+    chargen_open: true
     ancestry: orc
     features:
     - rainfall_orc
   badlands_orc:
     name: Badlands Orc
+    chargen_open: true
     ancestry: orc
     features:
     - badlands_orc
   grave_orc:
     name: Grave Orc
+    chargen_open: true
     ancestry: orc
     features:
     - grave_orc
   winter_orc:
     name: Winter Orc
+    chargen_open: true
     ancestry: orc
     features:
     - winter_orc
   hold_scarred_orc:
     name: Hold-Scarred Orc
+    chargen_open: true
     ancestry: orc
     features:
     - hold_scarred_orc
   deep_orc:
     name: Deep Orc
+    chargen_open: true
     ancestry: orc
     features:
     - deep_orc
@@ -225,26 +245,31 @@ heritages:
     chargen_open: true
   wellspring_gnome:
     name: Wellspring Gnome
+    chargen_open: true
     ancestry: gnome
     features:
     - wellspring_gnome
   chameleon_gnome:
     name: Chameleon Gnome
+    chargen_open: true
     ancestry: gnome
     features:
     - chameleon_gnome
   umbral_gnome:
     name: Umbral Gnome
+    chargen_open: true
     ancestry: gnome
     features:
     - umbral_gnome
   sensate_gnome:
     name: Sensate Gnome
+    chargen_open: true
     ancestry: gnome
     features:
     - sensate_gnome
   fey_touched_gnome:
     name: Fey-Touched Gnome
+    chargen_open: true
     ancestry: gnome
     features:
     - fey_touched_gnome
@@ -286,286 +311,343 @@ heritages:
     chargen_open: true
   dhampir:
     name: Dhampir
+    chargen_open: true
     ancestry: null
     features:
     - dhampir
   dragonblood:
     name: Dragonblood
+    chargen_open: true
     ancestry: null
     features:
     - dragonblood
   duskwalker:
     name: Duskwalker
+    chargen_open: true
     ancestry: null
     features:
     - duskwalker
   clawed_catfolk:
     name: Clawed Catfolk
+    chargen_open: true
     ancestry: catfolk
     features:
     - clawed_catfolk
   hunting_catfolk:
     name: Hunting Catfolk
+    chargen_open: true
     ancestry: catfolk
     features:
     - hunting_catfolk
   jungle_catfolk:
     name: Jungle Catfolk
+    chargen_open: true
     ancestry: catfolk
     features:
     - jungle_catfolk
   liminal_catfolk:
     name: Liminal Catfolk
+    chargen_open: true
     ancestry: catfolk
     features:
     - liminal_catfolk
   nine_lives_catfolk:
     name: Nine Lives Catfolk
+    chargen_open: true
     ancestry: catfolk
     features:
     - nine_lives_catfolk
   sharp_eared_catfolk:
     name: Sharp Eared Catfolk
+    chargen_open: true
     ancestry: catfolk
     features:
     - sharp_eared_catfolk
   winter_catfolk:
     name: Winter Catfolk
+    chargen_open: true
     ancestry: catfolk
     features:
     - winter_catfolk
   elfbane_hobgoblin:
     name: Elfbane Hobgoblin
+    chargen_open: true
     ancestry: hobgoblin
     features:
     - elfbane_hobgoblin
   runtboss_hobgoblin:
     name: Runtboss Hobgoblin
+    chargen_open: true
     ancestry: hobgoblin
     features:
     - runtboss_hobgoblin
   shortshanks_hobgoblin:
     name: Shortshanks Hobgoblin
+    chargen_open: true
     ancestry: hobgoblin
     features:
     - shortshanks_hobgoblin
   smokeworker_hobgoblin:
     name: Smokeworker Hobgoblin
+    chargen_open: true
     ancestry: hobgoblin
     features:
     - smokeworker_hobgoblin
   warmarch_hobgoblin:
     name: Warmarch Hobgoblin
+    chargen_open: true
     ancestry: hobgoblin
     features:
     - warmarch_hobgoblin
   warrenbred_hobgoblin:
     name: Warrenbred Hobgoblin
+    chargen_open: true
     ancestry: hobgoblin
     features:
     - warrenbred_hobgoblin
   ant_kholo:
     name: Ant Kholo
+    chargen_open: true
     ancestry: kholo
     features:
     - ant_kholo
   cave_kholo:
     name: Cave Kholo
+    chargen_open: true
     ancestry: kholo
     features:
     - cave_kholo
   dog_kholo:
     name: Dog Kholo
+    chargen_open: true
     ancestry: kholo
     features:
     - dog_kholo
   great_kholo:
     name: Great Kholo
+    chargen_open: true
     ancestry: kholo
     features:
     - great_kholo
   sweetbreath_kholo:
     name: Sweetbreath Kholo
+    chargen_open: true
     ancestry: kholo
     features:
     - sweetbreath_kholo
   winter_kholo:
     name: Winter Kholo
+    chargen_open: true
     ancestry: kholo
     features:
     - winter_kholo
   witch_kholo:
     name: Witch Kholo
+    chargen_open: true
     ancestry: kholo
     features:
     - witch_kholo
   cavernstalker_kobold:
     name: Cavernstalker Kobold
+    chargen_open: true
     ancestry: kobold
     features:
     - cavernstalker_kobold
   dragonscaled_kobold:
     name: Dragonscaled Kobold
+    chargen_open: true
     ancestry: kobold
     features:
     - dragonscaled_kobold
   elementheart_kobold:
     name: Elementheart Kobold
+    chargen_open: true
     ancestry: kobold
     features:
     - elementheart_kobold
   spellhorn_kobold:
     name: Spellhorn Kobold
+    chargen_open: true
     ancestry: kobold
     features:
     - spellhorn_kobold
   strongjaw_kobold:
     name: Strongjaw Kobold
+    chargen_open: true
     ancestry: kobold
     features:
     - strongjaw_kobold
   tunnelflood_kobold:
     name: Tunnelflood Kobold
+    chargen_open: true
     ancestry: kobold
     features:
     - tunnelflood_kobold
   venomtail_kobold:
     name: Venomtail Kobold
+    chargen_open: true
     ancestry: kobold
     features:
     - venomtail_kobold
   cliffscale_lizardfolk:
     name: Cliffscale Lizardfolk
+    chargen_open: true
     ancestry: lizardfolk
     features:
     - cliffscale_lizardfolk
   cloudleaper_lizardfolk:
     name: Cloudleaper Lizardfolk
+    chargen_open: true
     ancestry: lizardfolk
     features:
     - cloudleaper_lizardfolk
   frilled_lizardfolk:
     name: Frilled Lizardfolk
+    chargen_open: true
     ancestry: lizardfolk
     features:
     - frilled_lizardfolk
   sandstrider_lizardfolk:
     name: Sandstrider Lizardfolk
+    chargen_open: true
     ancestry: lizardfolk
     features:
     - sandstrider_lizardfolk
   unseen_lizardfolk:
     name: Unseen Lizardfolk
+    chargen_open: true
     ancestry: lizardfolk
     features:
     - unseen_lizardfolk
   wetlander_lizardfolk:
     name: Wetlander Lizardfolk
+    chargen_open: true
     ancestry: lizardfolk
     features:
     - wetlander_lizardfolk
   woodstalker_lizardfolk:
     name: Woodstalker Lizardfolk
+    chargen_open: true
     ancestry: lizardfolk
     features:
     - woodstalker_lizardfolk
   deep_rat:
     name: Deep Rat
+    chargen_open: true
     ancestry: ratfolk
     features:
     - deep_rat
   desert_rat:
     name: Desert Rat
+    chargen_open: true
     ancestry: ratfolk
     features:
     - desert_rat
   longsnout_rat:
     name: Longsnout Rat
+    chargen_open: true
     ancestry: ratfolk
     features:
     - longsnout_rat
   sewer_rat:
     name: Sewer Rat
+    chargen_open: true
     ancestry: ratfolk
     features:
     - sewer_rat
   shadow_rat:
     name: Shadow Rat
+    chargen_open: true
     ancestry: ratfolk
     features:
     - shadow_rat
   snow_rat:
     name: Snow Rat
+    chargen_open: true
     ancestry: ratfolk
     features:
     - snow_rat
   tunnel_rat:
     name: Tunnel Rat
+    chargen_open: true
     ancestry: ratfolk
     features:
     - tunnel_rat
   dogtooth_tengu:
     name: Dogtooth Tengu
+    chargen_open: true
     ancestry: tengu
     features:
     - dogtooth_tengu
   jinxed_tengu:
     name: Jinxed Tengu
+    chargen_open: true
     ancestry: tengu
     features:
     - jinxed_tengu
   mountainkeeper_tengu:
     name: Mountainkeeper Tengu
+    chargen_open: true
     ancestry: tengu
     features:
     - mountainkeeper_tengu
   skyborn_tengu:
     name: Skyborn Tengu
+    chargen_open: true
     ancestry: tengu
     features:
     - skyborn_tengu
   stormtossed_tengu:
     name: Stormtossed Tengu
+    chargen_open: true
     ancestry: tengu
     features:
     - stormtossed_tengu
   taloned_tengu:
     name: Taloned Tengu
+    chargen_open: true
     ancestry: tengu
     features:
     - taloned_tengu
   wavediver_tengu:
     name: Wavediver Tengu
+    chargen_open: true
     ancestry: tengu
     features:
     - wavediver_tengu
   poisonhide_tripkee:
     name: Poisonhide Tripkee
+    chargen_open: true
     ancestry: tripkee
     features:
     - poisonhide_tripkee
   riverside_tripkee:
     name: Riverside Tripkee
+    chargen_open: true
     ancestry: tripkee
     features:
     - riverside_tripkee
   snaptongue_tripkee:
     name: Snaptongue Tripkee
+    chargen_open: true
     ancestry: tripkee
     features:
     - snaptongue_tripkee
   stickytoe_tripkee:
     name: Stickytoe Tripkee
+    chargen_open: true
     ancestry: tripkee
     features:
     - stickytoe_tripkee
   thickskin_tripkee:
     name: Thickskin Tripkee
+    chargen_open: true
     ancestry: tripkee
     features:
     - thickskin_tripkee
   windweb_tripkee:
     name: Windweb Tripkee
+    chargen_open: true
     ancestry: tripkee
     features:
     - windweb_tripkee

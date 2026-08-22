@@ -1,5 +1,6 @@
-# Backgrounds — Pathfinder Player Core (Foundry).
+# Backgrounds — Pathfinder Player Core (+ compatible).
 # chargen_open: true required for player picks (missing = closed).
+# Default package: all listed backgrounds are open.
 #
 backgrounds:
   acolyte:

@@ -1,4 +1,7 @@
-# Class option grants. chargen_open: true required for player picks (missing = closed).
+# Subclass options (bloodlines, causes, doctrines, edges, methodologies,
+# muses, orders, rackets, schools, contacts, etc.).
+# chargen_open: true required for player picks (missing = closed).
+# Default package: all listed options are open.
 #
 subclasses:
   bloodline:

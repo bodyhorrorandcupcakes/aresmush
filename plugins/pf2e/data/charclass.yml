@@ -1327,6 +1327,7 @@ charclasses:
     chargen_open: true
   alchemist:
     name: Alchemist
+    chargen_open: true
     key_ability:
       options:
       - int
@@ -1355,6 +1356,7 @@ charclasses:
     notes: Data stub — closed for chargen (policy). Expand when/if opened.
   barbarian:
     name: Barbarian
+    chargen_open: true
     key_ability:
       options:
       - str
@@ -1383,6 +1385,7 @@ charclasses:
     notes: Data stub — closed for chargen (policy). Expand when/if opened.
   monk:
     name: Monk
+    chargen_open: true
     key_ability:
       options:
       - dex
@@ -1412,6 +1415,7 @@ charclasses:
     notes: Data stub — closed for chargen (policy). Expand when/if opened.
   oracle:
     name: Oracle
+    chargen_open: true
     key_ability:
       options:
       - cha
@@ -1440,6 +1444,7 @@ charclasses:
     notes: Data stub — closed for chargen (policy). Expand when/if opened.
   swashbuckler:
     name: Swashbuckler
+    chargen_open: true
     key_ability:
       options:
       - dex
