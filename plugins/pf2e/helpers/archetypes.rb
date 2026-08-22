@@ -3,7 +3,7 @@ module AresMUSH
 
     # -------------------------------------------------
     # Archetypes / dedications
-    # Policy (Tapestry):
+    # Dedication policy (configurable constants below):
     #   1st dedication — free via chargen/player tools
     #   2nd dedication — staff approval only (pf2e/set)
     #   3rd dedication — never approved (blocked for staff too)

@@ -43,7 +43,7 @@ module AresMUSH
     # Language
     LANGUAGE_ALIASES = {
       "druidic" => "wildsong",
-      "common" => "tradetongue"
+      "tradetongue" => "common"
     }.freeze
 
     # Condition / prose (documentation + future condition keys)
