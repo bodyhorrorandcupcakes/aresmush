@@ -30,7 +30,7 @@ module AresMUSH
 
     def self.cg_granted_languages(sheet)
       granted = []
-      granted << "tradetongue"
+      granted << "common"
 
       anc = cg_ancestry_entry(sheet.ancestry)
       if anc.is_a?(Hash)
@@ -84,13 +84,16 @@ module AresMUSH
         option_filter = Array(raw).map { |s| s.to_s.strip.downcase } if raw
       end
 
-      data.keys.sort.map do |slug|
-        entry = data[slug]
+      data.map do |slug, entry|
         next nil unless entry.is_a?(Hash)
-        next nil if entry["restricted"]
         next nil if known.include?(slug.to_s)
-        next nil if option_filter && !option_filter.include?(slug.to_s)
-        next nil unless entry["rarity"].to_s == "common"
+        next nil if entry["restricted"]
+        next nil if entry["alias_of"]
+        if option_filter && !option_filter.empty?
+          next nil unless option_filter.include?(slug.to_s)
+        else
+          next nil unless entry["rarity"].to_s == "common"
+        end
 
         {
           slug: slug.to_s,

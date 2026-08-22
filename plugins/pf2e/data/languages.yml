@@ -1,22 +1,20 @@
-# Language catalog for TapestryMUSH / PF2e plugin (Remaster-compatible).
-# Lookup: Pf2e.read_data("languages", "tradetongue")
+# Language catalog — PF2e Remaster (Player Core / Player Core 2).
+# Lookup: Pf2e.read_data("languages", "common")
 #
 # rarity: common | uncommon | secret
-# spoken / written: default true; Precursor is written-only
 # restricted: true → only granted by a specific source (e.g. Wildsong),
 #             never chosen as a free Int-language pick
-# society: true → granted to all PCs at chargen (Ruin-cant)
 #
-# Remaster: Druidic → Wildsong (druidic kept as alias key pointing at same entry shape)
+# Remaster: Druidic → Wildsong (druidic kept as alias)
 
 languages:
-  # ---- Common (everyone may learn; Tradetongue is universal baseline) ----
-  tradetongue:
-    name: Tradetongue
+  # ---- Common ----
+  common:
+    name: Common
     rarity: common
     spoken: true
     written: true
-    note: "Common trade tongue; all characters start with this."
+    note: "Universal trade language; most characters start with this."
 
   draconic:
     name: Draconic
@@ -30,15 +28,32 @@ languages:
     spoken: true
     written: true
 
-  iliari:
-    name: Iliari
+  elven:
+    name: Elven
     rarity: common
     spoken: true
     written: true
-    note: "Language of the Homelands / Iliari peoples."
+
+  fey:
+    name: Fey
+    rarity: common
+    spoken: true
+    written: true
+
+  gnomish:
+    name: Gnomish
+    rarity: common
+    spoken: true
+    written: true
 
   goblin:
     name: Goblin
+    rarity: common
+    spoken: true
+    written: true
+
+  halfling:
+    name: Halfling
     rarity: common
     spoken: true
     written: true
@@ -55,74 +70,148 @@ languages:
     spoken: true
     written: true
 
+  sakvroth:
+    name: Sakvroth
+    rarity: common
+    spoken: true
+    written: true
+    note: "Kobold / subterranean trade tongue."
+
   sylvan:
     name: Sylvan
     rarity: common
     spoken: true
     written: true
 
-  # ---- Regional (common rarity; local to specific realms) ----
-  askharian:
-    name: Askharian
+  # Ancestry-specific common tongues
+  amurrun:
+    name: Amurrun
     rarity: common
     spoken: true
     written: true
-    regional: true
-    note: "Askharia. Other realms lean on Tradetongue or Iliari."
+    note: "Catfolk language."
 
-  nuoran:
-    name: Nuoran
+  iruxi:
+    name: Iruxi
     rarity: common
     spoken: true
     written: true
-    regional: true
-    note: "Griona Nuor."
+    note: "Lizardfolk language."
 
-  # ---- Society (all PCs) ----
-  ruin_cant:
-    name: Ruin-cant
-    rarity: secret
-    spoken: false
-    written: false
-    signed: true
-    society: true
-    restricted: true
-    note: "Society hand signals for silent communication. All PCs receive this at chargen."
+  kholo:
+    name: Kholo
+    rarity: common
+    spoken: true
+    written: true
+
+  tengu:
+    name: Tengu
+    rarity: common
+    spoken: true
+    written: true
+
+  tripkee:
+    name: Tripkee
+    rarity: common
+    spoken: true
+    written: true
+
+  ysoki:
+    name: Ysoki
+    rarity: common
+    spoken: true
+    written: true
+    note: "Ratfolk language."
 
   # ---- Uncommon ----
+  aklo:
+    name: Aklo
+    rarity: uncommon
+    spoken: true
+    written: true
+
   celestial:
     name: Celestial
     rarity: uncommon
     spoken: true
     written: true
 
-  precursor:
-    name: Precursor
+  chthonian:
+    name: Chthonian
     rarity: uncommon
-    spoken: false
+    spoken: true
     written: true
-    note: "Read only — not spoken."
+    note: "Remaster name for former Abyssal / Undercommon-adjacent fiend tongues."
 
-  shadow_speak:
-    name: Shadow-speak
+  diabolic:
+    name: Diabolic
+    rarity: uncommon
+    spoken: true
+    written: true
+    note: "Remaster name for Infernal."
+
+  empyrean:
+    name: Empyrean
     rarity: uncommon
     spoken: true
     written: true
 
-  infernal:
-    name: Infernal
+  necrocil:
+    name: Necrocil
     rarity: uncommon
     spoken: true
     written: true
 
-  # ---- Secret (Remaster: Wildsong replaces classic Druidic) ----
+  petran:
+    name: Petran
+    rarity: uncommon
+    spoken: true
+    written: true
+
+  protean:
+    name: Protean
+    rarity: uncommon
+    spoken: true
+    written: true
+
+  pyric:
+    name: Pyric
+    rarity: uncommon
+    spoken: true
+    written: true
+
+  shadowtongue:
+    name: Shadowtongue
+    rarity: uncommon
+    spoken: true
+    written: true
+
+  sphinx:
+    name: Sphinx
+    rarity: uncommon
+    spoken: true
+    written: true
+
+  sussuran:
+    name: Sussuran
+    rarity: uncommon
+    spoken: true
+    written: true
+
+  thalassic:
+    name: Thalassic
+    rarity: uncommon
+    spoken: true
+    written: true
+
+  # ---- Secret ----
   wildsong:
     name: Wildsong
     rarity: secret
     spoken: true
     written: true
     restricted: true
-    note: "Druid class language (Remaster). Class-granted only. Druid PCs may not be open at launch."
+    note: "Druid class language (Remaster). Class-granted only."
 
   # Alias for classic text / imports
   druidic:
@@ -133,3 +222,28 @@ languages:
     restricted: true
     alias_of: wildsong
     note: "Legacy alias for Wildsong."
+
+  # ---- Legacy aliases (old names → Remaster) ----
+  infernal:
+    name: Diabolic
+    rarity: uncommon
+    spoken: true
+    written: true
+    alias_of: diabolic
+    note: "Legacy alias for Diabolic."
+
+  abyssal:
+    name: Chthonian
+    rarity: uncommon
+    spoken: true
+    written: true
+    alias_of: chthonian
+    note: "Legacy alias for Chthonian."
+
+  undercommon:
+    name: Sakvroth
+    rarity: common
+    spoken: true
+    written: true
+    alias_of: sakvroth
+    note: "Legacy alias often mapped to Sakvroth in Remaster tables."
