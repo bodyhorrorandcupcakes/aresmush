@@ -1,0 +1,295 @@
+# Class / order feats — Pathfinder Secrets of Magic (mechanical fields only).
+# Deep-merged under `feats` with feats.yml and feats_pc2.yml.
+# Kept separate so source books stay navigable and file sizes stay sane.
+#
+feats:
+  fire_lung:
+    name: Fire Lung
+    level: 1
+    traits: [druid]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Ignore concealment from smoke/ash; success vs persistent fire becomes critical success (critical failures become failures).
+    prerequisites:
+      special: flame order
+  shore_step:
+    name: Shore Step
+    level: 1
+    traits: [druid]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Ignore difficult terrain from shallow water. Success on Balance (slippery/wet) or Swim becomes critical success.
+    prerequisites:
+      special: wave order
+  stone_order_strength:
+    name: Stone Order Strength
+    level: 1
+    traits: [druid]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: "Stone order benefit: improved durability and rocky terrain affinity."
+    prerequisites:
+      special: stone order
+  arcane_fists:
+    name: Arcane Fists
+    level: 1
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Unarmed attacks gain arcane-empowered benefits; improved unarmed damage handling.
+  maguss_analysis:
+    name: Magus's Analysis
+    level: 1
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Recall Knowledge; on success, recharge Spellstrike.
+    action: "1"
+  raise_a_tome:
+    name: Raise a Tome
+    level: 1
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Raise a book as a shield-like implement; Shield Block with the tome.
+    action: "1"
+  cantrip_expansion_magus:
+    name: Cantrip Expansion
+    level: 2
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Prepare/gain additional cantrips for Spellstrike options.
+  expansive_spellstrike:
+    name: Expansive Spellstrike
+    level: 2
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Spellstrike with non-attack spells; save-based spells resolve on hit with limits.
+  spell_parry:
+    name: Spell Parry
+    level: 2
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Free hand raised; +1 AC and saves vs spells until start of next turn.
+    action: "1"
+  spirit_sheath:
+    name: Spirit Sheath
+    level: 2
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Extradimensional sheath for a light weapon; draw as part of Spellstrike.
+  steady_spellcasting_magus:
+    name: Steady Spellcasting
+    level: 4
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Reduce disruption chance when damaged while casting.
+  strikers_scroll:
+    name: Striker's Scroll
+    level: 4
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Attach a scroll for use with Spellstrike.
+  cascade_countermeasure:
+    name: Cascade Countermeasure
+    level: 6
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Arcane Cascade grants resistance based on the spell trait used.
+  runic_impression:
+    name: Runic Impression
+    level: 8
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Temporarily apply a weapon property rune via arcane power.
+  meteoric_spellstrike:
+    name: Meteoric Spellstrike
+    level: 10
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Spellstrike variant with forceful impact and positioning.
+  cascading_ray:
+    name: Cascading Ray
+    level: 10
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Extend Arcane Cascade into a ranged magical ray option.
+  arcane_shroud:
+    name: Arcane Shroud
+    level: 14
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Shroud of magic grants defenses after Spellstrike.
+  dispelling_spellstrike:
+    name: Dispelling Spellstrike
+    level: 16
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Spellstrike attempts to counteract a spell effect on the target.
+  hasted_assault:
+    name: Hasted Assault
+    level: 14
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Learn the hasted assault conflux spell; +1 Focus Point.
+  preternatural_parry:
+    name: Preternatural Parry
+    level: 14
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Parry a Strike or spell; +2 circumstance to AC/saves until next turn.
+    action: reaction
+  conflux_wellspring:
+    name: Conflux Wellspring
+    level: 18
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Refocus can restore more Focus Points when spent heavily.
+  versatile_spellstrike:
+    name: Versatile Spellstrike
+    level: 18
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Broader Spellstrike spell eligibility.
+  supreme_spellstrike:
+    name: Supreme Spellstrike
+    level: 20
+    traits: [magus]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Capstone Spellstrike improvement.
+  dual_strength:
+    name: Dual Strength
+    level: 1
+    traits: [summoner]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Coordinate better with your eidolon on combined tactics.
+  energy_heart:
+    name: Energy Heart
+    level: 1
+    traits: [summoner]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Eidolon gains an energy damage option tied to its nature.
+  evolved_companion:
+    name: Evolved Companion
+    level: 1
+    traits: [summoner]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Extra early evolution for your eidolon.
+  reinforced_eidolon:
+    name: Reinforced Eidolon
+    level: 1
+    traits: [summoner]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Eidolon gains additional durability.
+  glider_form:
+    name: Glider Form
+    level: 2
+    traits: [summoner]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: "Eidolon evolution: limited gliding."
+  magical_understudy:
+    name: Magical Understudy
+    level: 2
+    traits: [summoner]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Eidolon gains a cantrip from your tradition.
+  alacritous_action:
+    name: Alacritous Action
+    level: 4
+    traits: [summoner]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Eidolon gains an extra action once per turn under limits.
+  bloodletting_claws:
+    name: Bloodletting Claws
+    level: 4
+    traits: [summoner]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Eidolon claws gain bleed on critical hits.
+  stable_summoner:
+    name: Stable Summoner
+    level: 4
+    traits: [summoner]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Improve link stability; reduce negative effects when eidolon is damaged.
+  boost_summons:
+    name: Boost Summons
+    level: 6
+    traits: [summoner]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Strengthen summoned creatures you create.
+  master_summoner:
+    name: Master Summoner
+    level: 8
+    traits: [summoner]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: Improved summon spell options and duration handling.
+  twin_eidolon:
+    name: Twin Eidolon
+    level: 20
+    traits: [summoner]
+    category: class
+    slots: [class]
+    source: Pathfinder Secrets of Magic
+    summary: "Capstone: briefly mirror or split eidolon presence."
