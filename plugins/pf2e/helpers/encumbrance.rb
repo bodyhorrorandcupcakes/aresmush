@@ -3,7 +3,7 @@ module AresMUSH
 
     # -------------------------------------------------
     # Encumbrance (PF2e)
-    # Gated by pf2e.yml use_encumbrance (true for Tapestry).
+    # Gated by pf2e.yml use_encumbrance.
     #
     # Rules used:
     #   - Bulk "L" / light = 0.1; 10 L = 1 Bulk
